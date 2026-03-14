@@ -231,6 +231,9 @@
     --p-page-title-color: var(--p-gray-5);
     --p-page-title-border-bottom: 0.1rem solid var(--p-gray-2);
     --p-page-title-text-align: center;
+
+    --p-tabview-tab-min-width: 2rem;
+    --p-tabview-tab-bar-width: 1.5rem;
 }
 
 :root {

@@ -294,6 +294,7 @@ select {
     box-shadow: none;
     padding: 0rem;
     background-color: var(--p-gray-1);
+    min-width: var(--p-tabview-tab-min-width);
 }
 
 .yui-navset.yui-navset-top .yui-nav li.selected {
@@ -357,7 +358,7 @@ ul.yui-nav li:after {
     top: 0rem;
     left: 0rem;
     margin: 0 auto;
-    width: 3rem;
+    width: 0rem;
     height: 0.15rem;
     background-color: var(--p-gray-5);
     border-radius: 0.2rem;
@@ -365,13 +366,12 @@ ul.yui-nav li:after {
     margin-top: -0.5rem;
     margin-bottom: 0.5rem;
     line-height: 1rem;
-    transform: scaleX(0);
     z-index: 2;
-    transition: transform var(--p-animation-duration-short);
+    transition: width var(--p-animation-duration-short);
 }
 
 ul.yui-nav li.selected:after {
-    transform: scaleX(0.5);
+    width: var(--p-tabview-tab-bar-width);
 }
 
 ul.yui-nav li a {
