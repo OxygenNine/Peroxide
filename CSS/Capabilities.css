@@ -1,0 +1,136 @@
+/*
+ * Capabilities.css
+ * 兼容性
+ */
+
+/* Root Variables */
+
+/* Monoxide */
+
+:root {
+    --mox-theme-color: var(--p-theme-color);
+    --mox-theme-dark-color: var(--p-theme-color-dark);
+    --mox-theme-light-color: var(--p-theme-color-light);
+    --mox-bg-color: var(--p-gray-0);
+    --mox-text-color: var(--p-gray-5);
+ 
+    --mox-layer-dark-1: var(--p-gray-4);
+    --mox-layer-dark-2: var(--p-gray-5);
+    --mox-layer-dark-3: var(--p-gray-6);
+ 
+    --mox-layer-light-1: var(--p-gray-1);
+    --mox-layer-light-2: var(--p-gray-2);
+    --mox-layer-light-3: var(--p-gray-3);
+    --mox-bgblur-front-color: var(--p-light-transparent-0-8);
+ 
+    --mox-warn-color: var(--p-warning);
+    --mox-accept-color: var(--p-success);
+    --mox-alter-color: var(--p-info);
+ 
+    --mox-header-title: var(--p-header-title-content);
+    --mox-header-subtitle: var(--p-header-slogan-content);
+    --mox-header-logo: var(--p-header-logo-background);
+ 
+    --mox-page-width: var(--p-main-content-width);
+    --mox-header-height: var(--p-header-height);
+    --mox-anim-duration: var(--p-animation-duration-short);
+ 
+    --mox-ui-font: var(--p-font-sans-serif);
+    --mox-text-font: var(--p-font-sans-serif);
+    --mox-mono-font: var(--p-font-monospace);
+}
+
+/* Bedrock */
+
+:root {
+    --basalt-primary-color: var(--p-gray-0);
+    --basalt-secondary-color: var(--p-gray-1);
+    --basalt-tertiary-color: var(--p-gray-2);
+    --basalt-main-text-color: var(--p-gray-5);
+    --basalt-overtone: var(--p-gray-4);
+    --basalt-undertone: var(--p-theme-color-light);
+ 
+    --basalt-bright-element-color: var(--p-blue);
+    --basalt-dark-element-color: var(--p-dark-blue);
+    --basalt-alternate-color: var(--p-orange);
+    --basalt-positive-color: var(--p-green);
+    --basalt-negative-color: var(--p-red);
+    --basalt-cancel-color: var(--basalt-negative-color);
+    --basalt-sub-text-color: var(--p-gray-3);
+    --basalt-light-text-color: var(--basalt-primary-color);
+ 
+    --basalt-UI-dark-palette: var(--basalt-overtone);
+    --basalt-focus-color: var(--basalt-undertone);
+    --basalt-background-color: var(--basalt-primary-color);
+
+    --header-font-primary: var(--p-font-sans-serif);
+    --UI-font-primary: var(--p-font-sans-serif);
+    --body-font-primary: var(--p-font-sans-serif);
+    --mono-font-primary: var(--p-font-monospace);
+
+    --header-logo: var(--p-header-logo-background);
+    --title-size: var(--p-header-title-font-size);
+    --subtitle-size: var(--p-header-slogan-font-size);
+ 
+    --base-font-size: var(--p-font-size-base);
+    --main-content-width: var(--p-main-content-max-width);
+    --side-bar-width: var(--p-sidebar-width);
+
+    --header-title: var(--p-header-title-content);
+    --header-subtitle: var(--p-header-slogan-content);
+}
+
+/* Page Content Elements */
+
+/* Collspaible Info Component */
+
+:root {
+    --linkColour: var(--p-gray-1);
+    --barColour: var(--p-theme-color);
+}
+
+.info-container .collapsible-block-unfolded {
+    border: solid 0.1rem var(--p-gray-2);
+    border-top: none;
+}
+
+.info-container .collapsible-block-content {
+    padding: 1rem;
+}
+
+/* Content Warning */
+
+.content-warning.creditRate {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+/* Image Hover Enlarge Component */
+
+.image-hover-enlarge img.image {
+    box-shadow: none;
+}
+
+.image-hover-enlarge img.image:hover {
+    box-shadow: none;
+    border: solid 0.1rem var(--p-gray-2);
+}
+
+/* License Box */
+
+.licensebox {
+    padding: 0.75rem;
+    background-color: var(--p-gray-1);
+    border-radius: var(--p-border-radius-large);
+}
+
+.licensebox blockquote {
+    background-color: transparent;
+    padding: 0rem 1rem;
+}
+
+.note-page p {
+    line-height: var(--p-font-size-medium) !important;
+}
+
+
