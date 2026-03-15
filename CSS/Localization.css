@@ -13,7 +13,7 @@
     --LOC-close: '关闭';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-close: '閉じる';
 }
 
@@ -77,7 +77,7 @@
     --LOC-manage-attachments: '管理附件';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-file-type-svg: 'SVG ベクターグラフィック';
     --LOC-file-type-png: 'PNG 画像';
     --LOC-file-type-jpeg: 'JPEG 画像';
@@ -291,7 +291,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-website-tools-draft-pages: '草稿页面';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-website-tools-wanted-pages: '未作成ページ';
     --LOC-website-tools-orphaned-pages: '孤立ページ';
     --LOC-website-tools-draft-pages: '下書きページ';
@@ -337,7 +337,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-watchers-description: '当此页面或页面被评论时，这些人将收到通知。';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-watchers-title: 'このページを監視する人';
     --LOC-watchers-description: 'このページまたはページがコメントされたとき、これらの人は通知を受け取ります。';
 }
@@ -382,7 +382,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-owindow-cancel-and-delete-draft: '离开并删除草稿';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-owindow-cancel-and-leave-draft: '下書きを保留する';
     --LOC-owindow-cancel-and-delete-draft: '下書きを削除する';
 }
@@ -412,7 +412,7 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-page-tags: '标签';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-page-tags: 'タグ';
 }
 
@@ -426,7 +426,7 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-close-message: '关闭消息';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-close-message: 'メッセージを閉じる';
 }
 
@@ -449,7 +449,7 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-footnotes: '脚注';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-footnotes: '脚注';
 }
 
@@ -472,7 +472,7 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-less-option: '更多选项';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-less-option: '多くのオプション';
 }
 
@@ -495,7 +495,7 @@ a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(
     --LOC-insert-code: '插入代码';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-insert-code: 'コードを挿入する';
 }
 
@@ -518,7 +518,7 @@ a.btn.btn-default.button.button-insert-code::before {
     --LOC-cancel: '取消';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --LOC-cancel: 'キャンセル';
 }
 

@@ -476,7 +476,26 @@ div#toc-list {
 
 .creditRate {
     float: none;
-    margin: 0;
+    margin: 0 !important;
+}
+
+#page-content div.creditRate, 
+#page-content div.creditRate div, 
+div.rate-box-with-credit-button .creditButton{
+    max-width: unset;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.page-rate-widget-box.rate-box-with-credit-button {
+    min-width: unset;
+    height: auto;
 }
 
 div.page-rate-widget-box, .rate-box-with-credit-button {
@@ -533,6 +552,7 @@ div.page-rate-widget-box .cancel a {
     font-size: 0;
     overflow: hidden;
     position: relative;
+    background-color: transparent;
 }
 
 div.page-rate-widget-box .rateup a::before,
@@ -579,9 +599,9 @@ div.page-rate-widget-box .cancel:hover a::before {
     display: contents;
 }
 
-div.creditButton p a {
+div.creditButton a, div.creditButton p a {
     border: none;
-    background: var(--p-gray-5);
+    background: var(--p-gray-5) !important;
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
@@ -591,11 +611,11 @@ div.creditButton p a {
     transition: all var(--p-animation-duration-short);
 }
 
-.creditButton p a:hover {
+.creditButton a:hover, .creditButton p a:hover {
     background-color: var(--p-theme-color) !important;
 }
 
-.creditButton p a::before {
+.creditButton a::before, .creditButton p a::before {
     display: none !important;
 }
 

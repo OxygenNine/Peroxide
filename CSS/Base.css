@@ -185,6 +185,7 @@ div#header a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 102;
 }
  
 #login-status > * {
@@ -456,6 +457,8 @@ form#search-top-box-form {
     max-width: 20rem;
     padding: 0.5rem 0rem;
     line-height: var(--p-line-height-large);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a {
@@ -552,6 +555,10 @@ form#search-top-box-form {
 
 @media screen and (max-width: 768px) {
 
+    #login-status {
+        margin-top: -1rem;
+    }
+
     .top-bar {
         display: none;
     }
@@ -562,7 +569,7 @@ form#search-top-box-form {
         grid-area: topbar;
         width: calc(100% - calc(var(--p-header-height)* 0.5));
         justify-content: space-around;
-        z-index: 999;
+        z-index: 100;
     }
 
     #top-bar .mobile-top-bar>ul,
@@ -950,7 +957,7 @@ form#search-top-box-form {
     max-width: var(--p-main-content-max-width);
 }
 
-:where(#page-content) div {
+:where(#page-content) > div {
     max-width: var(--p-main-content-max-width);
 }
 

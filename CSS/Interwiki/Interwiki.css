@@ -19,85 +19,47 @@
     --p-theme-color: #3d5cab;
     --p-theme-color-dark: #354f96;
 
-    --p-sidebar-hover-button-color: var(--p-dark-transparent-0-2);
-    --p-sidebar-hover-button-width: calc(var(--p-header-height) * 1.45);
-    --p-sidebar-hover-button-height: calc(var(--p-header-height));
-    --p-sidebar-hover-button-top: calc(var(--p-header-height) * 1.25);
-    --p-sidebar-hover-button-left: calc(var(--p-sidebar-width) * -1);
-    --p-sidebar-top: var(--p-header-height);
-    --p-side-bar-border: none;
-    --p-side-bar-border-right: none;
-    --p-sidebar-background-color: var(--p-gray-1);
-    --p-sidebar-background-image: none;
-    --p-sidebar-background-size: cover;
-    --p-sidebar-background-position: center;
-    --p-sidebar-background-repeat: no-repeat;
-    --p-sidebar-background-attachment: fixed;
     --p-sideblock-margin-bottom: 1.5rem;
-    --p-sideblock-padding: 1rem;
+    --p-sideblock-padding: 0.5rem 1rem;
     --p-sideblock-background-color: var(--p-gray-0);
     --p-sideblock-border: 0.1rem solid var(--p-gray-2);
     --p-sideblock-border-radius: var(--p-border-radius-medium);
-    --p-sideblock-icon-color: var(--p-gray-4);
     --p-sideblock-border-bottom: 0.1rem solid var(--p-gray-2);
     --p-sideblock-text-color: var(--p-gray-5);
     --p-sideblock-link-color: var(--p-gray-4);
     --p-sideblock-link-hover-color: var(--p-theme-color);
+
+    --p-border-radius-medium: 0.5rem;
 }
 
-#interwiki .side-block {
+#interwiki body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#interwiki div.side-block {
     margin-bottom: var(--p-sideblock-margin-bottom);
     padding: var(--p-sideblock-padding);
     background-color: var(--p-sideblock-background-color) !important;
     border: var(--p-sideblock-border);
     border-radius: var(--p-sideblock-border-radius);
     text-align: left;
-}
-
-:where(#interwiki .side-block.newcomer > .heading:first-child, 
-        #interwiki .side-block a[href="/"],
-        #interwiki .side-block.resources > .heading:first-child,
-        #interwiki .side-block.admin a.collapsible-block-link,
-        #interwiki .side-block.media > .heading:first-child 
-        )::before {
-    content: '';
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    mask-size: contain;
-    background-color: var(--p-sideblock-icon-color);
-}
-
-#interwiki .side-block.newcomer > .heading:first-child::before {
-    mask: var(--p-icon-newcomer);
-}
-
-#interwiki .side-block.resources > .heading:first-child::before {
-    mask: var(--p-icon-resource);
-}
-
-#interwiki .side-block.media > .heading:first-child::before {
-    mask: var(--p-icon-media);
-}
-#interwiki .side-block a[href="/"]::before {
-    mask: var(--p-icon-home);
-}
-
-#interwiki .side-block.admin a.collapsible-block-link::before {
-    mask: var(--p-icon-admin);
-}
-
-#interwiki .side-block .heading, #interwiki .side-block a[href="/"] {
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: var(--p-sideblock-border-bottom);
+    direction: rtl;
+    font-size: 80%;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-#interwiki .side-block .heading p, #interwiki .side-block a[href="/"], #interwiki .side-block .collapsible-block-link {
+#interwiki .side-block .heading {
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.1rem;
+    border-bottom: var(--p-sideblock-border-bottom);
+    display: block;
+    flex-basis: 100%;
+}
+
+#interwiki .side-block .heading p {
     margin: 0;
     font-size: var(--p-font-size-large);
     font-weight: 700;
@@ -105,16 +67,13 @@
     text-align: left;
 }
 
-#interwiki .side-block .menu-item, #interwiki .side-block .collapsible-block-link {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+#interwiki .side-block .menu-item {
+    display: inline-block;
+    padding-right: 0.55rem;
+    line-height: 1rem;
 }
 
-#interwiki .side-block:not(.media) .menu-item img.image {
+#interwiki .side-block .menu-item img.image {
     display: none;
 }
 

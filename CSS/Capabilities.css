@@ -133,4 +133,14 @@
     line-height: var(--p-font-size-medium) !important;
 }
 
+/* SCP-JP 适配 */
 
+.side-block.sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-block.sns img {
+    display: block !important;
+}
