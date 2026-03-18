@@ -162,6 +162,7 @@
 
 :root {
 
+    /* Body */
     --p-body-text-color: var(--p-gray-5);
     --p-body-background-color: var(--p-gray-0);
     --p-body-background-image: none;
@@ -170,6 +171,7 @@
     --p-body-background-repeat: no-repeat;
     --p-body-background-attachment: fixed;
 
+    /* Top Bar */
     --p-top-bar-link-color: var(--p-gray-4);
     --p-top-bar-link-bar-color: var(--p-theme-color);
     --p-top-bar-title-font-size: calc(var(--p-header-height) * 0.45);
@@ -196,6 +198,7 @@
     --p-top-bar-submenu-link-color: var(--p-top-bar-menu-link-color);
     --p-top-bar-submenu-link-hover-color: var(--p-top-bar-menu-link-hover-color);
 
+    /* Sidebar */
     --p-sidebar-hover-button-color: var(--p-dark-transparent-0-2);
     --p-sidebar-hover-button-width: calc(var(--p-header-height) * 1.45);
     --p-sidebar-hover-button-height: calc(var(--p-header-height));
@@ -221,19 +224,68 @@
     --p-sideblock-link-color: var(--p-gray-4);
     --p-sideblock-link-hover-color: var(--p-theme-color);
 
+    /* Page Option Bottom */
     --p-page-option-bottom-background-color: var(--p-gray-1);
     --p-page-option-bottom-button-color: var(--p-gray-5);
     --p-page-option-bottom-button-border-color: var(--p-gray-2);
     --p-page-option-bottom-button-more-background-color: var(--p-gray-4);
     --p-page-option-bottom-button-more-color: var(--p-gray-1);
 
+    /* Page Title */
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.25);
     --p-page-title-color: var(--p-gray-5);
     --p-page-title-border-bottom: 0.1rem solid var(--p-gray-2);
     --p-page-title-text-align: center;
 
+    /* Tab View */
+    --p-tabview-navset-padding: 0.5rem 0.5rem;
+    --p-tabview-navset-background: var(--p-gray-1);
+    --p-tabview-navset-button-padding: 0.5rem 0.75rem;
+    --p-tabview-navset-content-padding: 0.5rem 0.75rem;
     --p-tabview-tab-min-width: 2rem;
     --p-tabview-tab-bar-width: 1.5rem;
+    --p-tabview-tab-bar-height: 0.15rem;
+    --p-tabview-navset-button-color: var(--p-gray-4);
+    --p-tabview-tab-bar-color: var(--p-gray-5);
+    --p-tabview-navset-content-background: var(--p-gray-0);
+    --p-tabview-navset-button-hover-color: var(--p-gray-4);
+
+    /* Page Content Elements */
+    --p-title-font: var(--p-font-sans-serif);
+    --p-link-color: var(--p-gray-4);
+    --p-link-visited-color: var(--p-gray-6);
+    --p-link-newpage-color: var(--p-danger-color);
+    --p-link-underline-thickness: 0.1rem;
+    --p-link-underline-offset: 0.1rem;
+
+    --p-code-block-filter: invert(1) hue-rotate(180deg);
+
+    --p-default-button-border: solid 0.1rem var(--p-gray-2);
+    --p-default-button-border-radius: var(--p-border-radius-medium);
+    --p-default-button-color: var(--p-gray-4);
+    --p-default-button-background-color: var(--p-gray-0);
+    --p-default-button-hover-border-color: var(--p-gray-3);
+    --p-default-button-hover-background-color: var(--p-gray-0);
+    --p-default-button-hover-color: var(--p-gray-4);
+    --p-default-button-padding: 0.3rem 0.8rem;
+
+    --p-scp-image-block-caption-background-color: var(--p-gray-5);
+    --p-scp-image-block-caption-color: var(--p-gray-2);
+    --p-scp-image-block-caption-padding: 0.15rem 0.75rem;
+    --p-scp-image-block-caption-font-size: 80%;
+    --p-scp-image-block-caption-border-radius: var(--p-border-radius-medium);
+
+    --p-blockquote-border: solid 0.15rem var(--p-gray-4);
+    --p-blockquote-stack-border: solid 0.1rem var(--p-gray-1);
+    --p-blockquote-padding: 0.5rem 1rem;
+    --p-blockquote-margin: 1rem 0rem;
+    --p-modal-border: solid 0.1rem var(--p-gray-2);
+    --p-modal-border-radius: var(--p-border-radius-medium);
+    --p-notation-border-type: double;
+    --p-notation-border-width: 0.6rem;
+    --p-notation-border-color: var(--p-gray-2);
+    --p-lineblock-border: solid 0.15rem var(--p-gray-4);
+    --p-card-border-radius: var(--p-border-radius-medium);
 }
 
 :root {
@@ -274,7 +326,7 @@
     --p-header-slogan-content: '控制 / 收容 / 保护';
 }
 
-:root:lang(jp) {
+:root:lang(ja) {
     --p-header-title-content: 'SCP財団';
     --p-header-slogan-content: '確保 / 収容 / 保護';
 }

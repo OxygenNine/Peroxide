@@ -78,32 +78,32 @@
 }
 
 :root:lang(ja) {
-    --LOC-file-type-svg: 'SVG ベクターグラフィック';
+    --LOC-file-type-svg: 'SVG ベクターグラフィックス';
     --LOC-file-type-png: 'PNG 画像';
     --LOC-file-type-jpeg: 'JPEG 画像';
     --LOC-file-type-gif: 'GIF アニメーション画像';
     --LOC-file-type-bmp: 'BMP 画像';
-    --LOC-file-type-truetype: 'TrueType フォントファイル';
-    --LOC-file-type-opentype: 'OpenType フォントファイル';
-    --LOC-file-type-woff: 'WOFF フォントファイル';
-    --LOC-file-type-woff2: 'WOFF2 フォントファイル';
+    --LOC-file-type-truetype: 'TrueType フォント';
+    --LOC-file-type-opentype: 'OpenType フォント';
+    --LOC-file-type-woff: 'WOFF フォント';
+    --LOC-file-type-woff2: 'WOFF2 フォント';
     --LOC-file-type-ascii: 'その他のファイル';
-    --LOC-file-type-pdf: 'PDF ドキュメント';
+    --LOC-file-type-pdf: 'PDF 文書';
     --LOC-file-type-7zip: '7-Zip 圧縮ファイル';
     --LOC-file-type-zip: 'ZIP 圧縮ファイル';
     --LOC-file-type-rar: 'RAR 圧縮ファイル';
     --LOC-file-type-powerpoint: 'PowerPoint プレゼンテーション';
-    --LOC-file-type-excel: 'Excel 電子表';
-    --LOC-file-type-word: 'Word ドキュメント';
+    --LOC-file-type-excel: 'Excel スプレッドシート';
+    --LOC-file-type-word: 'Word 文書';
     --LOC-file-type-access: 'Access データベース';
     --LOC-file-type-obj: '3D オブジェクトファイル';
     --LOC-file-type-txt: 'テキストファイル';
     --LOC-file-type-js: 'JavaScript コード';
-    --LOC-file-type-css: 'CSS カスケーディングスタイルシート';
-    --LOC-file-type-html: 'HTML ページ';
-    --LOC-file-type-xml: 'XML ドキュメント';
+    --LOC-file-type-css: 'CSS スタイルシート';
+    --LOC-file-type-html: 'HTML ウェブページ';
+    --LOC-file-type-xml: 'XML 文書';
     --LOC-file-type-exe: '実行可能ファイル';
-    --LOC-manage-attachments: '添付ファイルを管理する';
+    --LOC-manage-attachments: '添付ファイルの管理';
 }
 
 tr[id*="file-row"] :is(
@@ -383,8 +383,8 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
 }
 
 :root:lang(ja) {
-    --LOC-owindow-cancel-and-leave-draft: '下書きを保留する';
-    --LOC-owindow-cancel-and-delete-draft: '下書きを削除する';
+    --LOC-owindow-cancel-and-leave-draft: '下書きを保存して終了';
+    --LOC-owindow-cancel-and-delete-draft: '下書きを削除して終了';
 }
 
 a.btn.btn-default.button.button-cancel-and-leave-draft,
@@ -473,7 +473,7 @@ a.btn.btn-default.button.button-close-message::before {
 }
 
 :root:lang(ja) {
-    --LOC-less-option: '多くのオプション';
+    --LOC-less-option: 'その他のオプション';
 }
 
 a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
@@ -528,5 +528,28 @@ a.btn.btn-default.button.button-cancel {
 
 a.btn.btn-default.button.button-cancel::before {
     content: var(--LOC-cancel);
+    font-size: var(--p-font-size-small);
+}
+
+/* Yes, revert Button */
+
+:root {
+    --LOC-yes-revert: 'Yes, Revert';
+}
+
+:root:lang(cn) {
+    --LOC-yes-revert: '确定，回档页面';
+}
+
+:root:lang(ja) {
+    --LOC-yes-revert: 'はい、元に戻す';
+}
+
+a.btn.btn-default.button.button-yes\,-revert {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-yes\,-revert::before {
+    content: var(--LOC-yes-revert);
     font-size: var(--p-font-size-small);
 }

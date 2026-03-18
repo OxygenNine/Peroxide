@@ -63,6 +63,7 @@ div#header {
     grid-template-areas: 'logo title topbar user search';
     box-shadow: var(--p-shadow-1);
     user-select: none;
+    -webkit-user-select: none;
 }
  
 div#header h1 {
@@ -273,6 +274,7 @@ div#account-options {
     grid-template-columns: 1fr 1fr;
     position: absolute;
     backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
     transform: translateX(calc(var(--p-header-height)* 0.15)) translateY(calc(var(--p-header-height)* 1.45));
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
 }
@@ -391,6 +393,10 @@ div#header .top-bar {
 div#header .mobile-top-bar {
     display: none;
 }
+
+div#top-bar ul li a {
+    max-height: unset;
+}
  
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
     list-style: none;
@@ -444,6 +450,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul {
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li ul {
     background-color: var(--p-top-bar-background-color);
     backdrop-filter: var(--p-top-bar-backdrop-filter);
+    -webkit-backdrop-filter: var(--p-top-bar-backdrop-filter);
     border: none;
     border-radius: var(--p-border-radius-medium);
     box-shadow: var(--p-shadow-2);
@@ -493,6 +500,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul {
     pointer-events: none;
     transform: translate(5.5rem, calc(-50% - 0.85rem));
     backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     background-color: var(--p-top-bar-submenu-background-color);
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
     z-index: 1;
@@ -805,6 +813,10 @@ div#side-bar .side-block .heading, div#side-bar .side-block a[href="/"] {
     gap: 0.5rem;
 }
 
+div#side-bar div.menu-item a {
+    font-weight: normal;
+}
+
 div#side-bar .side-block .heading p, div#side-bar .side-block a[href="/"], div#side-bar .side-block .collapsible-block-link {
     margin: 0;
     font-size: var(--p-font-size-large);
@@ -1097,6 +1109,7 @@ div#main-content #page-options-bottom > a, div#main-content #page-options-bottom
     color: var(--p-page-option-bottom-button-color);
     transition: box-shadow var(--p-animation-duration-short);
     user-select: none;
+    -webkit-user-select: none;
 }
 
 div#page-options-bottom > a#more-options-button {
@@ -2007,6 +2020,7 @@ table.form.grid td, table.form.grid th {
     border: solid 0.1rem var(--p-warning-color);
     border-radius: var(--p-border-radius-medium);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: var(--p-shadow-2);
 }
 
@@ -2016,6 +2030,7 @@ div#page-version-info {
     border: solid 0.1rem var(--p-gray-2);
     border-radius: var(--p-border-radius-medium);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: var(--p-shadow-2);
 }
 
@@ -2146,6 +2161,7 @@ form#edit-meta-newtag-form td input {
     background-color: var(--p-dark-transparent-0-6);
     opacity: 1;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .owindow {
@@ -2248,6 +2264,7 @@ a.btn.btn-default.button.button-close {
     z-index: -1;
     cursor: pointer;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .owindow input.text {
@@ -2488,33 +2505,34 @@ div#who-rated-page-area > div {
 
 /* Footer */
 
-#footer {
+div#footer {
     margin-top: 0rem;
 }
 
 @media screen and (max-width: 768px) {
-    #footer {
+    div#footer {
         text-align: center;
     }
-    #footer .options {
+    div#footer div.options {
         width: 100%;
     }
 }
 
-#footer, #license-area {
+div#footer, div#license-area {
     background: var(--p-black-gray);
     color: var(--p-white-gray);
     font-size: var(--p-font-size-xsmall);
     padding: 1rem;
     user-select: none;
+    -webkit-user-select: none;
 }
 
-#footer .options {
+div#footer div.options {
     font-size: 0;
     float: right;
 }
 
-:is(#footer, #license-area) a {
+div#footer a, div#license-area a {
     color: var(--p-gray);
     font-size: var(--p-font-size-xsmall);
     margin: 0rem 0.5rem;
