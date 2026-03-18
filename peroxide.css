@@ -923,6 +923,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>br {
         justify-items: start;
         padding-right: calc(var(--p-header-height)* 0.5);
         width: auto;
+        z-index: 100;
     }
  
     div#header h1 a::before {
@@ -1015,6 +1016,7 @@ div#side-bar:hover::after {
     div#side-bar {
         z-index: 100;
         top: 0;
+        height: 100vh;
     }
 
     #header {
@@ -3458,7 +3460,7 @@ div.rate-box-with-credit-button .creditButton{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.25rem;
+    width: auto;
     height: 1.25rem;
 }
 
