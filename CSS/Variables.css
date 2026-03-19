@@ -252,8 +252,8 @@
 
     /* Page Content Elements */
     --p-title-font: var(--p-font-sans-serif);
-    --p-link-color: var(--p-gray-4);
-    --p-link-visited-color: var(--p-gray-6);
+    --p-link-color: var(--p-theme-color);
+    --p-link-visited-color: var(--p-theme-color-dark);
     --p-link-newpage-color: var(--p-danger-color);
     --p-link-underline-thickness: 0.1rem;
     --p-link-underline-offset: 0.1rem;
