@@ -253,8 +253,8 @@
 
     /* Page Content Elements */
     --p-title-font: var(--p-font-sans-serif);
-    --p-link-color: var(--p-gray-4);
-    --p-link-visited-color: var(--p-gray-6);
+    --p-link-color: var(--p-theme-color);
+    --p-link-visited-color: var(--p-theme-color-dark);
     --p-link-newpage-color: var(--p-danger-color);
     --p-link-underline-thickness: 0.1rem;
     --p-link-underline-offset: 0.1rem;
@@ -278,7 +278,8 @@
 
     --p-blockquote-border: solid 0.15rem var(--p-gray-4);
     --p-blockquote-stack-border: solid 0.1rem var(--p-gray-1);
-    --p-blockquote-padding: 0.5rem 1rem;
+    --p-blockquote-padding-y: 0.5rem;
+    --p-blockquote-padding-x: 1rem;
     --p-blockquote-margin: 1rem 0rem;
     --p-modal-border: solid 0.1rem var(--p-gray-2);
     --p-modal-border-radius: var(--p-border-radius-medium);
@@ -4066,10 +4067,10 @@ div.blockquote,
 .p-bq {
     border: none;
     border-left: var(--p-blockquote-border);
-    padding: var(--p-blockquote-padding);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
     background-color: var(--p-gray-0);
-    width: calc(100% - var(--p-blockquote-padding) * 2);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
 }
 
 :where(blockquote, div.blockquote, .p-bq) :where(blockquote, div.blockquote, .p-bq) {
@@ -4085,8 +4086,8 @@ div.blockquote,
 .modal,
 .p-mo,
 .wiki-note {
-    width: calc(100% - var(--p-blockquote-padding) * 2);
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     background: var(--p-gray-0);
     border: var(--p-modal-border);
     margin: var(--p-blockquote-margin);
@@ -4095,8 +4096,8 @@ div.blockquote,
 
 .notation,
 .p-no {
-    width: calc(100% - (var(--p-blockquote-padding) * 2) - (var(--p-notation-border-width) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2) - (var(--p-notation-border-width) * 2));
+    padding: var(--p-blockquote-padding-y);
     background: var(--p-gray-1);
     border-left: var(--p-notation-border-type) var(--p-notation-border-width) var(--p-notation-border-color);
     border-right: var(--p-notation-border-type) var(--p-notation-border-width) var(--p-notation-border-color);
@@ -4107,8 +4108,8 @@ div.blockquote,
 .p-ud {
     border-bottom: var(--p-lineblock-border);
     background-color: var(--p-gray-1);
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
 }
 
@@ -4117,15 +4118,15 @@ div.blockquote,
     border-bottom: var(--p-lineblock-border);
     border-top: var(--p-lineblock-border);
     background-color: var(--p-gray-1);
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
 }
 
 .card,
 .p-ca {
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     background-color: var(--p-gray-0);
     border-radius: var(--p-card-border-radius);
     box-shadow: var(--p-shadow-3);
@@ -4134,7 +4135,7 @@ div.blockquote,
 }
 
 .smaller {
-    width: min(80vw, calc(75% - (var(--p-blockquote-padding) * 2)));
+    width: min(80vw, calc(75% - (var(--p-blockquote-padding-x) * 2)));
 }
 
 .dark {
@@ -5175,15 +5176,15 @@ a.btn.btn-default.button.button-cancel::before {
 /* Yes, revert Button */
 
 :root {
-    --LOC-yes-revert: 'Yes, Revert';
+    --LOC-yes-revert: 'I know what I am doing!';
 }
 
 :root:lang(cn) {
-    --LOC-yes-revert: '确定，回档页面';
+    --LOC-yes-revert: '我知道我在做什么！';
 }
 
 :root:lang(ja) {
-    --LOC-yes-revert: 'はい、元に戻す';
+    --LOC-yes-revert: '私は自分が何をしているか分かっています。';
 }
 
 a.btn.btn-default.button.button-yes\,-revert {
@@ -5193,6 +5194,94 @@ a.btn.btn-default.button.button-yes\,-revert {
 a.btn.btn-default.button.button-yes\,-revert::before {
     content: var(--LOC-yes-revert);
     font-size: var(--p-font-size-small);
+}
+
+:root {
+    --LOC-revert-confirm-title: 'Confirm Action';
+    --LOC-revert-confirm-content-1: 'Are you sure you want to revert this page?';
+    --LOC-revert-confirm-content-2: 'You are about to revert the entire page to version';
+    --LOC-revert-confirm-content-3: '.\A';
+    --LOC-revert-confirm-content-4: 'The page content and title will be changed back to that version, and your changes will be visible to everyone. This will create a new page version. Attachments, metadata, parent page and other page properties will not be affected.\A';
+    --LOC-revert-confirm-content-5: 'Warning:';
+    --LOC-revert-confirm-content-6: 'Do not revert page versions unless you really know what you are doing. You can still undo this action by reverting again later.\A';
+}
+
+:root:lang(cn) {
+    --LOC-revert-confirm-title: '需要确认的操作';
+    --LOC-revert-confirm-content-1: '你确定要回档页面吗？';
+    --LOC-revert-confirm-content-2: '你正在尝试将整个页面回退到第';
+    --LOC-revert-confirm-content-3: '个版本。\A';
+    --LOC-revert-confirm-content-4: '页面内容、标题会被修改回那个版本，并且其他所有人都能看到你的更改。这会创建一个新的页面版本。附件、元数据、父页面等其他页面属性不受影响。\A';
+    --LOC-revert-confirm-content-5: '警告：';
+    --LOC-revert-confirm-content-6: '除非你真的知道自己在做什么，否则不要轻易回退页面版本。你在之后仍然可以通过再次回退的方式撤销这次操作。\A';
+}
+
+:root:lang(ja) {
+    --LOC-revert-confirm-title: '操作の確認';
+    --LOC-revert-confirm-content-1: 'このページを元に戻しますか？';
+    --LOC-revert-confirm-content-2: 'ページ全体をバージョン';
+    --LOC-revert-confirm-content-3: 'に戻そうとしています。\A';
+    --LOC-revert-confirm-content-4: 'ページのコンテンツとタイトルがそのバージョンに変更され、変更内容は全員に表示されます。これにより新しいページバージョンが作成されます。添付ファイル、メタデータ、親ページなどのその他のページプロパティは影響を受けません。\A';
+    --LOC-revert-confirm-content-5: '警告:';
+    --LOC-revert-confirm-content-6: '自分が何をしているのかを確実に理解している場合を除き、ページバージョンを元に戻さないでください。後で再度元に戻すことでこの操作を取り消すことはできます。\A';
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) :where(
+    .title,
+    h1,
+    .content > p:nth-child(2),
+    .content > p:nth-child(3),
+    .content > p:nth-child(4)
+) {
+    font-size: 0;
+    margin-bottom: 1rem;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .title::before {
+    font-size: var(--p-font-size-large);
+    content: var(--LOC-revert-confirm-title);
+}
+
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) h1::before {
+    content: var(--LOC-revert-confirm-content-1);
+    font-size: var(--p-font-size-xlarge);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2)::before {
+    content: var(--LOC-revert-confirm-content-2);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong {
+    font-size: var(--p-font-size-medium);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(2) strong::after {
+    content: var(--LOC-revert-confirm-content-3);
+    font-size: var(--p-font-size-medium);
+    font-weight: normal;
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(3)::before {
+    content: var(--LOC-revert-confirm-content-4);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::before {
+    content: var(--LOC-revert-confirm-content-5);
+    font-size: var(--p-font-size-medium);
+    font-weight: bold;
+    color: var(--p-warning-color);
+}
+
+div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .content>p:nth-child(4)::after {
+    content: var(--LOC-revert-confirm-content-6);
+    font-size: var(--p-font-size-medium);
+    white-space: pre-wrap;
 }
  
 /* === 结束 Localization.css === */ 

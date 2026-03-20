@@ -1025,10 +1025,10 @@ div.blockquote,
 .p-bq {
     border: none;
     border-left: var(--p-blockquote-border);
-    padding: var(--p-blockquote-padding);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
     background-color: var(--p-gray-0);
-    width: calc(100% - var(--p-blockquote-padding) * 2);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
 }
 
 :where(blockquote, div.blockquote, .p-bq) :where(blockquote, div.blockquote, .p-bq) {
@@ -1044,8 +1044,8 @@ div.blockquote,
 .modal,
 .p-mo,
 .wiki-note {
-    width: calc(100% - var(--p-blockquote-padding) * 2);
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     background: var(--p-gray-0);
     border: var(--p-modal-border);
     margin: var(--p-blockquote-margin);
@@ -1054,8 +1054,8 @@ div.blockquote,
 
 .notation,
 .p-no {
-    width: calc(100% - (var(--p-blockquote-padding) * 2) - (var(--p-notation-border-width) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2) - (var(--p-notation-border-width) * 2));
+    padding: var(--p-blockquote-padding-y);
     background: var(--p-gray-1);
     border-left: var(--p-notation-border-type) var(--p-notation-border-width) var(--p-notation-border-color);
     border-right: var(--p-notation-border-type) var(--p-notation-border-width) var(--p-notation-border-color);
@@ -1066,8 +1066,8 @@ div.blockquote,
 .p-ud {
     border-bottom: var(--p-lineblock-border);
     background-color: var(--p-gray-1);
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
 }
 
@@ -1076,15 +1076,15 @@ div.blockquote,
     border-bottom: var(--p-lineblock-border);
     border-top: var(--p-lineblock-border);
     background-color: var(--p-gray-1);
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
 }
 
 .card,
 .p-ca {
-    width: calc(100% - (var(--p-blockquote-padding) * 2));
-    padding: var(--p-blockquote-padding);
+    width: calc(100% - (var(--p-blockquote-padding-x) * 2));
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     background-color: var(--p-gray-0);
     border-radius: var(--p-card-border-radius);
     box-shadow: var(--p-shadow-3);
@@ -1093,7 +1093,7 @@ div.blockquote,
 }
 
 .smaller {
-    width: min(80vw, calc(75% - (var(--p-blockquote-padding) * 2)));
+    width: min(80vw, calc(75% - (var(--p-blockquote-padding-x) * 2)));
 }
 
 .dark {

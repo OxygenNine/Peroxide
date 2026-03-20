@@ -277,7 +277,8 @@
 
     --p-blockquote-border: solid 0.15rem var(--p-gray-4);
     --p-blockquote-stack-border: solid 0.1rem var(--p-gray-1);
-    --p-blockquote-padding: 0.5rem 1rem;
+    --p-blockquote-padding-y: 0.5rem;
+    --p-blockquote-padding-x: 1rem;
     --p-blockquote-margin: 1rem 0rem;
     --p-modal-border: solid 0.1rem var(--p-gray-2);
     --p-modal-border-radius: var(--p-border-radius-medium);
