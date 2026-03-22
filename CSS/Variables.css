@@ -197,6 +197,7 @@
     --p-top-bar-submenu-background-color: var(--p-gray-0);
     --p-top-bar-submenu-link-color: var(--p-top-bar-menu-link-color);
     --p-top-bar-submenu-link-hover-color: var(--p-top-bar-menu-link-hover-color);
+    --p-mobile-top-bar-font-size: calc(var(--p-font-size-medium) * 0.85);
 
     /* Sidebar */
     --p-sidebar-hover-button-color: var(--p-dark-transparent-0-2);

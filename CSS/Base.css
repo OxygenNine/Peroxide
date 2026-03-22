@@ -422,6 +422,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
     width: max-content;
     background-color: transparent;
     transition: box-shadow calc(var(--p-animation-duration-short) * 2), color var(--p-animation-duration-short);
+    font-size: var(--p-mobile-top-bar-font-size);
 }
 
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a::after {
@@ -436,7 +437,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a::after {
 }
 
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>a::after {
-    width: 2rem;
+    width: min(2rem, 100%);
 }
 
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul {
@@ -2172,7 +2173,6 @@ form#edit-meta-newtag-form td input {
     box-shadow: 0 0.5rem 1rem var(--p-light-transparent-0-2);
     max-width: min(40rem, 90vw);
     max-height: 90vh;
-    overflow-y: auto;
     left: 0 !important;
     top: 0 !important;
     width: unset !important;
@@ -2198,6 +2198,9 @@ form#edit-meta-newtag-form td input {
 
 .owindow .content.modal-body {
     padding: 0.5rem 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: min(60vh, 40rem);
 }
 
 .owindow .content.modal-body h1 {
@@ -2248,6 +2251,8 @@ form#edit-meta-newtag-form td input {
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
+    margin: 0rem 0rem;
+    height: auto;
 }
 
 .owindow .button-bar .btn[onclick*="cleanAll"], 
@@ -2265,6 +2270,7 @@ a.btn.btn-default.button.button-close {
     cursor: pointer;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    margin: 0rem 0rem;
 }
 
 .owindow input.text {
@@ -2318,7 +2324,7 @@ a.btn.btn-default.button.button-close {
 }
 
 .owindow .btn-primary:hover {
-    background-color: var(--p-gray-1) !important;
+    background-color: var(--p-theme-color-dark) !important;
     border-color: var(--p-theme-color-dark) !important;
 }
 
