@@ -761,6 +761,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
     width: max-content;
     background-color: transparent;
     transition: box-shadow calc(var(--p-animation-duration-short) * 2), color var(--p-animation-duration-short);
+}
+
+div#header #top-bar :is(.mobile-top-bar)>ul>li>a {
     font-size: var(--p-mobile-top-bar-font-size);
 }
 
