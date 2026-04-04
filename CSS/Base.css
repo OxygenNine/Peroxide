@@ -2322,7 +2322,14 @@ a.btn.btn-default.button.button-close:hover {
 :where(a, input, button).button.default,
 :where(a, input, button).btn.default,
 :where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default {
+:where(a, input, button).btn.btn-default,
+
+.owindow :where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2330,12 +2337,13 @@ a.btn.btn-default.button.button-close:hover {
     border: var(--p-button-border);
     border-radius: var(--p-border-radius-small);
     background-color: var(--p-button-background-color);
-    color: var(--p-button-text-color);
+    color: var(--p-button-text-color) !important;
     font-size: var(--p-button-font-size);
     font-weight: normal;
     text-decoration: none;
     margin: var(--p-button-margin);
     transition: all var(--p-animation-duration-short);
+    text-decoration: none !important;
 }
 
 :where(:where(a, input, button).button,
@@ -2343,13 +2351,28 @@ a.btn.btn-default.button.button-close:hover {
 :where(a, input, button).button.default,
 :where(a, input, button).btn.default,
 :where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):hover,
+
+.owindow :where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
 :where(a, input, button).btn.btn-default):hover {
     border-color: var(--p-button-hover-border-color);
     background-color: var(--p-button-hover-background-color);
-    color: var(--p-button-hover-color);
+    color: var(--p-button-hover-color) !important;
+    text-decoration: none !important;
 }
 
 :where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):focus-visible,
+
+.owindow :where(:where(a, input, button).button,
 :where(a, input, button).btn,
 :where(a, input, button).button.default,
 :where(a, input, button).btn.default,
@@ -2359,30 +2382,46 @@ a.btn.btn-default.button.button-close:hover {
 }
 
 :is(a, input, button).danger,
-:is(a, input, button).btn-danger {
+:is(a, input, button).btn-danger,
+
+.owindow :where(:is(a, input, button).danger,
+:is(a, input, button).btn-danger) {
     background-color: var(--p-warning-color);
     border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray);
+    color: var(--p-white-gray) !important;
+    text-decoration: none !important;
 }
 
 :is(a, input, button).danger:hover,
-:is(a, input, button).btn-danger:hover {
+:is(a, input, button).btn-danger:hover,
+
+.owindow :where(:is(a, input, button).danger:hover,
+:is(a, input, button).btn-danger:hover) {
     background-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray);
+    color: var(--p-white-gray) !important;
+    text-decoration: none !important;
 }
  
 :is(a, input, button).primary,
-:is(a, input, button).btn-primary {
+:is(a, input, button).btn-primary,
+
+.owindow :where(:is(a, input, button).primary,
+:is(a, input, button).btn-primary) {
     background-color: var(--p-theme-color);
     border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray);
+    color: var(--p-white-gray) !important;
+    text-decoration: none !important;
 }
 
 :is(a, input, button).primary:hover,
-:is(a, input, button).btn-primary:hover {
+:is(a, input, button).btn-primary:hover,
+
+.owindow :where(:is(a, input, button).primary:hover,
+:is(a, input, button).btn-primary:hover) {
     background-color: var(--p-theme-color-dark);
     border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray);
+    color: var(--p-white-gray) !important;
+    text-decoration: none !important;
 }
 
 
