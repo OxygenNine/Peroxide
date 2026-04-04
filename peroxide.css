@@ -96,9 +96,9 @@
     --p-font-size-small: 0.9rem;
     --p-line-height-small: 1.2;
     --p-font-size-medium: 1rem;
-    --p-line-height-medium: 1.5;
+    --p-line-height-medium: 1.55;
     --p-font-size-large: 1.2rem;
-    --p-line-height-large: 1.8;
+    --p-line-height-large: 1.75;
     --p-font-size-xlarge: 1.4rem;
     --p-line-height-xlarge: 2.2;
     --p-font-size-xxlarge: 1.6rem;
@@ -232,6 +232,7 @@
     --p-page-option-bottom-button-border-color: var(--p-gray-2);
     --p-page-option-bottom-button-more-background-color: var(--p-gray-4);
     --p-page-option-bottom-button-more-color: var(--p-gray-1);
+    --p-page-option-bottom-2-margin-top: 0.5rem;
 
     /* Page Title */
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.25);
@@ -277,7 +278,16 @@
     --p-scp-image-block-caption-font-size: 80%;
     --p-scp-image-block-caption-border-radius: var(--p-border-radius-medium);
 
-    --p-blockquote-border: solid 0.15rem var(--p-gray-4);
+    --p-blockquote-border-left: solid 0.15rem var(--p-gray-4);
+    --p-blockquote-border-top: solid 0.1rem var(--p-gray-2);
+    --p-blockquote-border-right: solid 0.1rem var(--p-gray-2);
+    --p-blockquote-border-bottom: solid 0.1rem var(--p-gray-2);
+    --p-blockquote-background-color: var(--p-gray-0);
+    --p-blockquote-background-color-secondary: var(--p-gray-1);
+    --p-blockquote-border-left-secondary: solid 0.15rem var(--p-gray-4);
+    --p-blockquote-border-top-secondary: solid 0.1rem var(--p-gray-2);
+    --p-blockquote-border-right-secondary: solid 0.1rem var(--p-gray-2);
+    --p-blockquote-border-bottom-secondary: solid 0.1rem var(--p-gray-2);
     --p-blockquote-stack-border: solid 0.1rem var(--p-gray-1);
     --p-blockquote-padding-y: 0.5rem;
     --p-blockquote-padding-x: 1rem;
@@ -289,6 +299,19 @@
     --p-notation-border-color: var(--p-gray-2);
     --p-lineblock-border: solid 0.15rem var(--p-gray-4);
     --p-card-border-radius: var(--p-border-radius-medium);
+
+    /* Button */
+    --p-button-padding: 0.25rem 0.5rem;
+    --p-button-margin: 0.25rem 0.25rem;
+    --p-button-border: solid 0.1rem var(--p-gray-3);
+    --p-button-border-radius: var(--p-border-radius-medium);
+    --p-button-color: var(--p-gray-4);
+    --p-button-text-color: var(--p-gray-4);
+    --p-button-font-size: var(--p-font-size-small);
+    --p-button-background-color: var(--p-gray-0);
+    --p-button-hover-border-color: var(--p-gray-4);
+    --p-button-hover-background-color: var(--p-gray-1);
+    --p-button-hover-color: var(--p-gray-4);
 }
 
 :root {
@@ -317,6 +340,7 @@
     --p-icon-ratio: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktcmVjb3JkLWNpcmNsZSIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNOCAxNUE3IDcgMCAxIDEgOCAxYTcgNyAwIDAgMSAwIDE0em0wIDFBOCA4IDAgMSAwIDggMGE4IDggMCAwIDAgMCAxNnoiLz4KICA8cGF0aCBkPSJNMTEgOGEzIDMgMCAxIDEtNiAwIDMgMyAwIDAgMSA2IDB6Ii8+Cjwvc3ZnPg==");
     --p-icon-warning: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktZXhjbGFtYXRpb24tY2lyY2xlLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTE2IDhBOCA4IDAgMSAxIDAgOGE4IDggMCAwIDEgMTYgMHpNOCA0YS45MDUuOTA1IDAgMCAwLS45Ljk5NWwuMzUgMy41MDdhLjU1Mi41NTIgMCAwIDAgMS4xIDBsLjM1LTMuNTA3QS45MDUuOTA1IDAgMCAwIDggNHptLjAwMiA2YTEgMSAwIDEgMCAwIDIgMSAxIDAgMCAwIDAtMnoiLz4KPC9zdmc+");
     --p-icon-toc-collapse: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktY2hldnJvbi1iYXItZG93biIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjY0NiA0LjE0NmEuNS41IDAgMCAxIC43MDggMEw4IDcuNzkzbDMuNjQ2LTMuNjQ3YS41LjUgMCAwIDEgLjcwOC43MDhsLTQgNGEuNS41IDAgMCAxLS43MDggMGwtNC00YS41LjUgMCAwIDEgMC0uNzA4ek0xIDExLjVhLjUuNSAwIDAgMSAuNS0uNWgxM2EuNS41IDAgMCAxIDAgMWgtMTNhLjUuNSAwIDAgMS0uNS0uNXoiLz4KPC9zdmc+');
+    --p-icon-rss: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCIgdmVyc2lvbj0iMS4xIj4KICAgIAogICAgPHRpdGxlPnJzcyBbIzEwMjNdPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+Cgo8L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iRHJpYmJibGUtTGlnaHQtUHJldmlldyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2NS4wMDAwMDAsIC0zNjQ0LjAwMDAwMCkiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8ZyBpZD0iaWNvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU2LjAwMDAwMCwgMTYwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTIwOSwzNDkyIEwyMDksMzQ5NCBMMjEwLjk3MTgwMywzNDk0IEMyMTAuOTcxODAzLDM0OTIuODk1IDIxMC4wODk0MjEsMzQ5MiAyMDksMzQ5MiBNMjA5LDM0ODggTDIwOSwzNDkwIEMyMTAuOTcxODAzLDM0OTAgMjEzLjA4NDU5LDM0OTIgMjEzLjA4NDU5LDM0OTQgTDIxNS4wNTYzOTQsMzQ5NCBDMjE1LjA1NjM5NCwzNDkxIDIxMS45NTc3MDUsMzQ4OCAyMDksMzQ4OCBNMjE5LDM0OTQgTDIxNy4wMjgxOTcsMzQ5NCBDMjE3LjAyODE5NywzNDkwIDIxMi45NDM2MDYsMzQ4NiAyMDksMzQ4NiBMMjA5LDM0ODQgQzIxMy45Mjk1MDgsMzQ4NCAyMTksMzQ4OCAyMTksMzQ5NCIgaWQ9InJzcy1bIzEwMjNdIj4KCjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
 }
 
 :root {
@@ -1437,6 +1461,10 @@ div#main-content #page-options-bottom, div#main-content #page-options-bottom-2 {
     border-radius: var(--p-border-radius-medium);
 }
 
+div#main-content div#page-options-bottom-2 {
+    margin-top: var(--p-page-options-bottom-2-margin-top);
+}
+
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
     margin: 0rem;;
     margin-bottom: 0.5rem;
@@ -1569,6 +1597,10 @@ form#edit-page-form table.form :is(tbody, tr, td) {
     display: contents;
 }
 
+.forum-breadcrumbs {
+    margin-top: 0rem;
+}
+
 form#edit-page-form table.form {
     display: flex;
     align-items: center;
@@ -1600,16 +1632,16 @@ textarea {
     resize: vertical;
 }
 
-:is(#action-area, #new-post-form) input[type="text"] {
+:is(#action-area, #new-post-form, #new-thread-form) input[type="text"] {
     transition: outline var(--p-animation-duration-short);
 }
 
-:is(#action-area, #new-post-form) :is(textarea:focus, textarea:focus-visible,
+:is(#action-area, #new-post-form, #new-thread-form) :is(textarea:focus, textarea:focus-visible,
 input[type="text"]:focus, input[type="text"]:focus-visible) {
     outline: solid 0.15rem var(--p-theme-color-light);
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size {
     display: flex;
     padding: 0;
     width: 7rem;
@@ -1617,7 +1649,7 @@ input[type="text"]:focus, input[type="text"]:focus-visible) {
     height: 1.6rem;
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size a.btn {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size a.btn {
     flex-grow: 1;
     display: block;
     text-align: center;
@@ -1632,7 +1664,7 @@ input[type="text"]:focus, input[type="text"]:focus-visible) {
     min-width: unset;
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size a.btn:hover {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size a.btn:hover {
     text-decoration: none;
     background: var(--p-gray-2);
 }
@@ -2615,73 +2647,23 @@ a.btn.btn-default.button.button-close {
     margin: 0rem 0rem;
 }
 
+.owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
+a.btn.btn-default.button.button-close:hover {
+    background: transparent !important;
+}
+
 .owindow input.text {
     border: none;
     border-bottom: solid 0.1rem var(--p-gray-4);
     padding: 0rem 0.5rem;
     background-color: transparent;
     color: var(--p-gray-4);
+    width: 100%;
 }
 
 .owindow a.btn.btn-default:not(.button-close, .button-cancel):hover {
     border-color: var(--p-theme-color-dark);
     background: var(--p-gray-1);
-}
-
-.owindow .btn, 
-.owindow .button-bar a,
-.owindow a.btn.btn-default  {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem 0.5rem;
-    border: solid 0.1rem var(--p-gray-3);
-    border-radius: var(--p-border-radius-small);
-    background-color: var(--p-gray-0);
-    color: var(--p-gray-5);
-    font-size: var(--p-font-size-small);
-    font-weight: normal;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0.25rem 0.25rem;
-    padding: 0.25rem 0.5rem;
-    transition: all var(--p-animation-duration-short);
-}
-
-.owindow .btn:hover {
-    background-color: var(--p-gray-1);
-    border-color: var(--p-gray-4);
-    box-shadow: 0 0.125rem 0.25rem var(--p-light-transparent-0-1);
-}
-
-.owindow .btn:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.owindow .btn-primary {
-    background-color: var(--p-theme-color);
-    border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray);
-}
-
-.owindow .btn-primary:hover {
-    background-color: var(--p-theme-color-dark) !important;
-    border-color: var(--p-theme-color-dark) !important;
-    color: var(--p-white-gray) !important;
-}
-
-.owindow .btn-danger {
-    background-color: var(--p-warning-color);
-    border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray);
-    margin-left: 0.25rem;
-}
-
-.owindow .btn-danger:hover {
-    background-color: var(--p-warning-color-dark);
-    border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray) !important;
 }
 
 .owindow:has(img[src*="userkarma"]) div[style="margin-top: 10px"] {
@@ -2691,6 +2673,77 @@ a.btn.btn-default.button.button-close {
     gap: 0.5rem;
     flex-direction: row-reverse;
 }
+
+/* General Button Classes */
+
+:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--p-button-padding);
+    border: var(--p-button-border);
+    border-radius: var(--p-border-radius-small);
+    background-color: var(--p-button-background-color);
+    color: var(--p-button-text-color);
+    font-size: var(--p-button-font-size);
+    font-weight: normal;
+    text-decoration: none;
+    margin: var(--p-button-margin);
+    transition: all var(--p-animation-duration-short);
+}
+
+:where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):hover {
+    border-color: var(--p-button-hover-border-color);
+    background-color: var(--p-button-hover-background-color);
+    color: var(--p-button-hover-color);
+}
+
+:where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):focus-visible {
+    outline: solid 0.15rem var(--p-theme-color);
+}
+
+:is(a, input, button).danger,
+:is(a, input, button).btn-danger {
+    background-color: var(--p-warning-color);
+    border-color: var(--p-warning-color-dark);
+    color: var(--p-white-gray);
+}
+
+:is(a, input, button).danger:hover,
+:is(a, input, button).btn-danger:hover {
+    background-color: var(--p-warning-color-dark);
+    color: var(--p-white-gray);
+}
+ 
+:is(a, input, button).primary,
+:is(a, input, button).btn-primary {
+    background-color: var(--p-theme-color);
+    border-color: var(--p-theme-color-dark);
+    color: var(--p-white-gray);
+}
+
+:is(a, input, button).primary:hover,
+:is(a, input, button).btn-primary:hover {
+    background-color: var(--p-theme-color-dark);
+    border-color: var(--p-theme-color-dark);
+    color: var(--p-white-gray);
+}
+
 
 /* Saving Pages */
 
@@ -3132,16 +3185,45 @@ code {
 
 li {
     margin: 0.5rem 0rem;
-    list-style-type: disc;
 }
 
 li li {
     margin-left: 0.5rem;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ul li li {
     list-style-type: circle;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+ol li li {
+    list-style-type: lower-roman;
 }
 
 img.image {
     max-width: 100%;
+}
+
+#page-content table.wiki-content-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0.5em auto;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+#page-content table.wiki-content-table > tbody {
+    overflow-x: auto;
+    max-width: 100%;
+    display: block;
 }
 
 table.wiki-content-table th {
@@ -3287,6 +3369,7 @@ a.avatar-hover {
 input.text:focus, input.text:focus-visible {
     border-color: var(--p-theme-color);
     outline: none;
+    background-color: transparent;
 }
 
 input.text {
@@ -3295,6 +3378,7 @@ input.text {
     margin: 0;
     padding: 0.2rem 0rem;
     width: auto;
+    background-color: transparent;
 }
 
 :is(input.button, input[type="button"], input[type="submit"]):hover {
@@ -3825,6 +3909,68 @@ div.creditButton a, div.creditButton p a {
     color: var(--p-theme-color);
 }
 
+.thread-container .post.folded .short {
+    background-color: var(--p-gray-1);
+    border-radius: var(--p-border-radius-medium);
+    padding: 1rem 1rem;
+    border: solid 0.1rem var(--p-gray-2);
+}
+
+.forum-category-box .description-block {
+    height: auto;
+    background-color: var(--p-gray-2);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.forum-category-box table tr.head td {
+    text-align: center;
+    font-size: 90%;
+    background-color: var(--p-gray-1);
+    border: none;
+}
+
+.forum-category-box table {
+    width: 100%;
+    border-spacing: 0px;
+    border: none;
+    margin: 0.75rem 0;
+    padding: 0;
+}
+
+.forum-category-box table td {
+    border: none;
+    padding: 0.5rem 0.5rem;
+}
+
+span.rss-icon img {
+    display: none;
+}
+
+span.rss-icon {
+    background-color: var(--p-gray-4);
+    display: inline-block;
+    width: var(--p-font-size-xsmall);
+    height: var(--p-font-size-xsmall);
+    mask-image: var(--p-icon-rss);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    padding: 0;
+    font-size: 0;
+}
+
+.forum-new-thread-box .description {
+    background-color: var(--p-gray-1);
+    border: none;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    border-radius: var(--p-border-radius-medium);
+}
+
+
+
 /* Default Buttons */
 
 :is(div.new-post a, div.buttons input, input.button, button, a.button, #page-content a.btn):hover {
@@ -3947,7 +4093,8 @@ rt {
 }
 
 .scp-image-block img {
-    border: 0;
+    border: none;
+    border-radius: var(--p-border-radius-medium) var(--p-border-radius-medium) 0 0;
     width: 100% !important;
 }
 
@@ -4016,6 +4163,10 @@ div#print-head {
 }
 
 /* Credit */
+
+:is(#u-credit-otherwise, #u-credit-view) {
+    max-width: 100% !important;
+}
 
 :is(#u-credit-otherwise, #u-credit-view) .modalbox {
     background: var(--p-gray-0);
@@ -4093,11 +4244,31 @@ blockquote,
 div.blockquote,
 .p-bq {
     border: none;
-    border-left: var(--p-blockquote-border);
+    border-left: var(--p-blockquote-border-left);
+    border-top: var(--p-blockquote-border-top);
+    border-right: var(--p-blockquote-border-right);
+    border-bottom: var(--p-blockquote-border-bottom);
     padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
-    background-color: var(--p-gray-0);
+    background-color: var(--p-blockquote-background-color);
     width: calc(100% - var(--p-blockquote-padding-x) * 2);
+}
+
+div.blockquote-clear,
+div.p-bqc {
+    border-left: var(--p-blockquote-border-left);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
+    margin: var(--p-blockquote-margin);
+    background-color: var(--p-blockquote-background-color);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
+}
+
+:where(blockquote,div.blockquote,.p-bq) :where(blockquote, div.blockquote, .p-bq) {
+    border-left: var(--p-blockquote-border-left-secondary);
+    border-top: var(--p-blockquote-border-top-secondary);
+    border-right: var(--p-blockquote-border-right-secondary);
+    border-bottom: var(--p-blockquote-border-bottom-secondary);
+    background-color: var(--p-blockquote-background-color-secondary);
 }
 
 :where(blockquote, div.blockquote, .p-bq) :where(blockquote, div.blockquote, .p-bq) {
@@ -4177,6 +4348,13 @@ div.blockquote,
     color: var(--p-gray-6);
 }
 
+:where( div.underline, 
+        div.doubleline, 
+        div.p-ud, 
+        div.p-dl).dark {
+    border-color: var(--p-theme-color-light);
+}
+
 /* Action Area */
 
 /* Panel Buttons */
@@ -4185,6 +4363,14 @@ div.blockquote,
     display: flex;
     justify-content: center;
     height: auto;
+}
+
+.wd-editor-toolbar-panel ul {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .wd-editor-toolbar-panel ul li {
@@ -4239,8 +4425,11 @@ div.blockquote,
 }
 
 .wd-editor-toolbar-panel li.hseparator {
+    margin: 0rem;
+    display: block;
+    float: none;
     height: 1rem;
-    width: 1px;
+    width: 0.1rem;
     background: var(--p-gray-4);
 }
 
@@ -5327,6 +5516,29 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .conte
     content: var(--LOC-revert-confirm-content-6);
     font-size: var(--p-font-size-medium);
     white-space: pre-wrap;
+}
+
+/* forever delete confirm */
+
+:root {
+    --LOC-rename-option-delete: 'This will remove the page completely and it will not be possible to recover the data. Are you sure you want to do this?';
+}
+
+:root:lang(cn) {
+    --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
+}
+
+:root:lang(ja) {
+    --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
+}
+
+div#rename-option-delete p {
+    font-size: 0;
+}
+
+div#rename-option-delete p::before {
+    content: var(--LOC-rename-option-delete);
+    font-size: var(--p-font-size-medium);
 }
  
 /* === 结束 Localization.css === */ 

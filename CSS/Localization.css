@@ -659,3 +659,26 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .conte
     font-size: var(--p-font-size-medium);
     white-space: pre-wrap;
 }
+
+/* forever delete confirm */
+
+:root {
+    --LOC-rename-option-delete: 'This will remove the page completely and it will not be possible to recover the data. Are you sure you want to do this?';
+}
+
+:root:lang(cn) {
+    --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
+}
+
+:root:lang(ja) {
+    --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
+}
+
+div#rename-option-delete p {
+    font-size: 0;
+}
+
+div#rename-option-delete p::before {
+    content: var(--LOC-rename-option-delete);
+    font-size: var(--p-font-size-medium);
+}

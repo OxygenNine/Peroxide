@@ -78,16 +78,45 @@ code {
 
 li {
     margin: 0.5rem 0rem;
-    list-style-type: disc;
 }
 
 li li {
     margin-left: 0.5rem;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ul li li {
     list-style-type: circle;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+ol li li {
+    list-style-type: lower-roman;
 }
 
 img.image {
     max-width: 100%;
+}
+
+#page-content table.wiki-content-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0.5em auto;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+#page-content table.wiki-content-table > tbody {
+    overflow-x: auto;
+    max-width: 100%;
+    display: block;
 }
 
 table.wiki-content-table th {
@@ -233,6 +262,7 @@ a.avatar-hover {
 input.text:focus, input.text:focus-visible {
     border-color: var(--p-theme-color);
     outline: none;
+    background-color: transparent;
 }
 
 input.text {
@@ -241,6 +271,7 @@ input.text {
     margin: 0;
     padding: 0.2rem 0rem;
     width: auto;
+    background-color: transparent;
 }
 
 :is(input.button, input[type="button"], input[type="submit"]):hover {
@@ -771,6 +802,68 @@ div.creditButton a, div.creditButton p a {
     color: var(--p-theme-color);
 }
 
+.thread-container .post.folded .short {
+    background-color: var(--p-gray-1);
+    border-radius: var(--p-border-radius-medium);
+    padding: 1rem 1rem;
+    border: solid 0.1rem var(--p-gray-2);
+}
+
+.forum-category-box .description-block {
+    height: auto;
+    background-color: var(--p-gray-2);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.forum-category-box table tr.head td {
+    text-align: center;
+    font-size: 90%;
+    background-color: var(--p-gray-1);
+    border: none;
+}
+
+.forum-category-box table {
+    width: 100%;
+    border-spacing: 0px;
+    border: none;
+    margin: 0.75rem 0;
+    padding: 0;
+}
+
+.forum-category-box table td {
+    border: none;
+    padding: 0.5rem 0.5rem;
+}
+
+span.rss-icon img {
+    display: none;
+}
+
+span.rss-icon {
+    background-color: var(--p-gray-4);
+    display: inline-block;
+    width: var(--p-font-size-xsmall);
+    height: var(--p-font-size-xsmall);
+    mask-image: var(--p-icon-rss);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    padding: 0;
+    font-size: 0;
+}
+
+.forum-new-thread-box .description {
+    background-color: var(--p-gray-1);
+    border: none;
+    padding: 1rem 1rem;
+    margin: 1rem auto;
+    border-radius: var(--p-border-radius-medium);
+}
+
+
+
 /* Default Buttons */
 
 :is(div.new-post a, div.buttons input, input.button, button, a.button, #page-content a.btn):hover {
@@ -893,7 +986,8 @@ rt {
 }
 
 .scp-image-block img {
-    border: 0;
+    border: none;
+    border-radius: var(--p-border-radius-medium) var(--p-border-radius-medium) 0 0;
     width: 100% !important;
 }
 
@@ -962,6 +1056,10 @@ div#print-head {
 }
 
 /* Credit */
+
+:is(#u-credit-otherwise, #u-credit-view) {
+    max-width: 100% !important;
+}
 
 :is(#u-credit-otherwise, #u-credit-view) .modalbox {
     background: var(--p-gray-0);
@@ -1039,11 +1137,31 @@ blockquote,
 div.blockquote,
 .p-bq {
     border: none;
-    border-left: var(--p-blockquote-border);
+    border-left: var(--p-blockquote-border-left);
+    border-top: var(--p-blockquote-border-top);
+    border-right: var(--p-blockquote-border-right);
+    border-bottom: var(--p-blockquote-border-bottom);
     padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     margin: var(--p-blockquote-margin);
-    background-color: var(--p-gray-0);
+    background-color: var(--p-blockquote-background-color);
     width: calc(100% - var(--p-blockquote-padding-x) * 2);
+}
+
+div.blockquote-clear,
+div.p-bqc {
+    border-left: var(--p-blockquote-border-left);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
+    margin: var(--p-blockquote-margin);
+    background-color: var(--p-blockquote-background-color);
+    width: calc(100% - var(--p-blockquote-padding-x) * 2);
+}
+
+:where(blockquote,div.blockquote,.p-bq) :where(blockquote, div.blockquote, .p-bq) {
+    border-left: var(--p-blockquote-border-left-secondary);
+    border-top: var(--p-blockquote-border-top-secondary);
+    border-right: var(--p-blockquote-border-right-secondary);
+    border-bottom: var(--p-blockquote-border-bottom-secondary);
+    background-color: var(--p-blockquote-background-color-secondary);
 }
 
 :where(blockquote, div.blockquote, .p-bq) :where(blockquote, div.blockquote, .p-bq) {
@@ -1123,6 +1241,13 @@ div.blockquote,
     color: var(--p-gray-6);
 }
 
+:where( div.underline, 
+        div.doubleline, 
+        div.p-ud, 
+        div.p-dl).dark {
+    border-color: var(--p-theme-color-light);
+}
+
 /* Action Area */
 
 /* Panel Buttons */
@@ -1131,6 +1256,14 @@ div.blockquote,
     display: flex;
     justify-content: center;
     height: auto;
+}
+
+.wd-editor-toolbar-panel ul {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .wd-editor-toolbar-panel ul li {
@@ -1185,8 +1318,11 @@ div.blockquote,
 }
 
 .wd-editor-toolbar-panel li.hseparator {
+    margin: 0rem;
+    display: block;
+    float: none;
     height: 1rem;
-    width: 1px;
+    width: 0.1rem;
     background: var(--p-gray-4);
 }
 

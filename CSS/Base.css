@@ -1098,6 +1098,10 @@ div#main-content #page-options-bottom, div#main-content #page-options-bottom-2 {
     border-radius: var(--p-border-radius-medium);
 }
 
+div#main-content div#page-options-bottom-2 {
+    margin-top: var(--p-page-options-bottom-2-margin-top);
+}
+
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
     margin: 0rem;;
     margin-bottom: 0.5rem;
@@ -1230,6 +1234,10 @@ form#edit-page-form table.form :is(tbody, tr, td) {
     display: contents;
 }
 
+.forum-breadcrumbs {
+    margin-top: 0rem;
+}
+
 form#edit-page-form table.form {
     display: flex;
     align-items: center;
@@ -1261,16 +1269,16 @@ textarea {
     resize: vertical;
 }
 
-:is(#action-area, #new-post-form) input[type="text"] {
+:is(#action-area, #new-post-form, #new-thread-form) input[type="text"] {
     transition: outline var(--p-animation-duration-short);
 }
 
-:is(#action-area, #new-post-form) :is(textarea:focus, textarea:focus-visible,
+:is(#action-area, #new-post-form, #new-thread-form) :is(textarea:focus, textarea:focus-visible,
 input[type="text"]:focus, input[type="text"]:focus-visible) {
     outline: solid 0.15rem var(--p-theme-color-light);
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size {
     display: flex;
     padding: 0;
     width: 7rem;
@@ -1278,7 +1286,7 @@ input[type="text"]:focus, input[type="text"]:focus-visible) {
     height: 1.6rem;
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size a.btn {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size a.btn {
     flex-grow: 1;
     display: block;
     text-align: center;
@@ -1293,7 +1301,7 @@ input[type="text"]:focus, input[type="text"]:focus-visible) {
     min-width: unset;
 }
 
-:is(#action-area, #new-post-form) .change-textarea-size a.btn:hover {
+:is(#action-area, #new-post-form, #new-thread-form) .change-textarea-size a.btn:hover {
     text-decoration: none;
     background: var(--p-gray-2);
 }
@@ -2276,73 +2284,23 @@ a.btn.btn-default.button.button-close {
     margin: 0rem 0rem;
 }
 
+.owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
+a.btn.btn-default.button.button-close:hover {
+    background: transparent !important;
+}
+
 .owindow input.text {
     border: none;
     border-bottom: solid 0.1rem var(--p-gray-4);
     padding: 0rem 0.5rem;
     background-color: transparent;
     color: var(--p-gray-4);
+    width: 100%;
 }
 
 .owindow a.btn.btn-default:not(.button-close, .button-cancel):hover {
     border-color: var(--p-theme-color-dark);
     background: var(--p-gray-1);
-}
-
-.owindow .btn, 
-.owindow .button-bar a,
-.owindow a.btn.btn-default  {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem 0.5rem;
-    border: solid 0.1rem var(--p-gray-3);
-    border-radius: var(--p-border-radius-small);
-    background-color: var(--p-gray-0);
-    color: var(--p-gray-5);
-    font-size: var(--p-font-size-small);
-    font-weight: normal;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0.25rem 0.25rem;
-    padding: 0.25rem 0.5rem;
-    transition: all var(--p-animation-duration-short);
-}
-
-.owindow .btn:hover {
-    background-color: var(--p-gray-1);
-    border-color: var(--p-gray-4);
-    box-shadow: 0 0.125rem 0.25rem var(--p-light-transparent-0-1);
-}
-
-.owindow .btn:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.owindow .btn-primary {
-    background-color: var(--p-theme-color);
-    border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray);
-}
-
-.owindow .btn-primary:hover {
-    background-color: var(--p-theme-color-dark) !important;
-    border-color: var(--p-theme-color-dark) !important;
-    color: var(--p-white-gray) !important;
-}
-
-.owindow .btn-danger {
-    background-color: var(--p-warning-color);
-    border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray);
-    margin-left: 0.25rem;
-}
-
-.owindow .btn-danger:hover {
-    background-color: var(--p-warning-color-dark);
-    border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray) !important;
 }
 
 .owindow:has(img[src*="userkarma"]) div[style="margin-top: 10px"] {
@@ -2352,6 +2310,77 @@ a.btn.btn-default.button.button-close {
     gap: 0.5rem;
     flex-direction: row-reverse;
 }
+
+/* General Button Classes */
+
+:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--p-button-padding);
+    border: var(--p-button-border);
+    border-radius: var(--p-border-radius-small);
+    background-color: var(--p-button-background-color);
+    color: var(--p-button-text-color);
+    font-size: var(--p-button-font-size);
+    font-weight: normal;
+    text-decoration: none;
+    margin: var(--p-button-margin);
+    transition: all var(--p-animation-duration-short);
+}
+
+:where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):hover {
+    border-color: var(--p-button-hover-border-color);
+    background-color: var(--p-button-hover-background-color);
+    color: var(--p-button-hover-color);
+}
+
+:where(:where(a, input, button).button,
+:where(a, input, button).btn,
+:where(a, input, button).button.default,
+:where(a, input, button).btn.default,
+:where(a, input, button).button.btn-default,
+:where(a, input, button).btn.btn-default):focus-visible {
+    outline: solid 0.15rem var(--p-theme-color);
+}
+
+:is(a, input, button).danger,
+:is(a, input, button).btn-danger {
+    background-color: var(--p-warning-color);
+    border-color: var(--p-warning-color-dark);
+    color: var(--p-white-gray);
+}
+
+:is(a, input, button).danger:hover,
+:is(a, input, button).btn-danger:hover {
+    background-color: var(--p-warning-color-dark);
+    color: var(--p-white-gray);
+}
+ 
+:is(a, input, button).primary,
+:is(a, input, button).btn-primary {
+    background-color: var(--p-theme-color);
+    border-color: var(--p-theme-color-dark);
+    color: var(--p-white-gray);
+}
+
+:is(a, input, button).primary:hover,
+:is(a, input, button).btn-primary:hover {
+    background-color: var(--p-theme-color-dark);
+    border-color: var(--p-theme-color-dark);
+    color: var(--p-white-gray);
+}
+
 
 /* Saving Pages */
 
