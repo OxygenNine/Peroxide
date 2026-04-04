@@ -1473,6 +1473,10 @@ div#main-content #page-options-bottom > a, div#main-content #page-options-bottom
     align-items: center;
     text-align: center;
     flex-basis: 6rem;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
     flex-grow: 1;
     height: 2rem;
     box-shadow: inset 0rem -0.075rem 0rem var(--p-page-option-bottom-button-border-color);
