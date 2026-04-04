@@ -1491,7 +1491,7 @@ div#page-options-bottom > a#more-options-button {
     box-shadow: none;
     margin: 0rem 0.25rem;
     background-color: var(--p-page-option-bottom-button-more-background-color);
-    color: var(--p-page-option-bottom-button-more-color);
+    color: var(--p-page-option-bottom-button-more-color) !important;
     border-radius: var(--p-border-radius-medium);
     flex-basis: 4rem;
 }
@@ -1501,7 +1501,7 @@ div#page-options-bottom-2 {
 }
 
 div#page-options-bottom-2 > a#delete-button {
-    color: var(--p-warning-color);
+    color: var(--p-warning-color) !important;
     box-shadow: inset 0rem -0.075rem 0rem var(--p-warning-color);
 }
 
@@ -2643,7 +2643,7 @@ a.btn.btn-default.button.button-close {
     font-size: 0;
     padding: 0;
     border: none;
-    background: transparent;
+    background: transparent !important;
     z-index: -1;
     cursor: pointer;
     backdrop-filter: blur(5px);
@@ -2686,13 +2686,9 @@ a.btn.btn-default.button.button-close:hover {
 :where(a, input, button).btn.default,
 :where(a, input, button).button.btn-default,
 :where(a, input, button).btn.btn-default,
-
-.owindow :where(:where(a, input, button).button,
-:where(a, input, button).btn,
-:where(a, input, button).button.default,
-:where(a, input, button).btn.default,
-:where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default) {
+:where(a, input, button).btn-default,
+:is(.owindow .button-bar a)
+{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2700,7 +2696,7 @@ a.btn.btn-default.button.button-close:hover {
     border: var(--p-button-border);
     border-radius: var(--p-border-radius-small);
     background-color: var(--p-button-background-color);
-    color: var(--p-button-text-color) !important;
+    color: var(--p-button-text-color);
     font-size: var(--p-button-font-size);
     font-weight: normal;
     text-decoration: none;
@@ -2709,83 +2705,88 @@ a.btn.btn-default.button.button-close:hover {
     text-decoration: none !important;
 }
 
-:where(:where(a, input, button).button,
-:where(a, input, button).btn,
-:where(a, input, button).button.default,
-:where(a, input, button).btn.default,
-:where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default):hover,
-
-.owindow :where(:where(a, input, button).button,
-:where(a, input, button).btn,
-:where(a, input, button).button.default,
-:where(a, input, button).btn.default,
-:where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default):hover {
+:is(
+    :where(a, input, button).button,
+    :where(a, input, button).btn,
+    :where(a, input, button).button.default,
+    :where(a, input, button).btn.default,
+    :where(a, input, button).button.btn-default,
+    :where(a, input, button).btn.btn-default,
+    :where(a, input, button).btn-default,
+    :is(.owindow .button-bar a)
+):hover
+{
     border-color: var(--p-button-hover-border-color);
     background-color: var(--p-button-hover-background-color);
-    color: var(--p-button-hover-color) !important;
+    color: var(--p-button-hover-color);
     text-decoration: none !important;
 }
 
-:where(:where(a, input, button).button,
-:where(a, input, button).btn,
-:where(a, input, button).button.default,
-:where(a, input, button).btn.default,
-:where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default):focus-visible,
-
-.owindow :where(:where(a, input, button).button,
-:where(a, input, button).btn,
-:where(a, input, button).button.default,
-:where(a, input, button).btn.default,
-:where(a, input, button).button.btn-default,
-:where(a, input, button).btn.btn-default):focus-visible {
+:is(
+    :where(a, input, button).button,
+    :where(a, input, button).btn,
+    :where(a, input, button).button.default,
+    :where(a, input, button).btn.default,
+    :where(a, input, button).button.btn-default,
+    :where(a, input, button).btn.btn-default,
+    :where(a, input, button).btn-default,
+    :is(.owindow .button-bar a)
+):focus-visible {
     outline: solid 0.15rem var(--p-theme-color);
 }
 
-:is(a, input, button).danger,
-:is(a, input, button).btn-danger,
-
-.owindow :where(:is(a, input, button).danger,
-:is(a, input, button).btn-danger) {
+:root :is(
+    :where(a, input, button).danger,
+    :where(a, input, button).btn-danger,
+    :is(.owindow .button-bar a).danger
+) {
     background-color: var(--p-warning-color);
     border-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray) !important;
+    color: var(--p-white-gray);
     text-decoration: none !important;
 }
 
-:is(a, input, button).danger:hover,
-:is(a, input, button).btn-danger:hover,
-
-.owindow :where(:is(a, input, button).danger:hover,
-:is(a, input, button).btn-danger:hover) {
+:root :is(
+    :where(a, input, button).danger:hover,
+    :where(a, input, button).btn-danger:hover,
+    :is(.owindow .button-bar a).danger:hover
+) {
     background-color: var(--p-warning-color-dark);
-    color: var(--p-white-gray) !important;
+    color: var(--p-white-gray);
     text-decoration: none !important;
 }
- 
-:is(a, input, button).primary,
-:is(a, input, button).btn-primary,
 
-.owindow :where(:is(a, input, button).primary,
-:is(a, input, button).btn-primary) {
+:root :is(
+    :where(a, input, button).primary,
+    :where(a, input, button).btn-primary,
+    :is(.owindow .button-bar a).primary
+) {
     background-color: var(--p-theme-color);
     border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray) !important;
+    color: var(--p-white-gray);
     text-decoration: none !important;
 }
 
-:is(a, input, button).primary:hover,
-:is(a, input, button).btn-primary:hover,
-
-.owindow :where(:is(a, input, button).primary:hover,
-:is(a, input, button).btn-primary:hover) {
+:root :is(
+    :where(a, input, button).primary:hover,
+    :where(a, input, button).btn-primary:hover,
+    :is(.owindow .button-bar a).primary:hover
+) {
     background-color: var(--p-theme-color-dark);
     border-color: var(--p-theme-color-dark);
-    color: var(--p-white-gray) !important;
+    color: var(--p-white-gray);
     text-decoration: none !important;
 }
+
+a:is(.btn, .btn-default, .button, .button-default):visited {
+    color: var(--p-button-text-color) !important;
+}
+
+a:is(.btn-primary, .btn-primary:hover, .btn-danger, .btn-danger:hover):visited {
+    color: var(--p-white-gray) !important;
+}
+
+
 
 
 /* Saving Pages */
@@ -4000,6 +4001,10 @@ span.rss-icon {
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
+    -webkit-mask-image: var(--p-icon-rss);
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
     padding: 0;
     font-size: 0;
 }

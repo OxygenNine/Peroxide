@@ -850,6 +850,10 @@ span.rss-icon {
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
+    -webkit-mask-image: var(--p-icon-rss);
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
     padding: 0;
     font-size: 0;
 }
