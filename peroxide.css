@@ -1490,7 +1490,7 @@ div#main-content #page-options-bottom > a, div#main-content #page-options-bottom
 div#page-options-bottom > a#more-options-button {
     box-shadow: none;
     margin: 0rem 0.25rem;
-    background-color: var(--p-page-option-bottom-button-more-background-color);
+    background-color: var(--p-page-option-bottom-button-more-background-color) !important;
     color: var(--p-page-option-bottom-button-more-color) !important;
     border-radius: var(--p-border-radius-medium);
     flex-basis: 4rem;
