@@ -495,7 +495,7 @@ a.btn.btn-default.button.button-close-message::before {
 }
 
 a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
-    font-size: 0;
+    font-size: 0 !important;
 }
 
 a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"]::before {

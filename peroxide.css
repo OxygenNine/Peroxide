@@ -271,6 +271,7 @@
     --p-default-button-hover-background-color: var(--p-gray-0);
     --p-default-button-hover-color: var(--p-gray-4);
     --p-default-button-padding: 0.3rem 0.8rem;
+    --p-default-button-margin: 0.2rem 0.1rem;
 
     --p-scp-image-block-caption-background-color: var(--p-gray-5);
     --p-scp-image-block-caption-color: var(--p-gray-2);
@@ -341,6 +342,7 @@
     --p-icon-warning: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktZXhjbGFtYXRpb24tY2lyY2xlLWZpbGwiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZD0iTTE2IDhBOCA4IDAgMSAxIDAgOGE4IDggMCAwIDEgMTYgMHpNOCA0YS45MDUuOTA1IDAgMCAwLS45Ljk5NWwuMzUgMy41MDdhLjU1Mi41NTIgMCAwIDAgMS4xIDBsLjM1LTMuNTA3QS45MDUuOTA1IDAgMCAwIDggNHptLjAwMiA2YTEgMSAwIDEgMCAwIDIgMSAxIDAgMCAwIDAtMnoiLz4KPC9zdmc+");
     --p-icon-toc-collapse: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktY2hldnJvbi1iYXItZG93biIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjY0NiA0LjE0NmEuNS41IDAgMCAxIC43MDggMEw4IDcuNzkzbDMuNjQ2LTMuNjQ3YS41LjUgMCAwIDEgLjcwOC43MDhsLTQgNGEuNS41IDAgMCAxLS43MDggMGwtNC00YS41LjUgMCAwIDEgMC0uNzA4ek0xIDExLjVhLjUuNSAwIDAgMSAuNS0uNWgxM2EuNS41IDAgMCAxIDAgMWgtMTNhLjUuNSAwIDAgMS0uNS0uNXoiLz4KPC9zdmc+');
     --p-icon-rss: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxMCAxMCIgdmVyc2lvbj0iMS4xIj4KICAgIAogICAgPHRpdGxlPnJzcyBbIzEwMjNdPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+Cgo8L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iRHJpYmJibGUtTGlnaHQtUHJldmlldyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2NS4wMDAwMDAsIC0zNjQ0LjAwMDAwMCkiIGZpbGw9IiMwMDAwMDAiPgogICAgICAgICAgICA8ZyBpZD0iaWNvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU2LjAwMDAwMCwgMTYwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTIwOSwzNDkyIEwyMDksMzQ5NCBMMjEwLjk3MTgwMywzNDk0IEMyMTAuOTcxODAzLDM0OTIuODk1IDIxMC4wODk0MjEsMzQ5MiAyMDksMzQ5MiBNMjA5LDM0ODggTDIwOSwzNDkwIEMyMTAuOTcxODAzLDM0OTAgMjEzLjA4NDU5LDM0OTIgMjEzLjA4NDU5LDM0OTQgTDIxNS4wNTYzOTQsMzQ5NCBDMjE1LjA1NjM5NCwzNDkxIDIxMS45NTc3MDUsMzQ4OCAyMDksMzQ4OCBNMjE5LDM0OTQgTDIxNy4wMjgxOTcsMzQ5NCBDMjE3LjAyODE5NywzNDkwIDIxMi45NDM2MDYsMzQ4NiAyMDksMzQ4NiBMMjA5LDM0ODQgQzIxMy45Mjk1MDgsMzQ4NCAyMTksMzQ4OCAyMTksMzQ5NCIgaWQ9InJzcy1bIzEwMjNdIj4KCjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+    --p-icon-sidebar-alt: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktbGlzdCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjUgMTJhLjUuNSAwIDAgMSAuNS0uNWgxMGEuNS41IDAgMCAxIDAgMUgzYS41LjUgMCAwIDEtLjUtLjV6bTAtNGEuNS41IDAgMCAxIC41LS41aDEwYS41LjUgMCAwIDEgMCAxSDNhLjUuNSAwIDAgMS0uNS0uNXptMC00YS41LjUgMCAwIDEgLjUtLjVoMTBhLjUuNSAwIDAgMSAwIDFIM2EuNS41IDAgMCAxLS41LS41eiIvPgo8L3N2Zz4=");
 }
 
 :root {
@@ -871,6 +873,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul {
     background-color: var(--p-top-bar-submenu-background-color);
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
     z-index: 1;
+    overflow-y: visible;
 }
 
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul::before {
@@ -1101,6 +1104,8 @@ div#side-bar:hover::after {
     div#side-bar::after {
         top: calc(var(--p-header-height) * 0);
         z-index: 102;
+        background-color: var(--p-gray-4);
+        mask: var(--p-icon-sidebar-alt) center / 1.5rem no-repeat;
     }
 
     div#side-bar {
@@ -2052,6 +2057,10 @@ div.error-block a {
     color: var(--p-warning-color-light);
 }
 
+div.error-block:has(:where(a, em)) {
+    display: block;
+}
+
 /* Pager */
 
 .pager span {
@@ -2692,7 +2701,7 @@ a.btn.btn-default.button.button-close:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--p-button-padding);
+    padding: var(--p-button-padding) !important;
     border: var(--p-button-border);
     border-radius: var(--p-border-radius-small);
     background-color: var(--p-button-background-color);
@@ -2700,7 +2709,7 @@ a.btn.btn-default.button.button-close:hover {
     font-size: var(--p-button-font-size);
     font-weight: normal;
     text-decoration: none;
-    margin: var(--p-button-margin);
+    margin: var(--p-button-margin) !important;
     transition: all var(--p-animation-duration-short);
     text-decoration: none !important;
 }
@@ -2744,6 +2753,7 @@ a.btn.btn-default.button.button-close:hover {
     border-color: var(--p-warning-color-dark);
     color: var(--p-white-gray);
     text-decoration: none !important;
+    transition: background-color var(--p-animation-duration-short);
 }
 
 :root :is(
@@ -2751,9 +2761,10 @@ a.btn.btn-default.button.button-close:hover {
     :where(a, input, button).btn-danger:hover,
     :is(.owindow .button-bar a).danger:hover
 ) {
-    background-color: var(--p-warning-color-dark);
+    background-color: var(--p-warning-color-dark) !important;
     color: var(--p-white-gray);
     text-decoration: none !important;
+    border: initial;
 }
 
 :root :is(
@@ -3181,6 +3192,11 @@ a:hover {
     text-underline-offset: var(--p-link-underline-offset);
 }
 
+:where(#page-title, .meta-title) a:hover {
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.4rem;
+}
+
 a:visited {
     color: var(--p-link-visited-color);
 }
@@ -3259,7 +3275,7 @@ img.image {
     border-collapse: collapse;
     border-spacing: 0;
     margin: 0.5em auto;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     display: block;
 }
@@ -3423,7 +3439,29 @@ input.text {
     padding: 0.2rem 0rem;
     width: auto;
     background-color: transparent;
+    color: var(--p-gray-7);
 }
+
+.change-textarea-size a {
+    color: var(--p-gray-4);
+    background-color: var(--p-gray-1);
+    border: none;
+    border-width: unset;
+    padding: 0.5rem 0.75rem;
+    font-size: 120%;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--p-border-radius-medium);
+    transition: background-color var(--p-animation-duration-short);
+}
+
+.change-textarea-size a:hover {
+    background-color: var(--p-gray-2);
+    text-decoration: none;
+}
+
+
 
 :is(input.button, input[type="button"], input[type="submit"]):hover {
     background-color: var(--p-gray-1);
@@ -3919,7 +3957,24 @@ div.creditButton a, div.creditButton p a {
     height: auto;
     padding: 1rem 1rem;
     margin: 1rem auto;
-    width: min(30rem, 90vw);
+    width: auto;
+    max-width: 30rem;
+}
+
+.post-container.fordelete {
+    border: solid 0.1rem var(--p-warning-color);
+    border-radius: var(--p-border-radius-medium);
+    padding: 1rem 0.75rem;
+}
+
+.forum-thread-box .action-area {
+    margin: 1rem auto;
+    max-width: 30rem;
+    padding: 0.4rem 1.35rem;
+    border: none;
+    background-color: var(--p-gray-0);
+    border-radius: var(--p-border-radius-medium);
+    box-shadow: var(--p-shadow-1);
 }
 
 .forum-thread-box .description-block .statistics a {
@@ -3930,7 +3985,7 @@ div.creditButton a, div.creditButton p a {
 }
 
 .thread-container .post .head {
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: var(--p-gray-1);
     border-radius: var(--p-border-radius-medium);
 }
@@ -3951,6 +4006,31 @@ div.creditButton a, div.creditButton p a {
 
 .thread-container .post .long .changes a {
     color: var(--p-theme-color);
+}
+
+.thread-container .post .long .revisions table tr.active td {
+    background-color: transparent;
+}
+
+.thread-container .post .long .revisions table tr.active td:first-child::before {
+    content: '当前';
+    display: inline-block;
+    position: absolute;
+    transform: translate(-2.7rem, -0.1rem);
+    color: var(--p-gray-7);
+    background-color: var(--p-gray-2);
+    font-size: 85%;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--p-border-radius-small);
+    font-weight: normal;
+}
+
+#page-content :is(div.options, div.short) a[onclick*="togglePostFold"] {
+    font-size: 85%;
+    padding: 0.1rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: var(--p-gray-3);
 }
 
 .thread-container .post.folded .short {
@@ -4036,6 +4116,7 @@ div.new-post a, div.buttons input, input.button, button, a.button, #page-content
     font-weight: normal;
     transition: border-color var(--p-animation-duration-short);
     padding: var(--p-default-button-padding);
+    margin: var(--p-default-button-margin);
     text-align: center;
     display: inline-block;
 }
@@ -4900,6 +4981,24 @@ div#wd-editor-toolbar-panel>div ul {
 
 .side-block.sns img {
     display: block !important;
+}
+
+/* component分类警告栏 */
+
+div#u-component-top-box {
+    background-color: var(--p-theme-color-dark);
+    padding: 1rem 1rem;
+    max-width: min(calc(100% - 2rem), 32rem);
+    color: var(--p-gray-2);
+    text-align: center;
+    border-radius: var(--p-border-radius-large);
+    box-shadow: var(--p-shadow-2);
+}
+
+div#u-component-header {
+    font-weight: bold;
+    font-size: 150%;
+    margin-bottom: -1rem;
 } 
 /* === 结束 Capabilities.css === */ 
  
@@ -5401,7 +5500,7 @@ a.btn.btn-default.button.button-close-message::before {
 }
 
 a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
-    font-size: 0;
+    font-size: 0 !important;
 }
 
 a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"]::before {

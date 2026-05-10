@@ -508,6 +508,7 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul {
     background-color: var(--p-top-bar-submenu-background-color);
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
     z-index: 1;
+    overflow-y: visible;
 }
 
 div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul::before {
@@ -738,6 +739,8 @@ div#side-bar:hover::after {
     div#side-bar::after {
         top: calc(var(--p-header-height) * 0);
         z-index: 102;
+        background-color: var(--p-gray-4);
+        mask: var(--p-icon-sidebar-alt) center / 1.5rem no-repeat;
     }
 
     div#side-bar {
@@ -1689,6 +1692,10 @@ div.error-block a {
     color: var(--p-warning-color-light);
 }
 
+div.error-block:has(:where(a, em)) {
+    display: block;
+}
+
 /* Pager */
 
 .pager span {
@@ -2329,7 +2336,7 @@ a.btn.btn-default.button.button-close:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--p-button-padding);
+    padding: var(--p-button-padding) !important;
     border: var(--p-button-border);
     border-radius: var(--p-border-radius-small);
     background-color: var(--p-button-background-color);
@@ -2337,7 +2344,7 @@ a.btn.btn-default.button.button-close:hover {
     font-size: var(--p-button-font-size);
     font-weight: normal;
     text-decoration: none;
-    margin: var(--p-button-margin);
+    margin: var(--p-button-margin) !important;
     transition: all var(--p-animation-duration-short);
     text-decoration: none !important;
 }
@@ -2381,6 +2388,7 @@ a.btn.btn-default.button.button-close:hover {
     border-color: var(--p-warning-color-dark);
     color: var(--p-white-gray);
     text-decoration: none !important;
+    transition: background-color var(--p-animation-duration-short);
 }
 
 :root :is(
@@ -2388,9 +2396,10 @@ a.btn.btn-default.button.button-close:hover {
     :where(a, input, button).btn-danger:hover,
     :is(.owindow .button-bar a).danger:hover
 ) {
-    background-color: var(--p-warning-color-dark);
+    background-color: var(--p-warning-color-dark) !important;
     color: var(--p-white-gray);
     text-decoration: none !important;
+    border: initial;
 }
 
 :root :is(

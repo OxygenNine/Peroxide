@@ -144,3 +144,21 @@
 .side-block.sns img {
     display: block !important;
 }
+
+/* component分类警告栏 */
+
+div#u-component-top-box {
+    background-color: var(--p-theme-color-dark);
+    padding: 1rem 1rem;
+    max-width: min(calc(100% - 2rem), 32rem);
+    color: var(--p-gray-2);
+    text-align: center;
+    border-radius: var(--p-border-radius-large);
+    box-shadow: var(--p-shadow-2);
+}
+
+div#u-component-header {
+    font-weight: bold;
+    font-size: 150%;
+    margin-bottom: -1rem;
+}

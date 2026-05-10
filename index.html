@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>过氧化物 基础版式</title>
+        <style>
+
+            html {
+                font-size: 16px;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div#logoContainer {
+                width: min(12rem, 75vw);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div.logo {
+                background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iODA2IiBoZWlnaHQ9IjgwNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgb3ZlcmZsb3c9ImhpZGRlbiI+PGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMCI+PHJlY3QgeD0iMTc5NyIgeT0iODM1IiB3aWR0aD0iODA2IiBoZWlnaHQ9IjgwNSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNzk3IC04MzUpIj48cGF0aCBkPSJNMjEwNS45NSAxMDgzLjk1QzIwMjAuNjQgMTA4My45NSAxOTUxLjQ4IDExNTMuMDIgMTk1MS40OCAxMjM4LjIzIDE5NTEuNDggMTMyMy40NCAyMDIwLjY0IDEzOTIuNTEgMjEwNS45NSAxMzkyLjUxIDIxOTEuMjcgMTM5Mi41MSAyMjYwLjQzIDEzMjMuNDQgMjI2MC40MyAxMjM4LjIzIDIyNjAuNDMgMTE1My4wMiAyMTkxLjI3IDEwODMuOTUgMjEwNS45NSAxMDgzLjk1Wk0yMTk5Ljk4IDg4Mi45OTNDMjEyNi40OCA4ODIuOTkzIDIwNTguMTkgOTA1LjMxMiAyMDAxLjU0IDk0My41MzVMMTk4OS41MiA5NTIuNTExIDIwMTQuMDggOTQzLjUzM0MyMDQzLjEgOTM0LjUxOCAyMDczLjk2IDkyOS42NjEgMjEwNS45NSA5MjkuNjYxIDIyNzYuNTggOTI5LjY2MSAyNDE0LjkgMTA2Ny44MSAyNDE0LjkgMTIzOC4yMyAyNDE0LjkgMTQwOC42NSAyMjc2LjU4IDE1NDYuOCAyMTA1Ljk1IDE1NDYuOCAyMDczLjk2IDE1NDYuOCAyMDQzLjEgMTU0MS45NCAyMDE0LjA4IDE1MzIuOTNMMTk5My40MyAxNTI1LjM4IDIwMDEuNTQgMTUzMS40M0MyMDU4LjE5IDE1NjkuNjYgMjEyNi40OCAxNTkxLjk4IDIxOTkuOTggMTU5MS45OCAyMjQ4Ljk5IDE1OTEuOTggMjI5NS42OCAxNTgyLjA2IDIzMzguMTQgMTU2NC4xMkwyMzY2LjQ5IDE1NDguNzUgMjM2MC4xOSAxNTI4LjVDMjM1OC43MiAxNTIxLjMxIDIzNTcuOTUgMTUxMy44NiAyMzU3Ljk1IDE1MDYuMjIgMjM1Ny45NSAxNDQ1LjE3IDI0MDcuNSAxMzk1LjY3IDI0NjguNjMgMTM5NS42NyAyNDc2LjI3IDEzOTUuNjcgMjQ4My43MyAxMzk2LjQ1IDI0OTAuOTQgMTM5Ny45MkwyNTExLjM4IDE0MDQuMjYgMjUyNy4wMiAxMzc1LjQ3QzI1NDQuOTggMTMzMy4wNiAyNTU0LjkyIDEyODYuNDMgMjU1NC45MiAxMjM3LjQ4IDI1NTQuOTIgMTA0MS43IDIzOTYuMDEgODgyLjk5MyAyMTk5Ljk4IDg4Mi45OTNaTTIyMDIuNjcgODM1LjAwOEMyMjg0LjMyIDgzNS41MjMgMjM2Ni4yNCA4NjAuNzQ0IDI0MzYuNTEgOTExLjYyNSAyNTk3LjEzIDEwMjcuOTMgMjY0OS4xMSAxMjQzLjY5IDI1NTkuMDMgMTQyMC4yM0wyNTQ5LjIzIDE0MTUuMjVDMjYzNi44NiAxMjQzLjUyIDI1ODYuMyAxMDMzLjY0IDI0MzAuMDYgOTIwLjUxNSAyMjczLjgxIDgwNy4zODYgMjA1OC4zNyA4MjQuNjY3IDE5MjIuMjEgOTYxLjI1IDE4ODguMTcgOTk1LjM5NiAxODYxLjYyIDEwMzQuNDYgMTg0Mi43MSAxMDc2LjI3TDE4NDEuNTIgMTA3OS4yNiAxODQ5Ljc2IDEwNjUuNzFDMTg2MC44NyAxMDQ5LjI5IDE4NzMuNTEgMTAzNCAxODg3LjQ5IDEwMjAuMDRMMTkwNi43NCAxMDAyLjU2IDE5MDkuNzYgOTk4LjUzN0MxOTc4Ljc0IDkxNS4wNTEgMjA4My4xNCA4NjEuODM2IDIxOTkuOTggODYxLjgzNiAyNDA3LjcxIDg2MS44MzYgMjU3Ni4xIDEwMzAuMDIgMjU3Ni4xIDEyMzcuNDggMjU3Ni4xIDEyODkuMzUgMjU2NS41NyAxMzM4Ljc2IDI1NDYuNTQgMTM4My43TDI1MjkuOTQgMTQxNC4yNCAyNTMwLjUyIDE0MTQuNTVDMjU1OS45NiAxNDM0LjQyIDI1NzkuMzIgMTQ2OC4wNiAyNTc5LjMyIDE1MDYuMjIgMjU3OS4zMiAxNTY3LjI4IDI1MjkuNzYgMTYxNi43NyAyNDY4LjYzIDE2MTYuNzcgMjQzMC40MyAxNjE2Ljc3IDIzOTYuNzQgMTU5Ny40NCAyMzc2Ljg1IDE1NjguMDNMMjM3Ni40NiAxNTY3LjMxIDIzNDYuMzggMTU4My42MUMyMzAxLjM5IDE2MDIuNjIgMjI1MS45MiAxNjEzLjEzIDIxOTkuOTggMTYxMy4xMyAyMDk2LjEyIDE2MTMuMTMgMjAwMi4wOSAxNTcxLjA5IDE5MzQuMDMgMTUwMy4xMUwxOTEwLjE3IDE0NzYuODkgMTkwOS40MyAxNDc2LjM0QzE4ODYuNTQgMTQ1Ny40NyAxODY2LjQyIDE0MzUuMzggMTg0OS43NiAxNDEwLjc1TDE4NDQuNjEgMTQwMi4yOCAxODQ2Ljk4IDE0MDcuNzhDMTg1Ny4xNyAxNDI4LjgyIDE4NjkuMzcgMTQ0OS4xOSAxODgzLjYyIDE0NjguNjQgMTk5Ny41NiAxNjI0LjIgMjIwNy45MSAxNjczLjc5IDIzNzkuNDcgMTU4NS41M0wyMzg0LjUxIDE1OTUuMjlDMjIwOC4xMyAxNjg2LjAyIDE5OTEuODggMTYzNS4wNCAxODc0Ljc0IDE0NzUuMTIgMTgyMy41IDE0MDUuMTUgMTc5Ny44OSAxMzIzLjQ0IDE3OTcuMDIgMTI0MS45TDE3OTcuMDkgMTIzOS45NCAxNzk3IDEyMzguMjMgMTc5Ny40IDEyMzAuMyAxNzk4LjE2IDEyMDdDMTgwNS4yMyAxMTE0LjEzIDE4NDQuNDMgMTAyMy43MSAxOTE0LjQyIDk1My41MDMgMTk4NC40MSA4ODMuMjk2IDIwNzQuNzggODQzLjc1MiAyMTY3LjcyIDgzNi4yOTcgMjE3OS4zNCA4MzUuMzY1IDIxOTEgODM0LjkzNCAyMjAyLjY3IDgzNS4wMDhaIiBmaWxsPSIjMjYyNjI2IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9zdmc+");
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+
+            div#footer {
+                text-align: center;
+                width: 100%;
+                background-color: #191919;
+                color: #cccccc;
+                padding: 1rem 0;
+                font-family: "Tw Cen MT", "Noto Sans SC", sans-serif;
+            }
+
+            div#footer p {
+                margin: 0.5rem auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="logoContainer">
+            <div class="logo"></div>
+        </div>
+        <div id="footer">
+            <p>由 <a href="https://scp-wiki-cn.wikidot.com/o9">OxygenNine</a> 开发 | <a href="https://scp-wiki-cn.wikidot.com/theme:peroxide">SCP-CN Wiki</a></p>
+            <p><span><a href="https://creativecommons.org/licenses/by-sa/4.0/" style="font-size: 0.8rem; color: #4a4a4a;">CC-BY-SA 4.0 International</a></span></p>
+        </div>
+    </body>
+</html>

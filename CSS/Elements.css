@@ -30,6 +30,11 @@ a:hover {
     text-underline-offset: var(--p-link-underline-offset);
 }
 
+:where(#page-title, .meta-title) a:hover {
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.4rem;
+}
+
 a:visited {
     color: var(--p-link-visited-color);
 }
@@ -108,7 +113,7 @@ img.image {
     border-collapse: collapse;
     border-spacing: 0;
     margin: 0.5em auto;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     display: block;
 }
@@ -272,7 +277,29 @@ input.text {
     padding: 0.2rem 0rem;
     width: auto;
     background-color: transparent;
+    color: var(--p-gray-7);
 }
+
+.change-textarea-size a {
+    color: var(--p-gray-4);
+    background-color: var(--p-gray-1);
+    border: none;
+    border-width: unset;
+    padding: 0.5rem 0.75rem;
+    font-size: 120%;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--p-border-radius-medium);
+    transition: background-color var(--p-animation-duration-short);
+}
+
+.change-textarea-size a:hover {
+    background-color: var(--p-gray-2);
+    text-decoration: none;
+}
+
+
 
 :is(input.button, input[type="button"], input[type="submit"]):hover {
     background-color: var(--p-gray-1);
@@ -768,7 +795,24 @@ div.creditButton a, div.creditButton p a {
     height: auto;
     padding: 1rem 1rem;
     margin: 1rem auto;
-    width: min(30rem, 90vw);
+    width: auto;
+    max-width: 30rem;
+}
+
+.post-container.fordelete {
+    border: solid 0.1rem var(--p-warning-color);
+    border-radius: var(--p-border-radius-medium);
+    padding: 1rem 0.75rem;
+}
+
+.forum-thread-box .action-area {
+    margin: 1rem auto;
+    max-width: 30rem;
+    padding: 0.4rem 1.35rem;
+    border: none;
+    background-color: var(--p-gray-0);
+    border-radius: var(--p-border-radius-medium);
+    box-shadow: var(--p-shadow-1);
 }
 
 .forum-thread-box .description-block .statistics a {
@@ -779,7 +823,7 @@ div.creditButton a, div.creditButton p a {
 }
 
 .thread-container .post .head {
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: var(--p-gray-1);
     border-radius: var(--p-border-radius-medium);
 }
@@ -800,6 +844,31 @@ div.creditButton a, div.creditButton p a {
 
 .thread-container .post .long .changes a {
     color: var(--p-theme-color);
+}
+
+.thread-container .post .long .revisions table tr.active td {
+    background-color: transparent;
+}
+
+.thread-container .post .long .revisions table tr.active td:first-child::before {
+    content: '当前';
+    display: inline-block;
+    position: absolute;
+    transform: translate(-2.7rem, -0.1rem);
+    color: var(--p-gray-7);
+    background-color: var(--p-gray-2);
+    font-size: 85%;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--p-border-radius-small);
+    font-weight: normal;
+}
+
+#page-content :is(div.options, div.short) a[onclick*="togglePostFold"] {
+    font-size: 85%;
+    padding: 0.1rem 0.5rem;
+    border: none;
+    background-color: transparent;
+    color: var(--p-gray-3);
 }
 
 .thread-container .post.folded .short {
@@ -885,6 +954,7 @@ div.new-post a, div.buttons input, input.button, button, a.button, #page-content
     font-weight: normal;
     transition: border-color var(--p-animation-duration-short);
     padding: var(--p-default-button-padding);
+    margin: var(--p-default-button-margin);
     text-align: center;
     display: inline-block;
 }
