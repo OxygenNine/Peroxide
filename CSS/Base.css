@@ -1106,8 +1106,8 @@ div#main-content div#page-options-bottom-2 {
 }
 
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
-    margin: 0rem;;
-    margin-bottom: 0.5rem;
+    margin: 0rem !important;
+    margin-bottom: 0.5rem !important;
     display: inline-flex;
     justify-content: center;
     align-items: center;
