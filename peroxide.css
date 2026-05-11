@@ -1471,8 +1471,8 @@ div#main-content div#page-options-bottom-2 {
 }
 
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
-    margin: 0rem;;
-    margin-bottom: 0.5rem;
+    margin: 0rem !important;
+    margin-bottom: 0.5rem !important;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -2660,7 +2660,7 @@ a.btn.btn-default.button.button-close {
     margin: 0rem 0rem;
 }
 
-.owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
+:root .owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
 a.btn.btn-default.button.button-close:hover {
     background: transparent !important;
 }
@@ -2764,7 +2764,6 @@ a.btn.btn-default.button.button-close:hover {
     background-color: var(--p-warning-color-dark) !important;
     color: var(--p-white-gray);
     text-decoration: none !important;
-    border: initial;
 }
 
 :root :is(

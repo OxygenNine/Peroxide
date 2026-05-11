@@ -2295,7 +2295,7 @@ a.btn.btn-default.button.button-close {
     margin: 0rem 0rem;
 }
 
-.owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
+:root .owindow .button-bar .btn[onclick*="cleanAll"]:hover, 
 a.btn.btn-default.button.button-close:hover {
     background: transparent !important;
 }
@@ -2399,7 +2399,6 @@ a.btn.btn-default.button.button-close:hover {
     background-color: var(--p-warning-color-dark) !important;
     color: var(--p-white-gray);
     text-decoration: none !important;
-    border: initial;
 }
 
 :root :is(
