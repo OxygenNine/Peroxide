@@ -275,7 +275,7 @@ input.text {
     border-bottom: solid 0.1rem var(--p-gray-4);
     margin: 0;
     padding: 0.2rem 0rem;
-    width: auto;
+    width: 100% !important;
     background-color: transparent;
     color: var(--p-gray-7);
 }
@@ -1348,7 +1348,7 @@ div.p-bqc {
 .wd-editor-toolbar-panel ul li ul li a {
     height: 2rem;
     width: 2rem;
-    background: var(--p-gray-1);
+    background-color: var(--p-gray-1);
     border: none;
     border-radius: 0.3rem;
     margin: 0.3rem 0.1rem;
@@ -1383,7 +1383,8 @@ div.p-bqc {
 }
 
 .wd-editor-toolbar-panel ul li a:hover {
-    background: var(--p-gray-1);
+    background-color: var(--p-gray-1);
+    outline: solid 1.5px var(--p-theme-color-light);
 }
 
 .wd-editor-toolbar-panel ul li a:hover::before {
@@ -1405,6 +1406,14 @@ div#wd-editor-toolbar-panel>div ul {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+}
+
+div#wd-editor-toolbar-panel > div ul li ul {
+    background-color: var(--p-white-transparent-0-6);
+    width: auto;
+    border-radius: var(--p-border-radius-small);
+    padding: 0.25rem;
+    display: block;
 }
 
 .wd-editor-toolbar-panel ul li a::before {

@@ -3436,7 +3436,7 @@ input.text {
     border-bottom: solid 0.1rem var(--p-gray-4);
     margin: 0;
     padding: 0.2rem 0rem;
-    width: auto;
+    width: 100% !important;
     background-color: transparent;
     color: var(--p-gray-7);
 }
@@ -4509,7 +4509,7 @@ div.p-bqc {
 .wd-editor-toolbar-panel ul li ul li a {
     height: 2rem;
     width: 2rem;
-    background: var(--p-gray-1);
+    background-color: var(--p-gray-1);
     border: none;
     border-radius: 0.3rem;
     margin: 0.3rem 0.1rem;
@@ -4544,7 +4544,8 @@ div.p-bqc {
 }
 
 .wd-editor-toolbar-panel ul li a:hover {
-    background: var(--p-gray-1);
+    background-color: var(--p-gray-1);
+    outline: solid 1.5px var(--p-theme-color-light);
 }
 
 .wd-editor-toolbar-panel ul li a:hover::before {
@@ -4566,6 +4567,14 @@ div#wd-editor-toolbar-panel>div ul {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+}
+
+div#wd-editor-toolbar-panel > div ul li ul {
+    background-color: var(--p-white-transparent-0-6);
+    width: auto;
+    border-radius: var(--p-border-radius-small);
+    padding: 0.25rem;
+    display: block;
 }
 
 .wd-editor-toolbar-panel ul li a::before {
@@ -5013,11 +5022,11 @@ div#u-component-header {
     --LOC-close: 'Close';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-close: '关闭';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-close: '閉じる';
 }
 
@@ -5052,7 +5061,7 @@ div#u-component-header {
     --LOC-manage-attachments: 'Manage Attachments';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-file-type-svg: 'SVG 矢量图形';
     --LOC-file-type-png: 'PNG 图像';
     --LOC-file-type-jpeg: 'JPEG 图像';
@@ -5081,7 +5090,7 @@ div#u-component-header {
     --LOC-manage-attachments: '管理附件';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-file-type-svg: 'SVG ベクターグラフィックス';
     --LOC-file-type-png: 'PNG 画像';
     --LOC-file-type-jpeg: 'JPEG 画像';
@@ -5289,13 +5298,13 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-website-tools-draft-pages: 'Draft Pages';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-website-tools-wanted-pages: '待建页面';
     --LOC-website-tools-orphaned-pages: '孤立页面';
     --LOC-website-tools-draft-pages: '草稿页面';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-website-tools-wanted-pages: '未作成ページ';
     --LOC-website-tools-orphaned-pages: '孤立ページ';
     --LOC-website-tools-draft-pages: '下書きページ';
@@ -5336,12 +5345,12 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-watchers-description: 'Those people will receive notifications when changes are made to this page or the page is commented.';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-watchers-title: '此页面的关注者　';
     --LOC-watchers-description: '当此页面或页面被评论时，这些人将收到通知。';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-watchers-title: 'このページを監視する人';
     --LOC-watchers-description: 'このページまたはページがコメントされたとき、これらの人は通知を受け取ります。';
 }
@@ -5383,14 +5392,14 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-owindow-draft-title: 'Draft Exists';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-owindow-cancel-and-leave-draft: '离开并保留草稿';
     --LOC-owindow-cancel-and-delete-draft: '离开并删除草稿';
     --LOC-owindow-draft: '你已经保存了草稿，请选择一个选项。';
     --LOC-owindow-draft-title: '已有草稿';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-owindow-cancel-and-leave-draft: '下書きを保存して終了';
     --LOC-owindow-cancel-and-delete-draft: '下書きを削除して終了';
     --LOC-owindow-draft: 'あなたは既に下書きを保存しました。選択してください。';
@@ -5430,11 +5439,11 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-page-tags: 'Tags';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-page-tags: '标签';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-page-tags: 'タグ';
 }
 
@@ -5444,11 +5453,11 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-close-message: 'Close Message';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-close-message: '关闭消息';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-close-message: 'メッセージを閉じる';
 }
 
@@ -5467,11 +5476,11 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-footnotes: 'Footnotes';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-footnotes: '脚注';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-footnotes: '脚注';
 }
 
@@ -5490,11 +5499,11 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-less-option: 'More Option';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-less-option: '更多选项';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-less-option: 'その他のオプション';
 }
 
@@ -5513,11 +5522,11 @@ a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(
     --LOC-insert-code: 'Insert Code';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-insert-code: '插入代码';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-insert-code: 'コードを挿入する';
 }
 
@@ -5536,11 +5545,11 @@ a.btn.btn-default.button.button-insert-code::before {
     --LOC-cancel: 'Cancel';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-cancel: '取消';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-cancel: 'キャンセル';
 }
 
@@ -5559,11 +5568,11 @@ a.btn.btn-default.button.button-cancel::before {
     --LOC-yes-revert: 'I know what I am doing!';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-yes-revert: '我知道我在做什么！';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-yes-revert: '私は自分が何をしているか分かっています。';
 }
 
@@ -5586,7 +5595,7 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: 'Do not revert page versions unless you really know what you are doing. You can still undo this action by reverting again later.\A';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-revert-confirm-title: '需要确认的操作';
     --LOC-revert-confirm-content-1: '你确定要回档页面吗？';
     --LOC-revert-confirm-content-2: '你正在尝试将整个页面回退到第';
@@ -5596,7 +5605,7 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: '除非你真的知道自己在做什么，否则不要轻易回退页面版本。你在之后仍然可以通过再次回退的方式撤销这次操作。\A';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-revert-confirm-title: '操作の確認';
     --LOC-revert-confirm-content-1: 'このページを元に戻しますか？';
     --LOC-revert-confirm-content-2: 'ページ全体をバージョン';
@@ -5670,11 +5679,11 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .conte
     --LOC-rename-option-delete: 'This will remove the page completely and it will not be possible to recover the data. Are you sure you want to do this?';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root:lang(ja-corrections) {
     --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
 }
 

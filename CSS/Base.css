@@ -1297,13 +1297,13 @@ input[type="text"]:focus, input[type="text"]:focus-visible) {
     flex-grow: 1;
     display: block;
     text-align: center;
-    line-height: 1.6rem;
-    padding: 0;
+    line-height: 0.8rem !important;
+    padding: 0 !important;
     color: var(--p-gray-5);
     background: var(--p-gray-1);
     border: solid 0.1rem var(--p-gray-2);
     border-radius: var(--p-border-radius-medium);
-    transition: background var(--p-animation-duration-short);
+    transition: background-color var(--p-animation-duration-short);
     width: 100%;
     min-width: unset;
 }
@@ -1367,6 +1367,7 @@ a.button {
 a[onclick*="PageRateModule.listeners.showWho"]:hover,
 a.button:hover {
     background-color: var(--p-gray-3);
+    color: var(--p-gray-7);
     text-decoration: none;
 }
 
@@ -1959,6 +1960,10 @@ table.form.grid td, table.form.grid th {
 }
 
 /* Backlinks */
+
+#action-area:has(h1+h2+h2) {
+    font-size: 0; /* 隐藏裸文本 */
+}
 
 #action-area:has(h1+h2+ul+h2) h2 {
     margin-top: 1.5rem;
