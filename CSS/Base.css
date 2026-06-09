@@ -2137,7 +2137,7 @@ form#edit-meta-newtag-form td input {
 }
 
 #action-area a.action-area-close.btn.btn-danger:hover {
-    background-color: transparent;
+    background-color: transparent !important;
     text-decoration: none;
     color: var(--p-gray-5);
 }
@@ -2150,9 +2150,9 @@ form#edit-meta-newtag-form td input {
     justify-content: flex-end;
     font-size: 0;
     background-color: transparent;
-    padding-top: 1.25rem;
+    padding-top: 1.25rem !important;
+    margin-left: calc(100% - 6rem) !important;
     width: auto;
-    margin-left: calc(100% - 6rem);
 }
 
 #action-area .btn:not(.rateup, .ratedown, .cancel) {

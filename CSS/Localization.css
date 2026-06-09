@@ -3,6 +3,10 @@
  * 伪元素本地化文本
 */
 
+#top-bar .ios-cache-issue-notification {
+ display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
+}
+
 /* Action Area - Close Button */
 
 :root {
