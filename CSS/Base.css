@@ -1967,14 +1967,17 @@ table.form.grid td, table.form.grid th {
     font-size: 0; /* 隐藏裸文本 */
 }
 
-#action-area:has(h1+h2+ul+h2) h2 {
+#action-area:has(h1+h2+ul+h2) h2,
+#action-area:has(h1+h2+h2+ul) h2 {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     font-size: var(--p-font-size-large);
     color: var(--p-gray-5);
 }
 
-#action-area:has(h1+h2+ul+h2) ul {
+#action-area:has(h1+h2+ul+h2) ul,
+#action-area:has(h1+h2+h2+ul) ul {
+    font-size: var(--p-font-size-medium);
     list-style: none;
     padding: 0;
     margin: 0 0 1rem 0;
