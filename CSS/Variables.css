@@ -349,12 +349,12 @@
     --p-header-slogan-content: 'Secure / Contain / Protect';
 }
 
-:root:lang(cn) {
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
     --p-header-title-content: 'SCP基金会';
     --p-header-slogan-content: '控制 / 收容 / 保护';
 }
 
-:root:lang(ja) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --p-header-title-content: 'SCP財団';
     --p-header-slogan-content: '確保 / 収容 / 保護';
 }
