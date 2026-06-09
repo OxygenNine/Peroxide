@@ -2326,7 +2326,9 @@ table.form.grid td, table.form.grid th {
 
 /* Backlinks */
 
-#action-area:has(h1+h2+h2) {
+#action-area:has(h1+h2+h2),
+#action-area:has(h1+h2+ul+h2),
+#action-area:has(h1+h2+h2+ul) {
     font-size: 0; /* 隐藏裸文本 */
 }
 
@@ -5035,7 +5037,7 @@ div#u-component-header {
     --LOC-close: '关闭';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-close: '閉じる';
 }
 
@@ -5099,7 +5101,7 @@ div#u-component-header {
     --LOC-manage-attachments: '管理附件';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-file-type-svg: 'SVG ベクターグラフィックス';
     --LOC-file-type-png: 'PNG 画像';
     --LOC-file-type-jpeg: 'JPEG 画像';
@@ -5313,7 +5315,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-website-tools-draft-pages: '草稿页面';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-website-tools-wanted-pages: '未作成ページ';
     --LOC-website-tools-orphaned-pages: '孤立ページ';
     --LOC-website-tools-draft-pages: '下書きページ';
@@ -5359,7 +5361,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-watchers-description: '当此页面或页面被评论时，这些人将收到通知。';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-watchers-title: 'このページを監視する人';
     --LOC-watchers-description: 'このページまたはページがコメントされたとき、これらの人は通知を受け取ります。';
 }
@@ -5408,7 +5410,7 @@ table.page-files td:has(a[href*=".exe"])+td span::before {
     --LOC-owindow-draft-title: '已有草稿';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-owindow-cancel-and-leave-draft: '下書きを保存して終了';
     --LOC-owindow-cancel-and-delete-draft: '下書きを削除して終了';
     --LOC-owindow-draft: 'あなたは既に下書きを保存しました。選択してください。';
@@ -5452,7 +5454,7 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-page-tags: '标签';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-page-tags: 'タグ';
 }
 
@@ -5466,7 +5468,7 @@ a.btn.btn-default.button.button-cancel-and-delete-draft::before {
     --LOC-close-message: '关闭消息';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-close-message: 'メッセージを閉じる';
 }
 
@@ -5489,7 +5491,7 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-footnotes: '脚注';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-footnotes: '脚注';
 }
 
@@ -5512,7 +5514,7 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-less-option: '更多选项';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-less-option: 'その他のオプション';
 }
 
@@ -5535,7 +5537,7 @@ a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(
     --LOC-insert-code: '插入代码';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-insert-code: 'コードを挿入する';
 }
 
@@ -5558,7 +5560,7 @@ a.btn.btn-default.button.button-insert-code::before {
     --LOC-cancel: '取消';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-cancel: 'キャンセル';
 }
 
@@ -5581,7 +5583,7 @@ a.btn.btn-default.button.button-cancel::before {
     --LOC-yes-revert: '我知道我在做什么！';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-yes-revert: '私は自分が何をしているか分かっています。';
 }
 
@@ -5614,7 +5616,7 @@ a.btn.btn-default.button.button-yes\,-revert::before {
     --LOC-revert-confirm-content-6: '除非你真的知道自己在做什么，否则不要轻易回退页面版本。你在之后仍然可以通过再次回退的方式撤销这次操作。\A';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-revert-confirm-title: '操作の確認';
     --LOC-revert-confirm-content-1: 'このページを元に戻しますか？';
     --LOC-revert-confirm-content-2: 'ページ全体をバージョン';
@@ -5692,7 +5694,7 @@ div.owindow:has(.button-bar a.btn.btn-default.button.button-yes\,-revert) .conte
     --LOC-rename-option-delete: '这会彻底删除页面，并且永远都不能恢复内容。你确定要这样做吗？';
 }
 
-:root:lang(ja), :root:lang(ja-corrections) {
+:root:lang(ja), :root[lang="ja-corrections"] {
     --LOC-rename-option-delete: 'これによりページが完全に削除され、コンテンツを復元することは二度とできなくなります。本当に実行してもよろしいですか？';
 }
 

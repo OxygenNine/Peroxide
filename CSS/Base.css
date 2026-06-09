@@ -1961,7 +1961,9 @@ table.form.grid td, table.form.grid th {
 
 /* Backlinks */
 
-#action-area:has(h1+h2+h2) {
+#action-area:has(h1+h2+h2),
+#action-area:has(h1+h2+ul+h2),
+#action-area:has(h1+h2+h2+ul) {
     font-size: 0; /* 隐藏裸文本 */
 }
 
