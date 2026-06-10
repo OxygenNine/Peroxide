@@ -120,7 +120,7 @@
     --p-header-logo-size: calc(var(--p-header-title-font-size) * 1.5);
     --p-header-height: calc(var(--p-header-title-font-size) + var(--p-header-slogan-font-size) + 0.75rem);
     --p-topbar-font-size: var(--p-font-size-medium);
-    --p-header-logo-background: url('https://cdn.mer.run/i/2026/03/05/69a98e8720849.png');
+    --p-header-logo-background: url('https://oxygennine.github.io/Peroxide/Images/scp-logo-line-black.svg');
 
     --p-page-title-font-size: var(--p-font-size-xxlarge);
     --p-page-title-font-weight: 700;

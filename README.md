@@ -1,6 +1,8 @@
 # 简介
 
-欢迎使用过氧化物（Peroxide）基础版式。这是一个为Wikidot网站设计的基础CS版式。
+欢迎使用过氧化物（Peroxide）基础版式。这是一个为Wikidot网站设计的基础CSS版式。
+
+此仓库同样用于开发过氧化物的衍生版式。未来，基于一氧化物版式的衍生版式都将用过氧化物重置。
 
 # 使用
 
@@ -11,7 +13,7 @@
 3. 将以下地址复制粘贴到文本框：
 
 ```
-https://scp-wiki-cn.wdfiles.com/local--code/fragment%3Aperoxide-code/1
+https://oxygennine.github.io/Peroxide/peroxide.css
 ```
 
 在任何一个页面上，也可以通过插入以下代码引入此版式：
@@ -20,4 +22,4 @@ https://scp-wiki-cn.wdfiles.com/local--code/fragment%3Aperoxide-code/1
 [[include :scp-wiki-cn:theme:peroxide]]
 ```
 
-详细信息参考它在SCP-CN Wiki上的发布页：https://scp-wiki-cn.wikidot.com/theme:peroxide
+关于版式特性，请参考它在SCP-CN Wiki上的发布页：https://scp-wiki-cn.wikidot.com/theme:peroxide
