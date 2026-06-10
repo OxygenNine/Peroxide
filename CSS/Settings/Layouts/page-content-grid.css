@@ -1,0 +1,9 @@
+div#page-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+:where(div#page-content) > * {
+    grid-column: 3 / 11;
+    max-width: var(--p-main-content-max-width);
+}

@@ -1,0 +1,85 @@
+:root {
+    --p-top-bar-container-background-color: var(--p-gray-1);
+    --p-top-bar-container-border-top-color: var(--p-gray-2);
+}
+
+@media screen and (max-width: 768px) {
+    div#header {
+        z-index: 100;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    div#header {
+     grid-template-areas:
+     'logo title user'
+     'logo title search'
+     'topbar topbar topbar';
+     grid-template-columns: 0.5fr 2fr calc(var(--p-header-height) * 1.75);
+     grid-template-rows: calc(var(--p-header-height) * 2) calc(var(--p-header-height) * 1) calc(var(--p-header-height) * 1);
+     height: calc(var(--p-header-height) * 4);
+     display: grid;
+     align-items: center;
+     position: relative;
+     z-index: 10;
+    }
+
+    div#header h1 a::before {
+     width: calc(var(--p-header-height) * 2);
+     height: calc(var(--p-header-height) * 2);
+     background-size: contain;
+     align-self: center;
+     justify-self: end;
+    }
+
+    div#header h1 a span {
+     align-self: center;
+     justify-self: start;
+    }
+
+    div#header h1 a span::before {
+     font-size: calc(var(--p-header-height) * 0.75) !important;
+     padding-left: 1rem;
+    }
+
+    div#header h1 a span::after {
+     font-size: calc(var(--p-header-height) * 0.45) !important;
+     padding-left: 1rem;
+    }
+
+    div#header div.top-bar {
+     align-self: end;
+     justify-self: end;
+     padding-right: 0;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     border-top: solid 0.1rem var(--p-top-bar-container-border-top-color);
+     background-color: var(--p-top-bar-container-background-color);
+    }
+
+    div#header div#top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
+     margin: 0rem 0.5rem;
+    }
+
+    div#header #search-top-box input.button {
+     top: -0.55rem;
+    }
+
+    div#side-bar::after {
+        top: calc(var(--p-header-height) * 0.2);
+        z-index: 101;
+    }
+
+    div#side-bar {
+        top: 0;
+    }
+
+    div#content-wrap {
+        margin-top: calc(var(--p-header-height) * 0.25);
+    }
+
+}

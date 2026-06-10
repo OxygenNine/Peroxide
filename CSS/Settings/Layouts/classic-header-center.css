@@ -1,0 +1,161 @@
+@media screen and (max-width: 1000px) {
+    div#header {
+        z-index: 100;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+
+:root {
+  --p-top-bar-container-background-color: var(--p-gray-1);
+  --p-top-bar-container-border-top-color: var(--p-gray-2);
+  --p-sidebar-background-color: transparent;
+  --p-sidebar-width: 18rem;
+  --p-main-side-margin: 0;
+  --p-main-extrude-margin: 0.5rem;
+}
+
+    div#header {
+        grid-template-areas:
+        '. logo logo user'
+        '. title title search'
+        'topbar topbar topbar topbar';
+        grid-template-columns: calc(var(--p-header-height) * 1.75) 1fr 1fr calc(var(--p-header-height) * 1.75);
+        grid-template-rows: calc(var(--p-header-height) * 2) calc(var(--p-header-height) * 1) calc(var(--p-header-height) * 1);
+        height: calc(var(--p-header-height) * 4);
+        display: grid;
+        align-items: center;
+        position: relative;
+        padding-left: 0rem;
+    }
+
+    div#header h1 a::before {
+        width: calc(var(--p-header-height) * 2);
+        height: calc(var(--p-header-height) * 2);
+        background-size: contain;
+        align-self: center;
+        justify-self: center;
+        mask: linear-gradient(180deg, var(--p-dark-transparent-0-4), transparent 80%);
+        transform: translate(0rem, calc(var(--p-header-height) * 0.35)) scale(1.2);
+    }
+
+    div#header h1 a span {
+        justify-self: center;
+    }
+
+    div#header h1 a span::before {
+        font-size: calc(var(--p-header-height) * 0.75) !important;
+        padding-left: 0rem;
+        width: 100%;
+        transform: translate(0rem, calc(var(--p-header-height) * -0.85));
+    }
+
+    div#header h1 a span::after {
+        font-size: calc(var(--p-header-height) * 0.45) !important;
+        padding-left: 0rem;
+        width: 100%;
+        transform: translate(0rem, calc(var(--p-header-height) * -0.85));
+    }
+
+    div#header .top-bar {
+        align-self: end;
+        justify-self: end;
+        padding-right: 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: solid 0.1rem var(--p-top-bar-container-border-top-color);
+        background-color: var(--p-top-bar-container-background-color);
+        margin-left: 0rem;
+    }
+
+    div#header div#top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
+     margin: 0rem 0.5rem;
+    }
+
+    div#header #search-top-box input.button {
+     top: -0.55rem;
+    }
+
+    div#side-bar {
+     position: relative;
+     left: 1rem;
+     top: 0;
+     transition: none;
+     max-height: unset;
+     height: auto;
+     box-shadow: none;
+     border: none;
+     border-radius: var(--p-border-radius-large);
+     width: calc(var(--p-sidebar-width) - 3rem);
+     z-index: 0;
+     overflow-y: auto;
+     background: transparent;
+    }
+
+    div#side-bar:hover {
+     box-shadow: none;
+     left: 0rem;
+    }
+
+    div#side-bar::after {
+     display: none;
+    }
+
+
+  #header div.top-bar > ul {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+  div#side-bar {
+    top: 0;
+    left: 0;
+    transition: none;
+    box-shadow: none;
+    position: relative;
+    grid-area: p-sidebar;
+    z-index: 1;
+    max-height: unset;
+    height: auto;
+    overflow: auto;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  div#side-bar:hover {
+    box-shadow: none;
+  }
+
+  div#side-bar::after {
+    display: none;
+  }
+
+  body div#content-wrap {
+    display: grid;
+    grid-template-areas:
+'. p-sidebar p-content . .';
+    grid-template-columns: auto var(--p-sidebar-width) var(--p-main-content-max-width) 0.05fr auto;
+    align-items: flex-start;
+    max-width: 100vw;
+    margin: 3rem auto;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  div#main-content {
+    grid-area: p-content;
+    min-height: 100%;
+    display: block;
+    padding: 0rem;
+    max-width: var(--p-main-content-max-width);
+  }
+
+  div#action-area {
+    grid-template-columns: [fullwidth-start] 0 [extrude-start] var(--p-main-extrude-margin) [content-start] minmax(0, var(--p-main-content-width)) [content-end] var(--p-main-extrude-margin) [extrude-end] 0 [fullwidth-end];
+  }
+
+}

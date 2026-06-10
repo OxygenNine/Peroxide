@@ -1,0 +1,30 @@
+:root {
+    --p-top-bar-container-background-color: var(--p-gray-5);
+    --p-top-bar-container-border-top-color: var(--p-gray-4);
+}
+
+:root {
+    --p-gray-0: #fff6f2;
+    --p-gray-1: #eeddd6;
+    --p-gray-2: #e5acac;
+    --p-gray-3: #d79d90;
+    --p-gray-4: #3a7585;
+    --p-gray-5: #245563;
+    --p-gray-6: #163a44;
+    --p-gray-7: #091f25;
+    --p-theme-color-light: #3baae4 !important;
+    --p-theme-color: #3d97ab !important;
+    --p-theme-color-dark: #357996 !important;
+    --p-top-bar-link-color: var(--p-gray-1);
+    --p-top-bar-title-color: var(--p-gray-1);
+    --p-top-bar-slogan-color: var(--p-gray-1);
+    --p-body-text-color: var(--p-black);
+    --p-top-bar-search-color: var(--p-gray-1);
+    --p-top-bar-search-hover-color: var(--p-gray-2);
+
+    --p-header-background-image: linear-gradient(45deg, var(--p-gray-4), var(--p-gray-6));
+
+    --p-body-background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGwtb3BhY2l0eT0iMCIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZTdlMiIgZD0iTTEwIDB2MjBaTTAgMTBoMjBaIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iODAwJSIgaGVpZ2h0PSI4MDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+");
+    --p-body-background-attachment: scroll;
+
+}

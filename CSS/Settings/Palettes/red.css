@@ -1,0 +1,29 @@
+:root {
+    --p-top-bar-container-background-color: var(--p-gray-5);
+    --p-top-bar-container-border-top-color: var(--p-gray-4);
+}
+
+:root {
+    --p-theme-color-light: #e43b3b !important;
+    --p-theme-color: #ab3d3d !important;
+    --p-theme-color-dark: #963535 !important;
+    --p-header-background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iODAiIGhlaWdodD0iNDYuMTg1IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmIyYjMxIiBmaWxsLW9wYWNpdHk9IjAiLz48cGF0aCBmaWxsLW9wYWNpdHk9Ii4xMyIgZD0iTTAgLjAwMlYxMy42M2w5Ljg3LTUuNjlMMjEuOTQ0Ljk3NWw3LjM3MyA0LjIzOUMxOS41MzYgMTAuODQzIDkuNzgyIDE2LjUwMyAwIDIyLjEzNXYyNC4wNWguODQyVjIzLjU1N2wuMTQ1LS4wODdDMTAuNzEgMTcuODY4IDIwLjQzNiAxMi4yNjYgMzAuMTMgNi42NjR2OC40NzZjLTQuMDA2IDIuMzUtOC4wNDEgNC42NzMtMTIuMDc2IDYuOTk1LTMuMjggMS44ODctNi41NiAzLjgwMy05Ljg2OSA1LjY5djE4LjM1OUg5Ljg3di02LjAyMmExOTI4IDE5MjggMCAwIDEgMTAuMzk2IDYuMDIzaDMuMzM4bC0xLjY1OS0uOTcyYy00LjAwNS0yLjMyMy04LjA0LTQuNjQ1LTEyLjA3NS02Ljk2N1YyOS43NGwyOC40NSAxNi40NDVoMy4zODljOS40NTQtNS40ODIgMTguOTM4LTEwLjk2MyAyOC40MjEtMTYuNDQ0djguNTA1YTQ1OTEgNDU5MSAwIDAgMS0xMi4wNzYgNi45NjdsLTEuNjMuOTcyaDMuMjg1di0uMDE2YzMuNDgzLTIuMDA0IDYuOTY2LTQuMDA2IDEwLjQyMS02LjAxdjYuMDI0aDEuNjg0di0xOC4zNmwtNi4wMS0zLjQ4My0zLjg2LTIuMjA2YTI1NDggMjU0OCAwIDAgMS0xMi4wNzYtNi45OTZWNi42NjJjOS43NTQgNS42MzEgMTkuNTM2IDExLjI2MyAyOS4yOSAxNi44OTR2MjIuNjI3SDgwdi0yNC4wNUw1MC42ODIgNS4yMTEgNTguMDU1Ljk3MiA3MC4xMzEgNy45NCA4MCAxMy42M1YwaC0uODQydjExLjIybC03LjM0NC00LjI0VjBoLTEuNjgzdjYuMDIzTDU5LjczNSAwaC0zLjM2bC04LjE4OSA0LjcxN3YyNS4zN2wtNy4zNDQgNC4yMzhWLjQ4bC4xNDYtLjA4N0w0MS42MyAwaC0zLjI2bC43ODguNDh2MzMuODQ1bC03LjM0NC00LjIzOFY0LjcxN2wtNi4wMDgtMy40NTRMMjMuNjUzIDBoLTMuMzg3TDkuODcgNi4wMjNWMEg4LjE4NnY2Ljk4MkwuODQyIDExLjIyVjB6bTMwLjEzIDE3LjA4M3YxMi4wMTdsLTEwLjQyLTYuMDA5YzMuNDgzLTIuMDAzIDYuOTY2LTQuMDA2IDEwLjQyLTYuMDA4bTE5Ljc0IDBjMy40ODMgMi4wMDIgNi45MzcgNC4wMDUgMTAuNDIgNi4wMDhsLTEwLjQyIDYuMDA5em0tMzEuODE0IDYuOTY3IDEyLjA3NSA2Ljk5NSA5Ljg3IDUuNjkgOS44NjgtNS42OSAxMi4wNzYtNi45OTUgNy4zNzMgNC4yMzdjLTkuNzgyIDUuNjYtMjkuMzE3IDE2LjkyNC0yOS4zMTcgMTYuOTI0TDEwLjY4MyAyOC4yODl6Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iODAwJSIgaGVpZ2h0PSI4MDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+"), linear-gradient(45deg, var(--p-theme-color-light), var(--p-theme-color-dark));
+    --p-header-background-size: contain;
+    --p-header-background-repeat: repeat, no-repeat;
+}
+
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
+    color: var(--p-gray-1);
+}
+
+div#header #search-top-box input.button {
+    background-color: var(--p-gray-1);
+}
+
+div#header h1 a span::before, div#header h1 a span::after {
+    color: var(--p-gray-0);
+}
+
+div#header div#top-bar :is(div.mobile-top-bar, div.top-bar)>ul>li>a::after {
+    background-color: var(--p-gray-1);
+}

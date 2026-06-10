@@ -1,0 +1,17 @@
+:root {
+    --p-gray-0: #000000;
+    --p-gray-1: #0e0e0e;
+    --p-gray-2: #1a1a1a;
+    --p-gray-3: #707070;
+    --p-gray-4: #afafaf;
+    --p-gray-5: #d5d5d5;
+    --p-gray-6: #ececec;
+    --p-gray-7: #ffffff;
+    --p-theme-color-light: #ff3232 !important;
+    --p-theme-color: #c80909 !important;
+    --p-theme-color-dark: #950c0c !important;
+    --p-top-bar-background-color: var(--p-dark-transparent-0-8);
+
+    --p-body-background-image: radial-gradient(circle at center 0%, transparent, var(--p-body-background-color) 100vh), url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJhIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHBhdHRlcm5UcmFuc2Zvcm09InNjYWxlKDIpIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmIyYjMxIiBmaWxsLW9wYWNpdHk9IjAiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMxMTExMTEiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIGQ9Ik0zLjI1IDEwaDEzLjVNMTAgMy4yNXYxMy41Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iODAwJSIgaGVpZ2h0PSI4MDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+);
+    --p-body-background-attachment: scroll;
+}

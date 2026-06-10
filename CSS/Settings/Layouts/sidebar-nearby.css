@@ -1,0 +1,37 @@
+@media (min-width: 1000px) {
+
+  :root {
+    --p-sidebar-background-color: transparent;
+  }
+
+    div#side-bar {
+        position: relative;
+        left: 1rem;
+        top: 0;
+        transition: none;
+        max-height: unset;
+        height: auto;
+        box-shadow: none;
+        border: none;
+        border-radius: var(--p-border-radius-large);
+        width: calc(var(--p-sidebar-width) - 3rem);
+        z-index: 0;
+        overflow-y: auto;
+        background: transparent;
+    }
+
+    div#side-bar:hover {
+        box-shadow: none;
+        left: 1rem;
+    }
+
+    div#side-bar::after {
+        display: none;
+    }
+
+    div#content-wrap {
+        display: grid;
+        grid-template-columns: var(--p-sidebar-width) 1fr;
+    }
+
+}

@@ -1,0 +1,125 @@
+:root {
+    --p-top-bar-container-background-color: var(--p-gray-1);
+    --p-top-bar-container-border-top-color: var(--p-gray-2);
+}
+
+    div#header {
+        grid-template-areas:
+        '. logo logo user'
+        '. title title search'
+        'topbar topbar topbar topbar';
+        grid-template-columns: calc(var(--p-header-height) * 1.75) 1fr 1fr calc(var(--p-header-height) * 1.75);
+        grid-template-rows: calc(var(--p-header-height) * 2) calc(var(--p-header-height) * 1) calc(var(--p-header-height) * 1);
+        height: calc(var(--p-header-height) * 4);
+        display: grid;
+        align-items: center;
+        position: relative;
+        z-index: 99;
+        padding: 0;
+    }
+
+    div#header h1 a::before {
+        width: calc(var(--p-header-height) * 2);
+        height: calc(var(--p-header-height) * 2);
+        background-size: contain;
+        align-self: center;
+        justify-self: center;
+        mask: linear-gradient(180deg, var(--p-dark-transparent-0-4), transparent 80%);
+        transform: translate(0rem, calc(var(--p-header-height) * 0.35)) scale(1.2);
+    }
+
+    div#header h1 a span {
+        justify-self: center;
+    }
+
+    div#header h1 a span::before {
+        font-size: calc(var(--p-header-height) * 0.75) !important;
+        padding-left: 0rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        max-width: 100%;
+        transform: translate(0rem, calc(var(--p-header-height) * -0.85));
+    }
+
+    div#header h1 a span::after {
+        font-size: calc(var(--p-header-height) * 0.45) !important;
+        padding-left: 0rem;
+        width: 100%;
+        transform: translate(0rem, calc(var(--p-header-height) * -0.85));
+    }
+
+@media (min-width: 768px) {
+
+    div#header div.top-bar {
+        align-self: end;
+        justify-self: end;
+        padding-right: 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: solid 0.1rem var(--p-top-bar-container-border-top-color);
+        background-color: var(--p-top-bar-container-background-color);
+    }
+
+    div#header div#top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
+     margin: 0rem 0.5rem;
+    }
+
+    div#side-bar::after {
+        top: calc(var(--p-header-height) * 0.2);
+    }
+
+    div#side-bar {
+        top: 0;
+    }
+
+    div#content-wrap {
+        margin-top: calc(var(--p-header-height) * 0.25);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    div#header {
+        grid-template-areas:
+        '. logo logo user'
+        '. title title search'
+        '. topbar topbar topbar';
+        z-index: 100;
+        top: calc(var(--p-header-height) * -3);
+        position: sticky !important;
+    }
+
+    div#header h1 a span {
+        padding: 0;
+        width: 100%;
+    }
+
+    div#header h1 a span::before {
+        text-align: center;
+        font-size: calc(var(--p-header-height) * 0.45) !important;
+        width: 100%;
+        display: block;
+        max-width: 100%;
+    }
+
+    div#header h1 a span::after {
+        font-size: calc(var(--p-header-height) * 0.35) !important;
+    }
+
+    div#headerdiv.mobile-top-bar {
+        width: 100%;
+    }
+
+    div#header div#top-bar .mobile-top-bar>ul>li>ul {
+        left: calc(var(--p-header-height) * 0);
+    }
+
+
+}
+
+div#header #search-top-box input.button {
+    top: -0.55rem;
+}
