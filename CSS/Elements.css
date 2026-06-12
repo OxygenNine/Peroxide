@@ -1356,6 +1356,7 @@ div.p-bqc {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    background-image: none;
 }
 
 .wd-editor-toolbar-panel ul li a::before,
