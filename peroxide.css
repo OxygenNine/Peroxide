@@ -254,6 +254,10 @@
     --p-tabview-navset-button-hover-color: var(--p-gray-4);
 
     /* Page Content Elements */
+    --p-paragraph-letters-spacing: 0rem;
+    --p-paragraph-spacing: 0.85rem;
+    --p-paragraph-line-height: var(--p-line-height-medium);
+    --p-paragraph-text-indent: 0rem;
     --p-title-font: var(--p-font-sans-serif);
     --p-link-color: var(--p-theme-color);
     --p-link-visited-color: var(--p-theme-color-dark);
@@ -3227,7 +3231,10 @@ a:focus-visible {
 }
 
 #page-content p {
-    margin: 0.5rem 0rem;
+    margin: var(--p-paragraph-spacing) 0rem;
+    text-indent: var(--p-paragraph-text-indent);
+    line-height: var(--p-paragraph-line-height);
+    letter-spacing: var(--p-paragraph-letters-spacing);
 }
 
 tt,
