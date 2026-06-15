@@ -56,7 +56,10 @@ a:focus-visible {
 }
 
 #page-content p {
-    margin: 0.5rem 0rem;
+    margin: var(--p-paragraph-spacing) 0rem;
+    text-indent: var(--p-paragraph-text-indent);
+    line-height: var(--p-paragraph-line-height);
+    letter-spacing: var(--p-paragraph-letters-spacing);
 }
 
 tt,
