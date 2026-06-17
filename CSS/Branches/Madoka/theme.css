@@ -5,14 +5,16 @@
     --p-header-title-content: 'I. A. M. A.' !important;
     --p-header-slogan-content: '1931 - 1945' !important;
 
+    --p-header-logo-background: var(--madoka-logo-dark);
+
 }
 
 :root {
 
     --madoka-serif: 'Caudex', var(--p-font-serif);
-    --madoka-logo-light: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-light.svg);
     --madoka-background-light: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-light.svg);
     --madoka-logo-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark.svg);
+    --madoka-logo-dark-blur: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark-blur.svg);
     --madoka-background-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-dark.svg);
 
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.05);
@@ -40,13 +42,14 @@ div#header {
 }
 
 div#header h1 a::before {
-    width: calc(var(--p-header-height) * 2);
-    height: calc(var(--p-header-height) * 2);
+    width: calc(var(--p-header-height) * 3);
+    height: calc(var(--p-header-height) * 3);
     background-size: contain;
     align-self: center;
     justify-self: center;
-    mask: linear-gradient(180deg, var(--p-dark-transparent-0-4), transparent 80%);
-    transform: translate(0rem, calc(var(--p-header-height) * 0.35)) scale(1.2);
+    mask: none;
+    transform: translate(0rem, calc(var(--p-header-height) * -0.3)) scale(1.2);
+    background-position: center calc(var(--p-header-height) * 1.5);
 }
 
 div#header h1 a span {
@@ -76,6 +79,12 @@ div#header h1 a span::after {
 
 div#top-bar {
     font-family: var(--madoka-serif);
+}
+
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
+    font-weight: bold;
+    color: var(--p-gray-3);
+    letter-spacing: 0.2rem;
 }
 
 div#login-status, div#header #search-top-box {
@@ -162,7 +171,10 @@ div#header #search-top-box input.button {
 }
 
 div#content-wrap {
-    background-image: linear-gradient(180deg, var(--p-gray-1) 10vh, transparent 30vh);
+    background-image: linear-gradient(180deg, var(--p-gray-1) 0vh, transparent 30vh), var(--madoka-logo-dark-blur);
+    background-size: contain, calc(var(--p-header-height) * 4.3);
+    background-repeat: no-repeat;
+    background-position: center, center top calc(var(--p-header-height) * -2.1);
     padding-top: calc(var(--p-header-height) * 1.5);
     margin-top: calc(var(--p-header-height) * -1.5);
 }
@@ -175,7 +187,7 @@ div#container {
 }
 
 div#main-content {
-    background-image: linear-gradient(180deg, transparent, var(--p-gray-1) 14vh);
+    background-image: linear-gradient(180deg, transparent, var(--p-gray-1) 5vh);
 }
 
 div#main-content #page-title, div#main-content .meta-title {
@@ -196,5 +208,5 @@ div#main-content #page-title, div#main-content .meta-title {
     flex-grow: 1;
     flex-basis: 1rem;
     height: 0.1rem;
-    background-color: var(--p-gray-2);
+    background-color: var(--p-gray-4);
 }
