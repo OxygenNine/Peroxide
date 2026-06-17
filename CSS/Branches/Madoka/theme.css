@@ -1,0 +1,200 @@
+@import url(https://fonts.bunny.net/css?family=caudex:400,400i,700,700i);
+
+:root {
+
+    --p-header-title-content: 'I. A. M. A.' !important;
+    --p-header-slogan-content: '1931 - 1945' !important;
+
+}
+
+:root {
+
+    --madoka-serif: 'Caudex', var(--p-font-serif);
+    --madoka-logo-light: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-light.svg);
+    --madoka-background-light: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-light.svg);
+    --madoka-logo-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark.svg);
+    --madoka-background-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-dark.svg);
+
+    --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.05);
+}
+
+div#header {
+    grid-template-areas:
+        '. logo logo user'
+        '. title title search'
+        'topbar topbar topbar topbar';
+    grid-template-columns: calc(var(--p-header-height) * 1.75) 1fr 1fr calc(var(--p-header-height) * 1.75);
+    grid-template-rows: calc(var(--p-header-height) * 2) calc(var(--p-header-height) * 1) calc(var(--p-header-height) * 1);
+    height: calc(var(--p-header-height) * 4);
+    display: grid;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    padding-top: 25vh;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+    background-color: transparent;
+    font-family: var(--madoka-serif);
+}
+
+div#header h1 a::before {
+    width: calc(var(--p-header-height) * 2);
+    height: calc(var(--p-header-height) * 2);
+    background-size: contain;
+    align-self: center;
+    justify-self: center;
+    mask: linear-gradient(180deg, var(--p-dark-transparent-0-4), transparent 80%);
+    transform: translate(0rem, calc(var(--p-header-height) * 0.35)) scale(1.2);
+}
+
+div#header h1 a span {
+    justify-self: center;
+}
+
+div#header h1 a span::before {
+    font-size: calc(var(--p-header-height) * 0.45) !important;
+    padding-left: 0rem;
+    text-align: left;
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    transform: translate(calc(var(--p-header-height) * 3.15), calc(var(--p-header-height) * -0.35));
+    font-weight: normal;
+    font-family: var(--madoka-serif);
+}
+
+div#header h1 a span::after {
+    font-size: calc(var(--p-header-height) * 0.45) !important;
+    padding-left: 0rem;
+    width: 100%;
+    text-align: right;
+    transform: translate(calc(var(--p-header-height) * -3.15), calc(var(--p-header-height) * -0.85));
+    font-family: var(--madoka-serif);
+}
+
+div#top-bar {
+    font-family: var(--madoka-serif);
+}
+
+div#login-status, div#header #search-top-box {
+    transform: translate(0, calc(var(--p-header-height) * -1));
+}
+
+@media (min-width: 768px) {
+
+    div#header div.top-bar {
+        align-self: end;
+        justify-self: end;
+        padding-right: 0rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: solid 0.1rem var(--p-top-bar-container-border-top-color);
+        background-color: var(--p-top-bar-container-background-color);
+    }
+
+    div#header div#top-bar :is(.mobile-top-bar, .top-bar)>ul>li {
+        margin: 0rem 0.5rem;
+    }
+
+    div#side-bar::after {
+        top: calc(var(--p-header-height) * 0.2);
+    }
+
+    div#side-bar {
+        top: 0;
+    }
+
+    div#content-wrap {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    div#header {
+        grid-template-areas:
+            '. logo logo user'
+            '. title title search'
+            '. topbar topbar topbar';
+        z-index: 100;
+        top: calc(var(--p-header-height) * -3);
+        position: sticky !important;
+    }
+
+    div#header h1 a span {
+        padding: 0;
+        width: 100%;
+    }
+
+    div#header h1 a span::before {
+        text-align: center;
+        font-size: calc(var(--p-header-height) * 0.45) !important;
+        width: 100%;
+        display: block;
+        max-width: 100%;
+    }
+
+    div#header h1 a span::after {
+        font-size: calc(var(--p-header-height) * 0.35) !important;
+    }
+
+    div#headerdiv.mobile-top-bar {
+        width: 100%;
+    }
+
+    div#header div#top-bar .mobile-top-bar>ul>li>ul {
+        left: calc(var(--p-header-height) * 0);
+    }
+
+    div#content-wrap {
+        margin-top: 0;
+    }
+
+
+}
+
+div#header #search-top-box input.button {
+    top: -0.55rem;
+}
+
+div#content-wrap {
+    background-image: linear-gradient(180deg, var(--p-gray-1) 10vh, transparent 30vh);
+    padding-top: calc(var(--p-header-height) * 1.5);
+    margin-top: calc(var(--p-header-height) * -1.5);
+}
+
+div#container {
+    background-image: var(--madoka-background-light);
+    background-repeat: no-repeat;
+    background-size: auto 90vh;
+    background-position: center top -25vh;
+}
+
+div#main-content {
+    background-image: linear-gradient(180deg, transparent, var(--p-gray-1) 14vh);
+}
+
+div#main-content #page-title, div#main-content .meta-title {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 90vw;
+    font-family: var(--madoka-serif);
+}
+
+:is(div#main-content #page-title, div#main-content .meta-title)::before, :is(div#main-content #page-title, div#main-content .meta-title)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 1rem;
+    height: 0.1rem;
+    background-color: var(--p-gray-2);
+}

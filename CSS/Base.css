@@ -1102,7 +1102,7 @@ div#main-content #page-options-bottom, div#main-content #page-options-bottom-2 {
 }
 
 div#main-content div#page-options-bottom-2 {
-    margin-top: var(--p-page-options-bottom-2-margin-top);
+    margin-top: calc(var(--p-border-radius-medium) * -1.5);
 }
 
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
