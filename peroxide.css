@@ -3285,6 +3285,7 @@ code {
     filter: var(--p-code-block-filter);
     padding: 0.25rem 1rem;
     width: calc(100% - 2rem);
+    color: var(--p-white-gray);
 }
 
 .code, pre {
