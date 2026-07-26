@@ -82,6 +82,30 @@
     --p-danger-color-dark: #c16e21;
     --p-danger-color-light: #fff3e4;
 
+    /* 颜色混合 */
+    --p-theme-color-w10: color-mix(in srgb, var(--p-theme-color), var(--p-white) 10%);
+    --p-theme-color-w20: color-mix(in srgb, var(--p-theme-color), var(--p-white) 20%);
+    --p-theme-color-w30: color-mix(in srgb, var(--p-theme-color), var(--p-white) 30%);
+    --p-theme-color-w40: color-mix(in srgb, var(--p-theme-color), var(--p-white) 40%);
+    --p-theme-color-w50: color-mix(in srgb, var(--p-theme-color), var(--p-white) 50%);
+    --p-theme-color-w60: color-mix(in srgb, var(--p-theme-color), var(--p-white) 60%);
+    --p-theme-color-w70: color-mix(in srgb, var(--p-theme-color), var(--p-white) 70%);
+    --p-theme-color-w80: color-mix(in srgb, var(--p-theme-color), var(--p-white) 80%);
+    --p-theme-color-w90: color-mix(in srgb, var(--p-theme-color), var(--p-white) 90%);
+    --p-theme-color-b10: color-mix(in srgb, var(--p-theme-color), var(--p-black) 10%);
+    --p-theme-color-b20: color-mix(in srgb, var(--p-theme-color), var(--p-black) 20%);
+    --p-theme-color-b30: color-mix(in srgb, var(--p-theme-color), var(--p-black) 30%);
+    --p-theme-color-b40: color-mix(in srgb, var(--p-theme-color), var(--p-black) 40%);
+    --p-theme-color-b50: color-mix(in srgb, var(--p-theme-color), var(--p-black) 50%);
+    --p-theme-color-b60: color-mix(in srgb, var(--p-theme-color), var(--p-black) 60%);
+    --p-theme-color-b70: color-mix(in srgb, var(--p-theme-color), var(--p-black) 70%);
+    --p-theme-color-b80: color-mix(in srgb, var(--p-theme-color), var(--p-black) 80%);
+    --p-theme-color-b90: color-mix(in srgb, var(--p-theme-color), var(--p-black) 90%);
+
+}
+
+:root {
+
     /* 布局 */
     --p-font-size-base: 16px;
     --p-line-height-base: 1.5;
@@ -154,7 +178,7 @@
     --p-border-radius-medium: 0.4rem;
     --p-border-radius-large: 0.8rem;
 
-    /* 签名档 */
+    /* 签名档可见性 */
     --p-signature-display: none;
 
 
@@ -231,7 +255,7 @@
     --p-page-option-bottom-button-border-color: var(--p-gray-2);
     --p-page-option-bottom-button-more-background-color: var(--p-gray-4);
     --p-page-option-bottom-button-more-color: var(--p-gray-1);
-    --p-page-option-bottom-2-margin-top: 0.5rem;
+    --p-page-option-bottom-2-margin-top: calc(var(--p-border-radius-medium) * -1.5);;
 
     /* Page Title */
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.25);
@@ -264,7 +288,9 @@
     --p-link-underline-thickness: 0.1rem;
     --p-link-underline-offset: 0.1rem;
 
-    --p-code-block-filter: invert(1) hue-rotate(180deg);
+    /* --p-code-block-filter: invert(1) hue-rotate(180deg); */
+    --p-code-block-filter: none;
+    --p-code-block-background: var(--p-black-gray);
 
     --p-default-button-border: solid 0.1rem var(--p-gray-2);
     --p-default-button-border-radius: var(--p-border-radius-medium);
@@ -361,4 +387,13 @@
 :root:lang(ja), :root[lang="ja-corrections"] {
     --p-header-title-content: 'SCP財団';
     --p-header-slogan-content: '確保 / 収容 / 保護';
+}
+
+/* Version */
+
+:root {
+    --p-version: '1.0-release';
+    --p-theme-id: 'peroxide-baseline';
+    --p-theme-name: '过氧化物 基础版式';
+    --p-theme-creator: 'OxygenNine';
 }

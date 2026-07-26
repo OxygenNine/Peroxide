@@ -23,6 +23,11 @@ a {
     text-decoration: none;
 }
 
+:where(#page-title, .meta-title) a:hover {
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.4rem;
+}
+
 a:hover {
     background-color: transparent;
     text-decoration: underline;
@@ -72,7 +77,7 @@ code {
 }
 
 .code {
-    background: var(--p-gray-2);
+    background: var(--p-code-block-background);
     border: none;
     border-radius: var(--p-border-radius-medium);
     filter: var(--p-code-block-filter);
@@ -106,6 +111,18 @@ ol li {
 
 ol li li {
     list-style-type: lower-roman;
+}
+
+span[style="color: theme"] {
+    color: var(--p-theme-color) !important;
+}
+
+span[style="color: theme-light"] {
+    color: var(--p-theme-color-light) !important;
+}
+
+span[style="color: theme-dark"] {
+    color: var(--p-theme-color-dark) !important;
 }
 
 img.image {
@@ -251,6 +268,11 @@ label.btn.btn-default {
 a.avatar-hover {
     display: none !important;
     /* 清除Wikidot自带的头像放大 */
+}
+
+#page-content span.printuser.avatarhover a:first-child {
+    user-select: none;
+    /* 阻止选中图片导致的复读用户名 */
 }
 
 /* Input Text & Button */
@@ -431,8 +453,13 @@ ul.yui-nav li:after {
     transition: width var(--p-animation-duration-short);
 }
 
-ul.yui-nav li.selected:after {
+.yui-navset.yui-navset-top ul.yui-nav li.selected:after {
     width: var(--p-tabview-tab-bar-width);
+}
+
+.yui-navset.yui-navset-top .yui-nav li:has(a:focus-visible)::after {
+    width: calc(var(--p-tabview-tab-bar-width) * 0.75);
+    background-color: var(--p-theme-color);
 }
 
 ul.yui-nav li a {
@@ -683,7 +710,10 @@ div.page-rate-widget-box .cancel:hover a::before {
     display: contents;
 }
 
-div.creditButton a, div.creditButton p a {
+div.creditButton a, 
+div.creditButton p a, 
+div.creditButtonStandalone a,
+div.creditButtonStandalone p a {
     border: none;
     background: var(--p-gray-5) !important;
     display: inline-block;
@@ -695,11 +725,17 @@ div.creditButton a, div.creditButton p a {
     transition: all var(--p-animation-duration-short);
 }
 
-.creditButton a:hover, .creditButton p a:hover {
+.creditButton a:hover, 
+.creditButton p a:hover,
+.creditButtonStandalone a:hover,
+.creditButtonStandalone p a:hover {
     background-color: var(--p-theme-color) !important;
 }
 
-.creditButton a::before, .creditButton p a::before {
+.creditButton a::before, 
+.creditButtonStandalone a::before,
+.creditButtonStandalone a::before,
+.creditButtonStandalone p a::before {
     display: none !important;
 }
 
@@ -802,6 +838,10 @@ div.creditButton a, div.creditButton p a {
     max-width: 30rem;
 }
 
+.forum-thread-box .description-block a {
+    color: var(--p-theme-color-light);
+}
+
 .post-container.fordelete {
     border: solid 0.1rem var(--p-warning-color);
     border-radius: var(--p-border-radius-medium);
@@ -832,6 +872,14 @@ div.creditButton a, div.creditButton p a {
 }
 
 .thread-container .post .options a {
+    color: var(--p-gray-3);
+}
+
+#page-content a.btn.btn-default.btn-small.btn-sm[onclick*="togglePostFold"],
+#page-content a.options.btn.btn-default.btn-mini.btn-xs[onclick*="togglePostFold"] {
+    border: none;
+    background-color: transparent;
+    padding: 0.2rem 0rem 0rem 0rem;
     color: var(--p-gray-3);
 }
 
@@ -1389,6 +1437,7 @@ div.p-bqc {
 .wd-editor-toolbar-panel ul li a:hover {
     background-color: var(--p-gray-1);
     outline: solid 1.5px var(--p-theme-color-light);
+    background-image: none !important;
 }
 
 .wd-editor-toolbar-panel ul li a:hover::before {
@@ -1681,5 +1730,178 @@ div#wd-editor-toolbar-panel > div ul li ul {
     mask-size: 0.55rem;
 }
 
+/* Highlight Palette */
 
+:root {
+    /* 代码块配色方案，使用绝对调色盘，背景色为暗色 */
+    --p-highlight-default: var(--p-white);
+    --p-highlight-default-weight: normal;
+    --p-highlight-default-style: normal;
+    
+    --p-highlight-code: var(--p-white);
+    --p-highlight-code-weight: normal;
+    --p-highlight-code-style: normal;
+    
+    --p-highlight-brackets: var(--p-gray);
+    --p-highlight-brackets-weight: normal;
+    --p-highlight-brackets-style: normal;
+    
+    --p-highlight-comment: var(--p-light-green);
+    --p-highlight-comment-weight: normal;
+    --p-highlight-comment-style: italic;
+    
+    --p-highlight-quotes: var(--p-light-green);
+    --p-highlight-quotes-weight: normal;
+    --p-highlight-quotes-style: normal;
+    
+    --p-highlight-string: var(--p-light-green);
+    --p-highlight-string-weight: normal;
+    --p-highlight-string-style: normal;
+    
+    --p-highlight-identifier: var(--p-white);
+    --p-highlight-identifier-weight: normal;
+    --p-highlight-identifier-style: normal;
+    
+    --p-highlight-builtin: var(--p-light-blue);
+    --p-highlight-builtin-weight: normal;
+    --p-highlight-builtin-style: normal;
+    
+    --p-highlight-reserved: var(--p-light-purple);
+    --p-highlight-reserved-weight: normal;
+    --p-highlight-reserved-style: normal;
+    
+    --p-highlight-inlinedoc: var(--p-light-blue);
+    --p-highlight-inlinedoc-weight: normal;
+    --p-highlight-inlinedoc-style: italic;
+    
+    --p-highlight-var: var(--p-light-orange);
+    --p-highlight-var-weight: normal;
+    --p-highlight-var-style: normal;
+    
+    --p-highlight-url: var(--p-light-blue);
+    --p-highlight-url-weight: normal;
+    --p-highlight-url-style: underline;
+    
+    --p-highlight-special: var(--p-light-yellow);
+    --p-highlight-special-weight: bold;
+    --p-highlight-special-style: normal;
+    
+    --p-highlight-number: var(--p-light-orange);
+    --p-highlight-number-weight: normal;
+    --p-highlight-number-style: normal;
+    
+    --p-highlight-inlinetags: var(--p-light-purple);
+    --p-highlight-inlinetags-weight: bold;
+    --p-highlight-inlinetags-style: normal;
+    
+    --p-highlight-main-background: var(--p-black-gray);
+    
+    --p-highlight-gutter: var(--p-gray);
+    --p-highlight-gutter-weight: normal;
+    --p-highlight-gutter-style: normal;
+    --p-highlight-gutter-background: transparent;
+    
+    --p-highlight-table: var(--p-gray-5);
+    --p-highlight-table-weight: normal;
+    --p-highlight-table-style: normal;
+    --p-highlight-table-background: var(--p-black-gray);
+}
 
+.hl-default {
+    color: var(--p-highlight-default);
+    font-weight: var(--p-highlight-default-weight);
+    font-style: var(--p-highlight-default-style);
+}
+.hl-code {
+    color: var(--p-highlight-code);
+    font-weight: var(--p-highlight-code-weight);
+    font-style: var(--p-highlight-code-style);
+}
+.hl-brackets {
+    color: var(--p-highlight-brackets);
+    font-weight: var(--p-highlight-brackets-weight);
+    font-style: var(--p-highlight-brackets-style);
+}
+.hl-comment {
+    color: var(--p-highlight-comment);
+    font-weight: var(--p-highlight-comment-weight);
+    font-style: var(--p-highlight-comment-style);
+}
+.hl-quotes {
+    color: var(--p-highlight-quotes);
+    font-weight: var(--p-highlight-quotes-weight);
+    font-style: var(--p-highlight-quotes-style);
+}
+.hl-string {
+    color: var(--p-highlight-string);
+    font-weight: var(--p-highlight-string-weight);
+    font-style: var(--p-highlight-string-style);
+}
+.hl-identifier {
+    color: var(--p-highlight-identifier);
+    font-weight: var(--p-highlight-identifier-weight);
+    font-style: var(--p-highlight-identifier-style);
+}
+.hl-builtin {
+    color: var(--p-highlight-builtin);
+    font-weight: var(--p-highlight-builtin-weight);
+    font-style: var(--p-highlight-builtin-style);
+}
+.hl-reserved {
+    color: var(--p-highlight-reserved);
+    font-weight: var(--p-highlight-reserved-weight);
+    font-style: var(--p-highlight-reserved-style);
+}
+.hl-inlinedoc {
+    color: var(--p-highlight-inlinedoc);
+    font-weight: var(--p-highlight-inlinedoc-weight);
+    font-style: var(--p-highlight-inlinedoc-style);
+}
+.hl-var {
+    color: var(--p-highlight-var);
+    font-weight: var(--p-highlight-var-weight);
+    font-style: var(--p-highlight-var-style);
+}
+.hl-url {
+    color: var(--p-highlight-url);
+    font-weight: var(--p-highlight-url-weight);
+    font-style: var(--p-highlight-url-style);
+}
+.hl-special {
+    color: var(--p-highlight-special);
+    font-weight: var(--p-highlight-special-weight);
+    font-style: var(--p-highlight-special-style);
+}
+.hl-number {
+    color: var(--p-highlight-number);
+    font-weight: var(--p-highlight-number-weight);
+    font-style: var(--p-highlight-number-style);
+}
+.hl-inlinetags {
+    color: var(--p-highlight-inlinetags);
+    font-weight: var(--p-highlight-inlinetags-weight);
+    font-style: var(--p-highlight-inlinetags-style);
+}
+.hl-gutter {
+    background-color: var(--p-highlight-gutter-background);
+    color: var(--p-highlight-gutter);
+    font-weight: var(--p-highlight-gutter-weight);
+    font-style: var(--p-highlight-gutter-style);
+}
+.hl-table {
+    background-color: var(--p-highlight-table-background);
+    color: var(--p-highlight-table);
+    font-weight: var(--p-highlight-table-weight);
+    font-style: var(--p-highlight-table-style);
+}
+
+/* SSL Warning block */
+
+div#extrac-div-3+div[style="color: #A00; background-color: #FFF; margin: 0.5em 1em; padding: 0.5em 1em; border: 1px solid #999;"] {
+    color: var(--p-white) !important;
+    background-color: var(--p-black-gray) !important;
+    border: none !important;
+    border-radius: var(--p-border-radius-large);
+    width: 90%;
+    margin: 1rem auto !important;
+}

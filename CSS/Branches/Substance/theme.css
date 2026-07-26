@@ -1,0 +1,361 @@
+
+/* Padding & Margin 排版工具类 */
+
+.padding-10, .pd-10 {
+    padding: 10px;
+}
+
+.padding-5, .pd-5 {
+    padding: 5px;
+}
+
+.padding-0-5rem, .pd-0-5rem {
+    padding: 0.5rem;
+}
+
+.padding-1rem, .pd-1rem {
+    padding: 1rem;
+}
+
+.padding-2rem, .pd-2rem {
+    padding: 2rem;
+}
+
+.padding-left-10, .pd-left-10 {
+    padding-left: 10px;
+}
+
+.padding-right-10, .pd-right-10 {
+    padding-right: 10px;
+}
+
+.padding-top-10, .pd-top-10 {
+    padding-top: 10px;
+}
+
+.padding-bottom-10, .pd-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-left-5, .pd-left-5 {
+    padding-left: 5px;
+}
+
+.padding-right-5, .pd-right-5 {
+    padding-right: 5px;
+}
+
+.padding-top-5, .pd-top-5 {
+    padding-top: 5px;
+}
+
+.padding-bottom-5, .pd-bottom-5 {
+    padding-bottom: 5px;
+}
+
+.padding-left-1rem, .pd-left-1rem {
+    padding-left: 1rem;
+}
+
+.padding-right-1rem, .pd-right-1rem {
+    padding-right: 1rem;
+}
+
+.padding-top-1rem, .pd-top-1rem {
+    padding-top: 1rem;
+}
+
+.padding-bottom-1rem, .pd-bottom-1rem {
+    padding-bottom: 1rem;
+}
+
+.padding-right-0-5rem, .pd-right-0-5rem {
+    padding-right: 0.5rem;
+}
+
+.padding-left-0-5rem, .pd-left-0-5rem {
+    padding-left: 0.5rem;
+}
+
+.padding-top-0-5rem, .pd-top-0-5rem {
+    padding-top: 0.5rem;
+}
+
+.padding-bottom-0-5rem, .pd-bottom-0-5rem {
+    padding-bottom: 0.5rem;
+}
+
+.padding-left-2rem, .pd-left-2rem {
+    padding-left: 2rem;
+}
+
+.padding-right-2rem, .pd-right-2rem {
+    padding-right: 2rem;
+}
+
+.padding-top-2rem, .pd-top-2rem {
+    padding-top: 2rem;
+}
+
+.padding-bottom-2rem, .pd-bottom-2rem {
+    padding-bottom: 2rem;
+}
+
+.margin-10, .mg-10 {
+    margin: 10px;
+}
+
+.margin-5, .mg-5 {
+    margin: 5px;
+}
+
+.margin-0-5rem, .mg-0-5rem {
+    margin: 0.5rem;
+}
+
+.margin-1rem, .mg-1rem {
+    margin: 1rem;
+}
+
+.margin-2rem, .mg-2rem {
+    margin: 2rem;
+}
+
+.margin-center, .mg-center {
+    margin: 0 auto;
+}
+
+.margin-top-10, .mg-top-10 {
+    margin-top: 10px;
+}
+
+.margin-bottom-10, .mg-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-left-10, .mg-left-10 {
+    margin-left: 10px;
+}
+
+.margin-right-10, .mg-right-10 {
+    margin-right: 10px;
+}
+
+.margin-left-5, .mg-left-5 {
+    margin-left: 5px;
+}
+
+.margin-right-5, .mg-right-5 {
+    margin-right: 5px;
+}
+
+.margin-top-5, .mg-top-5 {
+    margin-top: 5px;
+}
+
+.margin-bottom-5, .mg-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-top-1rem, .mg-top-1rem {
+    margin-top: 1rem;
+}
+
+.margin-bottom-1rem, .mg-bottom-1rem {
+    margin-bottom: 1rem;
+}
+
+.margin-left-1rem, .mg-left-1rem {
+    margin-left: 1rem;
+}
+
+.margin-right-1rem, .mg-right-1rem {
+    margin-right: 1rem;
+}
+
+.margin-top-2rem, .mg-top-2rem {
+    margin-top: 2rem;
+}
+
+.margin-bottom-2rem, .mg-bottom-2rem {
+    margin-bottom: 2rem;
+}
+
+.margin-left-2rem, .mg-left-2rem {
+    margin-left: 2rem;
+}
+
+.margin-right-2rem, .mg-right-2rem {
+    margin-right: 2rem;
+}
+
+.margin-top-auto, .mg-top-auto {
+    margin-top: auto;
+}
+
+.margin-bottom-auto, .mg-bottom-auto {
+    margin-bottom: auto;
+}
+
+.margin-left-auto, .mg-left-auto {
+    margin-left: auto;
+}
+
+.margin-right-auto, .mg-right-auto {
+    margin-right: auto;
+}
+
+/* Width & Height 排版工具类 */
+
+.width-100, .w-100 {
+    width: 100%;
+}
+
+.height-100, .h-100 {
+    height: 100%;
+}
+
+.width-auto, .w-auto {
+    width: auto;
+}
+
+.height-auto, .h-auto {
+    height: auto;
+}
+
+.width-full, .w-full {
+    width: var(--p-main-content-width);
+}
+
+/* Flex 排版工具类 */
+
+div.flex {
+    display: flex;
+}
+
+span.flex {
+    display: inline-flex;
+}
+
+.flex.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex.vertical.center,
+.flex.v.center {
+    align-items: center;
+}
+
+.flex.horizontal.center,
+.flex.h.center {
+    justify-content: center;
+}
+
+.flex.column,
+.flex.c {
+    flex-direction: column;
+}
+
+.flex.row,
+.flex.r {
+    flex-direction: row;
+}
+
+.flex.reverse, .flex.row.reverse,
+.flex.r.reverse {
+    flex-direction: row-reverse;
+}
+
+.flex.column.reverse,
+.flex.c.reverse {
+    flex-direction: column-reverse;
+}
+
+.flex.wrap,
+.flex.w {
+    flex-wrap: wrap;
+}
+
+.flex.no-wrap, .flex.nowarp,
+.flex.now {
+    flex-wrap: nowrap;
+}
+
+.flex.align.start,
+.flex.ali.start {
+    align-items: flex-start;
+}
+
+.flex.align.end,
+.flex.ali.end {
+    align-items: flex-end;
+}
+
+.flex.align.stretch,
+.flex.align.str,
+.flex.ali.str {
+    align-items: stretch;
+}
+
+.flex.align.center,
+.flex.ali.center {
+    align-items: center;
+}
+
+.flex.justify.start,
+.flex.jus.start {
+    justify-content: flex-start;
+}
+
+.flex.justify.end,
+.flex.jus.end {
+    justify-content: flex-end;
+}
+
+.flex.justify.center,
+.flex.jus.center {
+    justify-content: center;
+}
+
+.flex.justify.space-between,
+.flex.jus.space-between,
+.flex.jus.sb {
+    justify-content: space-between;
+}
+
+.flex.justify.space-around,
+.flex.jus.space-around,
+.flex.jus.sa {
+    justify-content: space-around;
+}
+
+.flex.gap {
+    gap: 10px;
+}
+
+.flex.gap-5 {
+    gap: 5px;
+}
+
+.flex.gap-0-5rem {
+    gap: 0.5rem;
+}
+
+.flex.gap-1rem {
+    gap: 1rem;
+}
+
+.flex.gap-2rem {
+    gap: 2rem;
+}
+
+.flex.gap-10 {
+    gap: 10px;
+}
+
+.flex.gap-20 {
+    gap: 20px;
+}
+
+

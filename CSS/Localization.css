@@ -498,13 +498,63 @@ a.btn.btn-default.button.button-close-message::before {
     --LOC-less-option: 'その他のオプション';
 }
 
-a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
+#page-content a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"] {
     font-size: 0 !important;
 }
 
-a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"]::before {
+#page-content a[onclick*="WIKIDOT.modules.ForumViewThreadModule.listeners.toggleThreadOptions(event)"]::before {
     content: var(--LOC-less-option);
     font-size: var(--p-font-size-medium);
+}
+
+/* Permanent Link */
+
+:root {
+    --LOC-permanent-link-title: 'Permanent Link';
+    --LOC-permanent-link-text: 'Permanent link for this post is:';
+}
+
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+    --LOC-permanent-link-title: '永久链接';
+    --LOC-permanent-link-text: '此帖子的永久链接是：';
+}
+
+:root:lang(ja), :root[lang="ja-corrections"] {
+    --LOC-permanent-link-title: '永続リンク';
+    --LOC-permanent-link-text: 'この投稿の永続リンクは：';
+}
+
+body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div))+div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1::before {
+    content: var(--LOC-permanent-link-title);
+    font-size: var(--p-font-size-xlarge);
+}
+
+body:has(.forum-thread-box) .title.modal-header:not(:has(h1, div))+div.content.modal-body:not(:has(div, a, img, h2, td, br)):has(h1+p+p>strong) h1+p::before {
+    content: var(--LOC-permanent-link-text);
+    font-size: var(--p-font-size-medium);
+}
+
+/* Close Window */
+
+:root {
+    --LOC-close-window: 'Close Window';
+}
+
+:root:lang(cn), :root:lang(zh), :root:lang(zh-cn) {
+    --LOC-close-window: '关闭窗口';
+}
+
+:root:lang(ja), :root[lang="ja-corrections"] {
+    --LOC-close-window: 'ウィンドウを閉じる';
+}
+
+a.btn.btn-default.button.button-close-window {
+    font-size: 0;
+}
+
+a.btn.btn-default.button.button-close-window::before {
+    content: var(--LOC-close-window);
+    font-size: var(--p-font-size-small);
 }
 
 /* Insert Code Button */

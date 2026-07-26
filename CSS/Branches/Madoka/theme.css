@@ -1,21 +1,27 @@
+
 @import url(https://fonts.bunny.net/css?family=caudex:400,400i,700,700i);
 
 :root {
 
     --p-header-title-content: 'I. A. M. A.' !important;
     --p-header-slogan-content: '1931 - 1945' !important;
-
     --p-header-logo-background: var(--madoka-logo-dark);
+
+    --p-theme-color-light: #953be4;
+    --p-theme-color: #703dab;
+    --p-theme-color-dark: #503596;
+
+    --p-top-bar-link-bar-color: var(--p-gray-6);
 
 }
 
 :root {
 
     --madoka-serif: 'Caudex', var(--p-font-serif);
-    --madoka-background-light: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-light.svg);
-    --madoka-logo-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark.svg);
-    --madoka-logo-dark-blur: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark-blur.svg);
-    --madoka-background-dark: url(https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-dark.svg);
+    --madoka-background-light: url('https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-light.svg');
+    --madoka-logo-dark: url('https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark.svg');
+    --madoka-logo-dark-blur: url('https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-iama-logo-dark-blur.svg');
+    --madoka-background-dark: url('https://oxygennine.github.io/Peroxide/CSS/Branches/Madoka/madoka-background-dark.svg');
 
     --p-page-title-font-size: calc(var(--p-font-size-xxlarge) * 1.05);
 }
@@ -91,7 +97,7 @@ div#login-status, div#header #search-top-box {
     transform: translate(0, calc(var(--p-header-height) * -1));
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     div#header div.top-bar {
         align-self: end;
@@ -128,10 +134,14 @@ div#login-status, div#header #search-top-box {
         grid-template-areas:
             '. logo logo user'
             '. title title search'
-            '. topbar topbar topbar';
+            'topbar topbar topbar topbar';
         z-index: 100;
         top: calc(var(--p-header-height) * -3);
-        position: sticky !important;
+        position: relative !important;
+    }
+
+    div#header h1 a::before {
+        transform: translate(0rem, calc(var(--p-header-height) * 2.7)) scale(1.2);
     }
 
     div#header h1 a span {
@@ -139,24 +149,38 @@ div#login-status, div#header #search-top-box {
         width: 100%;
     }
 
-    div#header h1 a span::before {
-        text-align: center;
-        font-size: calc(var(--p-header-height) * 0.45) !important;
-        width: 100%;
+    div#header h1 a span::before { /* 我放弃了，调这玩意实在太折磨了，感觉还不如直接隐藏掉 */
+        /* text-align: right;
+        font-size: calc(var(--p-header-height) * 0.35) !important;
+        width: 55%;
         display: block;
-        max-width: 100%;
+        top: calc(var(--p-header-height) * 3);
+        padding: 0; */
+        display: none;
     }
 
     div#header h1 a span::after {
-        font-size: calc(var(--p-header-height) * 0.35) !important;
+        /* font-size: calc(var(--p-header-height) * 0.35) !important;
+        width: calc(100% - 4.5rem);
+        text-align: right;
+        top: calc(var(--p-header-height) * 3); */
+        display: none;
     }
 
-    div#headerdiv.mobile-top-bar {
+    div#header #top-bar .mobile-top-bar {
         width: 100%;
+        top: calc(var(--p-header-height) * 2.6);
     }
 
     div#header div#top-bar .mobile-top-bar>ul>li>ul {
         left: calc(var(--p-header-height) * 0);
+    }
+
+    div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a {
+        letter-spacing: 0rem;
+        margin: 0;
+        padding: 0;
+        width: fit-content;
     }
 
     div#content-wrap {
@@ -168,6 +192,8 @@ div#login-status, div#header #search-top-box {
 
 div#header #search-top-box input.button {
     top: -0.55rem;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 div#content-wrap {

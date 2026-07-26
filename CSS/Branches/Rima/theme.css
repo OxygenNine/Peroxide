@@ -1,6 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
 @font-face{font-family:"ZSFT-fa";src:url("https://fontsapi.zeoseven.com/fa/main.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap;} /* ZSFT-fa | Afacad Flux */
 
+:root {
+    --p-version: '1.0-release';
+    --p-theme-id: 'peroxide-rima';
+    --p-theme-name: '月溪 主题版式';
+    --p-theme-creator: 'OxygenNine';
+}
 
 :root {
   --p-theme-color-light: #5b7ee7;

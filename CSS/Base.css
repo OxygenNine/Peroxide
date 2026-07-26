@@ -339,19 +339,17 @@ div#header #search-top-box input#search-top-box-input {
 }
  
 div#header #search-top-box input.button {
-    margin-left: calc(var(--p-header-height));
     padding: 0;
+    margin: 0 !important;
     text-decoration: none;
     border: none;
     font-size: 0;
     display: block;
     width: calc(var(--p-header-height));
     height: calc(var(--p-header-height));
-    margin-right: 0;
     z-index: 25;
     position: absolute;
     right: 0rem;
-    margin-left: 0;
     background-color: var(--p-top-bar-search-color);
     -webkit-mask: var(--p-icon-search) center / 40% no-repeat;
     mask: var(--p-icon-search) center / 40% no-repeat;
@@ -891,8 +889,6 @@ div#side-bar .close-menu {
     display: none;
 }
 
-
-
 /* Main Content */
 
 div#content-wrap {
@@ -1102,7 +1098,7 @@ div#main-content #page-options-bottom, div#main-content #page-options-bottom-2 {
 }
 
 div#main-content div#page-options-bottom-2 {
-    margin-top: calc(var(--p-border-radius-medium) * -1.5);
+    margin-top: var(--p-page-option-bottom-2-margin-top);
 }
 
 div#main-content #page-options-bottom > a, div#main-content #page-options-bottom-2 > a {
@@ -1134,10 +1130,6 @@ div#page-options-bottom > a#more-options-button {
     color: var(--p-page-option-bottom-button-more-color) !important;
     border-radius: var(--p-border-radius-medium);
     flex-basis: 4rem;
-}
-
-div#page-options-bottom-2 {
-    margin-top: 0.5rem;
 }
 
 div#page-options-bottom-2 > a#delete-button {
@@ -2277,7 +2269,7 @@ form#edit-meta-newtag-form td input {
 
 .owindow .button-bar.modal-footer {
     padding: 1rem 1.5rem;
-    background-color: var(--p-gray-1);
+    background-color: transparent;
     border-top: 1px solid var(--p-gray-2);
     border-radius: 0 0 0.5rem 0.5rem;
     display: flex;
