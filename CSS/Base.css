@@ -2677,7 +2677,7 @@ div.hovertip {
     bottom: -2rem;
     right: max(calc(50% - 12.5rem), 5vw);
     transition: bottom var(--p-animation-duration-medium), opacity var(--p-animation-duration-medium), pointer-events var(--p-animation-duration-medium);
-    transition-delay: var(--p-animation-duration-medium);
+    transition-delay: var(--p-hovertip-animation-delay);
     z-index: 29;
     opacity: 0;
     pointer-events: none;

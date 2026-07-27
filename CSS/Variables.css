@@ -172,6 +172,7 @@
     --p-animation-duration-short: 0.2s;
     --p-animation-duration-medium: 0.4s;
     --p-animation-duration-long: 0.6s;
+    --p-hovertip-animation-delay: var(--p-animation-duration-medium);
 
     /* 圆角 */
     --p-border-radius-small: 0.2rem;

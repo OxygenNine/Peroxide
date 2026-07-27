@@ -1906,3 +1906,17 @@ div#extrac-div-3+div[style="color: #A00; background-color: #FFF; margin: 0.5em 1
     width: 90%;
     margin: 1rem auto !important;
 }
+
+/* Form Match Error */
+
+.form-table .form-error {
+    border: none;
+}
+
+.form-table .form-error input {
+    background-color: var(--p-warning-color-dark) !important;
+}
+
+span.form-message.text-danger {
+    color: var(--p-warning-color);
+}
