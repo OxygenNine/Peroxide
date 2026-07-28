@@ -23,9 +23,9 @@
     --mox-layer-light-3: var(--p-gray-3);
     --mox-bgblur-front-color: var(--p-light-transparent-0-8);
  
-    --mox-warn-color: var(--p-warning);
-    --mox-accept-color: var(--p-success);
-    --mox-alter-color: var(--p-info);
+    --mox-warn-color: var(--p-warning-color);
+    --mox-accept-color: var(--p-success-color);
+    --mox-alter-color: var(--p-info-color);
  
     --mox-header-title: var(--p-header-title-content);
     --mox-header-subtitle: var(--p-header-slogan-content);
@@ -78,6 +78,12 @@
 
     --header-title: var(--p-header-title-content);
     --header-subtitle: var(--p-header-slogan-content);
+}
+
+/* Monotypical */
+
+:root {
+    --accent-color: var(--p-theme-color);
 }
 
 /* Page Content Elements */

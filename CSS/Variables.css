@@ -393,7 +393,7 @@
 /* Version */
 
 :root {
-    --p-version: '1.0-release';
+    --p-version: '1.0.0-release';
     --p-theme-id: 'peroxide-baseline';
     --p-theme-name: '过氧化物 基础版式';
     --p-theme-creator: 'OxygenNine';

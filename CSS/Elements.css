@@ -23,11 +23,6 @@ a {
     text-decoration: none;
 }
 
-:where(#page-title, .meta-title) a:hover {
-    text-decoration-thickness: 0.15rem;
-    text-underline-offset: 0.4rem;
-}
-
 a:hover {
     background-color: transparent;
     text-decoration: underline;
@@ -1919,4 +1914,14 @@ div#extrac-div-3+div[style="color: #A00; background-color: #FFF; margin: 0.5em 1
 
 span.form-message.text-danger {
     color: var(--p-warning-color);
+}
+
+/* MathJax */
+
+span.equation-number {
+    text-align: right;
+    display: block;
+    margin-bottom: -2.5rem;
+    width: 100%;
+    margin-top: 1rem;
 }

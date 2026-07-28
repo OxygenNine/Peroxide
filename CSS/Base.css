@@ -931,8 +931,10 @@ div#main-content .page-tags span::before {
     color: var(--p-gray-3);
 }
 
-div#main-content .page-tagss span {
+div#main-content .page-tags span {
     border-top: solid 0.1rem var(--p-gray-2);
+    font-size: 85%;
+    padding-top: 0.25rem;
 }
 
 div#main-content .page-tags {

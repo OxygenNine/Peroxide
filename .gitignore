@@ -1,1 +1,4 @@
-build.bat
+.workbuddy/
+.trae/
+.vscode/
+.codex/

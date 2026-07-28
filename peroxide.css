@@ -1336,8 +1336,10 @@ div#main-content .page-tags span::before {
     color: var(--p-gray-3);
 }
 
-div#main-content .page-tagss span {
+div#main-content .page-tags span {
     border-top: solid 0.1rem var(--p-gray-2);
+    font-size: 85%;
+    padding-top: 0.25rem;
 }
 
 div#main-content .page-tags {
@@ -3224,11 +3226,6 @@ a {
     font-family: inherit;
     background-color: transparent;
     text-decoration: none;
-}
-
-:where(#page-title, .meta-title) a:hover {
-    text-decoration-thickness: 0.15rem;
-    text-underline-offset: 0.4rem;
 }
 
 a:hover {
@@ -5122,6 +5119,16 @@ div#extrac-div-3+div[style="color: #A00; background-color: #FFF; margin: 0.5em 1
 
 span.form-message.text-danger {
     color: var(--p-warning-color);
+}
+
+/* MathJax */
+
+span.equation-number {
+    text-align: right;
+    display: block;
+    margin-bottom: -2.5rem;
+    width: 100%;
+    margin-top: 1rem;
 } 
 /* === 结束 Elements.css === */ 
  
@@ -5151,9 +5158,9 @@ span.form-message.text-danger {
     --mox-layer-light-3: var(--p-gray-3);
     --mox-bgblur-front-color: var(--p-light-transparent-0-8);
  
-    --mox-warn-color: var(--p-warning);
-    --mox-accept-color: var(--p-success);
-    --mox-alter-color: var(--p-info);
+    --mox-warn-color: var(--p-warning-color);
+    --mox-accept-color: var(--p-success-color);
+    --mox-alter-color: var(--p-info-color);
  
     --mox-header-title: var(--p-header-title-content);
     --mox-header-subtitle: var(--p-header-slogan-content);
@@ -5206,6 +5213,12 @@ span.form-message.text-danger {
 
     --header-title: var(--p-header-title-content);
     --header-subtitle: var(--p-header-slogan-content);
+}
+
+/* Monotypical */
+
+:root {
+    --accent-color: var(--p-theme-color);
 }
 
 /* Page Content Elements */
