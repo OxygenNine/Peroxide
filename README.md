@@ -1,5 +1,15 @@
 # 简介
 
+<img src="https://oxygennine.github.io/Peroxide/Images/peroxide-logo-titled.svg" alt="过氧化物基础版式logo" style="width: 100%; max-width: 400px; margin: 20px auto; background-color: #fff; padding: 10px; border-radius: 25px; display: block;">
+
+<div style="text-align: center;">
+
+![License CC4](https://img.shields.io/badge/license-CC4-yellow) ![Version 1.0.1](https://img.shields.io/badge/version-1.0.1_release-green) ![Creator OxygenNine](https://img.shields.io/badge/creator-OxygenNine-blue) ![Pure CSS](https://img.shields.io/badge/pure-CSS-purple) ![Wikidot Theme](https://img.shields.io/badge/wikidot-theme-red)
+
+</div>
+
+
+
 欢迎使用过氧化物（Peroxide）基础版式。这是一个为Wikidot网站设计的基础CSS版式。
 
 此仓库同样用于开发过氧化物的衍生版式。未来，基于一氧化物版式的衍生版式都将用过氧化物重置。

@@ -3,10 +3,6 @@
  * 伪元素本地化文本
 */
 
-#top-bar .ios-cache-issue-notification {
- display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
-}
-
 /* Action Area - Close Button */
 
 :root {
@@ -76,7 +72,7 @@
     --LOC-file-type-js: 'JavaScript 代码';
     --LOC-file-type-css: 'CSS 层叠样式表';
     --LOC-file-type-html: 'HTML 网页';
-    --LOC-file-type-xml: 'XML ドキュメント';
+    --LOC-file-type-xml: 'XML 文档';
     --LOC-file-type-exe: '可执行文件';
     --LOC-manage-attachments: '管理附件';
 }

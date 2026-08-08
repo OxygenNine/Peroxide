@@ -3,7 +3,9 @@
  * 基础样式
  */
 
-
+#top-bar .ios-cache-issue-notification {
+ display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
+}
 
 html {
     font-size: var(--p-font-size-base);
@@ -233,7 +235,7 @@ div#login-status a.login-status-sign-in.btn.btn-primary[onclick*="WIKIDOT.page.l
     font-size: 0 !important;
     background-color: var(--p-gray-4);
     display: block;
-    padding: calc(var(--p-header-height) * 0.275);
+    padding: calc(var(--p-header-height) * 0.275) !important;
     border-radius: var(--p-border-radius-small);
     mask: var(--p-icon-sign-in) center / 90% no-repeat;
     transform: rotate(0deg);
@@ -279,7 +281,9 @@ div#account-options {
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
 }
 
-div#login-status:hover div#account-options {
+div#login-status:hover div#account-options,
+div#login-status:focus-visible div#account-options,
+div#login-status div#account-options:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -375,7 +379,7 @@ div#header div#top-bar {
     display: contents;
 }
  
-div#header #top-bar a, div#header #top-bar a:hover {
+div#header #top-bar a, div#header #top-bar a:hover, div#header #top-bar a:focus, div#header #top-bar a:focus-visible {
     background-color: transparent;
 }
  
@@ -487,7 +491,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a:hover {
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a:is(:focus, :focus-visible)+ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(0rem, 0rem);
@@ -532,7 +538,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul a:hover {
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:hover>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:hover>ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>a:is(:focus, :focus-visible)+ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(6rem, calc(-50% - 0.85rem));

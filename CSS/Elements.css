@@ -1925,3 +1925,29 @@ span.equation-number {
     width: 100%;
     margin-top: 1rem;
 }
+
+/* Module Join */
+
+.join-box {
+    margin: 0.5rem auto;
+}
+
+.join-box a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: var(--p-font-size-large);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
+    background-image: none;
+    background-color: var(--p-theme-color);
+    color: var(--p-gray-0);
+    font-weight: bold;
+    transition: background-color var(--p-animation-duration-short) ease-in-out;
+    border-radius: var(--p-border-radius-large);
+}
+
+.join-box a:hover {
+    background-color: var(--p-theme-color-dark);
+    color: var(--p-gray-0);
+    text-decoration: none;
+}
