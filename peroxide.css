@@ -391,10 +391,18 @@
     --p-header-slogan-content: '確保 / 収容 / 保護';
 }
 
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --p-animation-duration-short: 0s;
+        --p-animation-duration-medium: 0s;
+        --p-animation-duration-long: 0s;
+    }
+}
+
 /* Version */
 
 :root {
-    --p-version: '1.0-release';
+    --p-version: '1.0.1-release';
     --p-theme-id: 'peroxide-baseline';
     --p-theme-name: '过氧化物 基础版式';
     --p-theme-creator: 'OxygenNine';
@@ -408,7 +416,9 @@
  * 基础样式
  */
 
-
+#top-bar .ios-cache-issue-notification {
+ display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
+}
 
 html {
     font-size: var(--p-font-size-base);
@@ -638,7 +648,7 @@ div#login-status a.login-status-sign-in.btn.btn-primary[onclick*="WIKIDOT.page.l
     font-size: 0 !important;
     background-color: var(--p-gray-4);
     display: block;
-    padding: calc(var(--p-header-height) * 0.275);
+    padding: calc(var(--p-header-height) * 0.275) !important;
     border-radius: var(--p-border-radius-small);
     mask: var(--p-icon-sign-in) center / 90% no-repeat;
     transform: rotate(0deg);
@@ -684,7 +694,9 @@ div#account-options {
     transition: transform var(--p-animation-duration-short), opacity var(--p-animation-duration-short);
 }
 
-div#login-status:hover div#account-options {
+div#login-status:hover div#account-options,
+div#login-status:focus-visible div#account-options,
+div#login-status div#account-options:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -780,7 +792,7 @@ div#header div#top-bar {
     display: contents;
 }
  
-div#header #top-bar a, div#header #top-bar a:hover {
+div#header #top-bar a, div#header #top-bar a:hover, div#header #top-bar a:focus, div#header #top-bar a:focus-visible {
     background-color: transparent;
 }
  
@@ -892,7 +904,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul a:hover {
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li.sfhover>ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>a:is(:focus, :focus-visible)+ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(0rem, 0rem);
@@ -937,7 +951,9 @@ div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul a:hover {
     font-weight: bold;
 }
 
-div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:hover>ul {
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li:hover>ul,
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>a:is(:focus, :focus-visible)+ul, 
+div#header #top-bar :is(.mobile-top-bar, .top-bar)>ul>li>ul>li>ul:has(a:is(:focus, :focus-visible)) {
     opacity: 1;
     pointer-events: all;
     transform: translate(6rem, calc(-50% - 0.85rem));
@@ -5129,7 +5145,34 @@ span.equation-number {
     margin-bottom: -2.5rem;
     width: 100%;
     margin-top: 1rem;
-} 
+}
+
+/* Module Join */
+
+.join-box {
+    margin: 0.5rem auto;
+}
+
+.join-box a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: var(--p-font-size-large);
+    padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
+    background-image: none;
+    background-color: var(--p-theme-color);
+    color: var(--p-gray-0);
+    font-weight: bold;
+    transition: background-color var(--p-animation-duration-short) ease-in-out;
+    border-radius: var(--p-border-radius-large);
+}
+
+.join-box a:hover {
+    background-color: var(--p-theme-color-dark);
+    color: var(--p-gray-0);
+    text-decoration: none;
+}
+ 
 /* === 结束 Elements.css === */ 
  
 /* === Capabilities.css === */ 
@@ -5311,10 +5354,6 @@ div#u-component-header {
  * 伪元素本地化文本
 */
 
-#top-bar .ios-cache-issue-notification {
- display: none !important; /* 隐藏EN负触发的版式加载失败提示 */
-}
-
 /* Action Area - Close Button */
 
 :root {
@@ -5384,7 +5423,7 @@ div#u-component-header {
     --LOC-file-type-js: 'JavaScript 代码';
     --LOC-file-type-css: 'CSS 层叠样式表';
     --LOC-file-type-html: 'HTML 网页';
-    --LOC-file-type-xml: 'XML ドキュメント';
+    --LOC-file-type-xml: 'XML 文档';
     --LOC-file-type-exe: '可执行文件';
     --LOC-manage-attachments: '管理附件';
 }
