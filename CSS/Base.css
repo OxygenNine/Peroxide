@@ -2789,16 +2789,82 @@ li.folded > .colmod-content {
 }
 .colmod-collapsiblealt > [class|="colmod-link"] a,
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a {
-    padding:0.1em 0.5em;
-    text-decoration:none;
-    background-color:#F4F4F4;
-    border:1px solid #AAA;
-    color:#000;
+    padding: 0.1rem 0.5rem;
+    text-decoration: none;
+    background-color: var(--p-gray-0);
+    border: 0.1rem solid var(--p-gray-2);
+    color: var(--p-gray-6);
+    border-radius: var(--p-border-radius-small);
+    font-size: var(--p-font-size-small);
+    transition: background-color var(--p-animation-duration-short);
 }
 .colmod-collapsiblealt > [class|="colmod-link"] a:hover,
 .colmod-collapsiblealt > [class|="colmod-link"] a:active,
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:hover,
 .collapsiblealt > .colmod-block > ul > li > [class|="colmod-link"] a:active {
-    background:#DDD;
-    text-decoration:none;
+    background-color: var(--p-gray-1);
+    text-decoration: none;
+}
+
+/* Content Warning */
+
+#page-content div#u-adult-warning {
+    width: 100%; /* 这是唯一和Sigma-9不同的地方，需确保宽度覆盖全页面，fit-content在过氧化物下只能覆盖部分文本 */
+    margin: 0 auto 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid #333;
+    background: #e4e4e4;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+#page-content div#u-adult-warning > div#u-adult-header {
+    font-size: 300%;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    color: #901;
+}
+#page-content div#u-adult-warning > div#u-adult-header p {
+    margin: 0;
+}
+#page-content div#u-adult-warning > .error-block {
+    color: unset;
+    padding: unset;
+    margin: unset;
+    border: unset;
+    margin-bottom: 1em;
+}
+#page-content div#u-component-top-box {
+    max-width: 500px;
+    margin: 0 auto 1.25rem;
+    padding: 1rem;
+    background-color: #b01;
+    border-radius: 20px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.5), inset 0 10px 1px rgba(255,255,255,.5), inset 0 -15px 30px rgba(0,0,0,.25);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+#page-content div#u-component-top-box > div#u-component-header {
+    font-size: 300%;
+    text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+#page-content div#u-component-top-box > div#u-component-header p {
+    margin: 0;
+}
+#page-content div#u-archived-top-box {
+    max-width: 375px;
+    margin: 0 auto 1.75rem;
+    padding: 1rem 1rem 0.5rem;
+    background-color: #e3e3e3;
+    border: 2px solid #a1a1a1;
+    border-radius: 2px;
+    color: #333;
+    text-align: center;
+}
+#page-content div#u-archived-top-box > div#u-archived-header {
+    font-size: 150%;
+    font-weight: bold;
+}
+#page-content div#u-archived-top-box > div#u-archived-header p {
+    margin: 0;
 }

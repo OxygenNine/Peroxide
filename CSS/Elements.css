@@ -1027,6 +1027,11 @@ rt {
     white-space: nowrap;
 }
 
+.emph {
+    text-emphasis-style: dot;
+    text-emphasis-position: under;
+}
+
 /* Print User */
 
 .printuser img.small {
@@ -1139,6 +1144,12 @@ rt {
     display: flex;
     padding: 1rem 1rem;
     flex-direction: column;
+    height: auto;
+}
+
+/* Bibblock */
+
+.bibitem {
     height: auto;
 }
 
@@ -1297,7 +1308,7 @@ div.p-bqc {
 
 .modal,
 .p-mo,
-.wiki-note {
+div.wiki-note {
     width: calc(100% - var(--p-blockquote-padding-x) * 2);
     padding: var(--p-blockquote-padding-y) var(--p-blockquote-padding-x);
     background: var(--p-gray-0);

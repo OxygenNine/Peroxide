@@ -91,8 +91,8 @@
 /* Collspaible Info Component */
 
 :root {
-    --linkColour: var(--p-gray-1);
-    --barColour: var(--p-theme-color);
+    --linkColour: var(--p-gray-0) !important;
+    --barColour: var(--p-theme-color) !important;
 }
 
 .info-container .collapsible-block-unfolded {
@@ -131,13 +131,24 @@
 }
 
 .licensebox blockquote {
-    background-color: transparent;
-    padding: 0rem 1rem;
+    background-color: var(--p-gray-2);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--p-border-radius-medium);
 }
 
 .note-page p {
     line-height: var(--p-font-size-medium) !important;
 }
+
+.licensebox a.collapsible-block-link {
+    color: var(--p-gray-4);
+    font-size: var(--p-font-size-small);
+    font-weight: bold;
+    display: block;
+}
+
+
 
 /* SCP-JP 适配 */
 
@@ -168,3 +179,41 @@ div#u-component-header {
     font-size: 150%;
     margin-bottom: -1rem;
 }
+
+/* 内容警告 */
+
+#page-content div.content-warning.creditRate {
+    margin-top: 0.75rem !important;
+}
+
+/* Mail Component by Sharia Vanilla */
+
+div.mail-main {
+    border-width: 0.1rem;
+    border-radius: var(--p-border-radius-medium);
+    border-color: var(--p-gray-2);
+}
+
+/* WeChat Component */
+
+#page-content :is(.sl, .sl-reply) p {
+    margin: unset;
+    text-indent: unset;
+    line-height: unset;
+    letter-spacing: unset;
+}
+
+/* 另一翻译版本 */
+
+.alt-block {
+    background-color: var(--p-danger-color-light);
+    color: var(--p-gray-7);
+    border-radius: var(--p-border-radius-medium);
+    margin: 1rem auto;
+    width: auto;
+    padding: 0rem 1rem;
+    font-size: var(--p-font-size-small);
+    position: absolute;
+    right: 1rem;
+}
+
